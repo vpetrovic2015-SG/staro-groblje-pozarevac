@@ -1,0 +1,19 @@
+{
+  "name": "Staro groblje Požarevac — digitalni vodič",
+  "short_name": "Staro groblje",
+  "description": "Besplatan digitalni vodič kroz znamenite ličnosti sahranjene na Starom groblju u Požarevcu.",
+  "lang": "sr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f3ec",
+  "theme_color": "#26372f",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

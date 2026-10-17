@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#26372f"><meta name="description" content="Besplatan digitalni istorijski vodič kroz znamenite ličnosti sahranjene na Starom groblju u Požarevcu.">
+  <link rel="manifest" href="manifest.json"><link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <title>Staro groblje Požarevac | Digitalni vodič</title>
+</head>
+<body>
+<header class="site-header"><div class="header-inner">
+  <div class="brand-mark" aria-hidden="true">✦</div><div class="brand-copy">
+    <p class="eyebrow" data-sr="DIGITALNA RIZNICA SEĆANJA" data-lat="DIGITALNA RIZNICA SEĆANJA">DIGITALNA RIZNICA SEĆANJA</p>
+    <h1 data-sr="Старо гробље Пожаревац" data-lat="Staro groblje Požarevac">Старо гробље Пожаревац</h1>
+    <p data-sr="Приче о људима који су обликовали историју града" data-lat="Priče o ljudima koji su oblikovali istoriju grada">Приче о људима који су обликовали историју града</p>
+  </div><button id="scriptToggle" class="script-toggle" type="button" aria-label="Promeni pismo">Latinica</button>
+</div></header>
+<main>
+  <section class="hero"><div class="hero-copy"><p class="eyebrow dark" data-sr="КУЛТУРНО-ИСТОРИЈСКИ ВОДИЧ" data-lat="KULTURNO-ISTORIJSKI VODIČ">КУЛТУРНО-ИСТОРИЈСКИ ВОДИЧ</p>
+    <h2 data-sr="Свако име чува једну причу." data-lat="Svako ime čuva jednu priču.">Свако име чува једну причу.</h2>
+    <p data-sr="Истражите биографије, пронађите гробна места на мапи и упознајте људе који су оставили траг у животу Пожаревца." data-lat="Istražite biografije, pronađite grobna mesta na mapi i upoznajte ljude koji su ostavili trag u životu Požarevca.">Истражите биографије, пронађите гробна места на мапи и упознајте људе који су оставили траг у животу Пожаревца.</p>
+    <a class="primary-link" href="#catalogSection" data-sr="Истражи каталог ↓" data-lat="Istraži katalog ↓">Истражи каталог ↓</a>
+  </div><div class="hero-stats"><div><strong id="peopleCount">10</strong><span data-sr="личности у каталогу" data-lat="ličnosti u katalogu">личности у каталогу</span></div><div><strong id="mappedCount">10</strong><span data-sr="локација на мапи" data-lat="lokacija na mapi">локација на мапи</span></div><p data-sr="Пројекат се постепено допуњује новим биографијама и фотографијама." data-lat="Projekat se postepeno dopunjuje novim biografijama i fotografijama.">Пројекат се постепено допуњује новим биографијама и фотографијама.</p></div></section>
+
+  <section id="profile" class="profile hidden" aria-live="polite"><button id="backToCatalog" class="text-button" type="button" data-sr="← Назад на каталог" data-lat="← Nazad na katalog">← Назад на каталог</button><div id="profileContent"></div></section>
+
+  <section id="catalogSection" class="catalog-section"><div class="section-heading"><div><p class="eyebrow dark" data-sr="ИСТРАЖИТЕ" data-lat="ISTRAŽITE">ИСТРАЖИТЕ</p><h2 data-sr="Каталог личности" data-lat="Katalog ličnosti">Каталог личности</h2><p data-sr="Претражите имена, занимања и биографије." data-lat="Pretražite imena, zanimanja i biografije.">Претражите имена, занимања и биографије.</p></div><label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Претрага имена или занимања…" aria-label="Претрага личности"></label></div>
+    <div class="catalog-tools"><span id="resultsCount" aria-live="polite">10 личности</span><button id="clearSearch" class="text-button subtle hidden" type="button" data-sr="Обриши претрагу" data-lat="Obriši pretragu">Обриши претрагу</button></div><div id="peopleList" class="people-grid"></div>
+  </section>
+
+  <section class="map-section"><div class="section-heading"><div><p class="eyebrow dark" data-sr="ОРИЈЕНТАЦИЈА НА ТЕРЕНУ" data-lat="ORIJENTACIJA NA TERENU">ОРИЈЕНТАЦИЈА НА ТЕРЕНУ</p><h2 data-sr="Мапа гробља" data-lat="Mapa groblja">Мапа гробља</h2><p data-sr="Изаберите маркер да бисте отворили биографију." data-lat="Izaberite marker da biste otvorili biografiju.">Изаберите маркер да бисте отворили биографију.</p></div></div><div id="map" role="application" aria-label="Интерактивна мапа Старог гробља"></div><p class="map-note" data-sr="Координате су унете на основу достављених података и треба их проверити на терену. Подлога: © OpenStreetMap contributors." data-lat="Koordinate su unete na osnovu dostavljenih podataka i treba ih proveriti na terenu. Podloga: © OpenStreetMap contributors.">Координате су унете на основу достављених података и треба их проверити на терену. Подлога: © OpenStreetMap contributors.</p></section>
+  <section class="about"><div><p class="eyebrow dark" data-sr="О ПРОЈЕКТУ" data-lat="O PROJEKTU">О ПРОЈЕКТУ</p><h2 data-sr="Сећање доступно свима." data-lat="Sećanje dostupno svima.">Сећање доступно свима.</h2></div><p data-sr="Овај дигитални водич замишљен је као бесплатна јавна ризница локалне историје. База је отворена за постепено допуњавање биографијама, фотографијама и провереним изворима." data-lat="Ovaj digitalni vodič zamišljen je kao besplatna javna riznica lokalne istorije. Baza je otvorena za postepeno dopunjavanje biografijama, fotografijama i proverenim izvorima.">Овај дигитални водич замишљен је као бесплатна јавна ризница локалне историје. База је отворена за постепено допуњавање биографијама, фотографијама и провереним изворима.</p></section>
+</main>
+<footer><div><strong data-sr="Старо гробље Пожаревац" data-lat="Staro groblje Požarevac">Старо гробље Пожаревац</strong><p data-sr="Бесплатан дигитални историјски водич · Радна верзија" data-lat="Besplatan digitalni istorijski vodič · Radna verzija">Бесплатан дигитални историјски водич · Радна верзија</p></div><p data-sr="Пре јавног објављивања проверити биографије, изворе, фотографије и координате." data-lat="Pre javnog objavljivanja proveriti biografije, izvore, fotografije i koordinate.">Пре јавног објављивања проверити биографије, изворе, фотографије и координате.</p></footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script src="app.js"></script>
+</body></html>
