@@ -36,49 +36,92 @@ function publicUrl(id) {
   url.search = ""; url.hash = ""; url.searchParams.set("id", id);
   return url.href;
 }
+
 function showProfile(id, scroll = true) {
   const p = people.find(x => x.id === id);
   if (!p) return;
-  
-const photo = p.fotografija
-  ? `<img class="profile-photo"
-       src="${esc(p.fotografija)}"
-       alt="${esc(field(p, "ime"))}"
-       onerror="this.hidden=true">`
-  : "";
 
-const gravePhoto = p.fotografija_groba
-  ? `<figure class="grave-photo-wrap">
-       <h3>${script === "sr" ? "Фотографија гроба" : "Fotografija groba"}</h3>
-       <img class="grave-photo"
-            src="${esc(p.fotografija_groba)}"
-            alt="${esc(script === "sr" ? "Гробно место личности" : "Grobno mesto ličnosti")}"
-            onerror="this.parentElement.hidden=true">
-     </figure>`
-  : "";
+  const photo = p.fotografija
+    ? `<img class="profile-photo"
+         src="${esc(p.fotografija)}"
+         alt="${esc(field(p, "ime"))}"
+         onerror="this.hidden=true">`
+    : "";
 
-  const coords = validCoords(p) ? `${Number(p.lat).toFixed(6)}, ${Number(p.lon).toFixed(6)}` : "";
-  const mapLink = validCoords(p) ? `https://www.google.com/maps?q=${encodeURIComponent(p.lat + "," + p.lon)}` : "";
+  const gravePhoto = p.fotografija_groba
+    ? `<figure class="grave-photo-wrap">
+         <h3>${script === "sr" ? "Фотографија гроба" : "Fotografija groba"}</h3>
+         <img class="grave-photo"
+              src="${esc(p.fotografija_groba)}"
+              alt="${esc(script === "sr" ? "Гробно место личности" : "Grobno mesto ličnosti")}"
+              onerror="this.parentElement.hidden=true">
+       </figure>`
+    : "";
+
+  const coords = validCoords(p)
+    ? `${Number(p.lat).toFixed(6)}, ${Number(p.lon).toFixed(6)}`
+    : "";
+
+  const mapLink = validCoords(p)
+    ? `https://www.google.com/maps?q=${encodeURIComponent(p.lat + "," + p.lon)}`
+    : "";
+
   $("profile").classList.remove("hidden");
   $("catalogSection").classList.add("hidden");
+
+  $("profileContent").innerHTML = `${photo}
     <p class="eyebrow dark">${esc(script === "sr" ? "БИОГРАФИЈА" : "BIOGRAFIJA")}</p>
-    <h2>${esc(field(p,"ime"))}</h2>
-    <p class="profession"><strong>${esc(field(p,"zanimanje"))}</strong>${p.godine ? ` · ${esc(p.godine)}` : ""}</p>
-    <p class="biography">${esc(field(p,"biografija") || t("noBio"))}</p>
-    <div class="profile-details">${p.parcela ? `<span class="detail-pill"><strong>${esc(t("parcel"))}:</strong> ${esc(p.parcela)}</span>` : ""}${p.grobno_mesto ? `<span class="detail-pill"><strong>${esc(t("grave"))}:</strong> ${esc(p.grobno_mesto)}</span>` : ""}${coords ? `<span class="detail-pill"><strong>GPS:</strong> ${esc(coords)}</span>` : ""}</div>
-    <div class="profile-actions">${mapLink ? `<a href="${mapLink}" target="_blank" rel="noopener">${esc(t("google"))} ↗</a>` : ""}<button id="copyProfileLink" type="button">${esc(t("direct"))}</button></div>
+    <h2>${esc(field(p, "ime"))}</h2>
+    <p class="profession"><strong>${esc(field(p, "zanimanje"))}</strong>${p.godine ? ` · ${esc(p.godine)}` : ""}</p>
+    <p class="biography">${esc(field(p, "biografija") || t("noBio"))}</p>
+    ${gravePhoto}
+    <div class="profile-details">
+      ${p.parcela ? `<span class="detail-pill"><strong>${esc(t("parcel"))}:</strong> ${esc(p.parcela)}</span>` : ""}
+      ${p.grobno_mesto ? `<span class="detail-pill"><strong>${esc(t("grave"))}:</strong> ${esc(p.grobno_mesto)}</span>` : ""}
+      ${coords ? `<span class="detail-pill"><strong>GPS:</strong> ${esc(coords)}</span>` : ""}
+    </div>
+    <div class="profile-actions">
+      ${mapLink ? `<a href="${mapLink}" target="_blank" rel="noopener">${esc(t("google"))} ↗</a>` : ""}
+      <button id="copyProfileLink" type="button">${esc(t("direct"))}</button>
+    </div>
     ${p.izvori ? `<div class="source-note"><strong>${esc(t("source"))}:</strong> ${esc(p.izvori)}</div>` : ""}
-    <div class="qr-wrap"><h3>${esc(t("qr"))}</h3><p class="qr-warning">${esc(t("qrNote"))}</p><div id="qrcode"></div><p><a href="${esc(publicUrl(p.id))}" target="_blank" rel="noopener">${esc(publicUrl(p.id))}</a></p></div>`;
-  if (window.QRCode) new QRCode($("qrcode"), {text: publicUrl(p.id), width: 180, height: 180, correctLevel: QRCode.CorrectLevel.M});
+    <div class="qr-wrap">
+      <h3>${esc(t("qr"))}</h3>
+      <p class="qr-warning">${esc(t("qrNote"))}</p>
+      <div id="qrcode"></div>
+      <p><a href="${esc(publicUrl(p.id))}" target="_blank" rel="noopener">${esc(publicUrl(p.id))}</a></p>
+    </div>`;
+
+  if (window.QRCode) {
+    new QRCode($("qrcode"), {
+      text: publicUrl(p.id),
+      width: 180,
+      height: 180,
+      correctLevel: QRCode.CorrectLevel.M
+    });
+  }
+
   $("copyProfileLink").addEventListener("click", async () => {
     const value = publicUrl(p.id);
-    try { await navigator.clipboard.writeText(value); $("copyProfileLink").textContent = t("copied"); }
-    catch { window.prompt(script === "sr" ? "Копирајте линк:" : "Kopirajte link:", value); }
+    try {
+      await navigator.clipboard.writeText(value);
+      $("copyProfileLink").textContent = t("copied");
+    } catch {
+      window.prompt(script === "sr" ? "Копирајте линк:" : "Kopirajte link:", value);
+    }
   });
+
   history.replaceState(null, "", `?id=${encodeURIComponent(p.id)}`);
-  if (scroll) $("profile").scrollIntoView({behavior:"smooth", block:"start"});
-  if (map && validCoords(p)) map.setView([Number(p.lat), Number(p.lon)], Math.max(map.getZoom(), 18));
+
+  if (scroll) {
+    $("profile").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  if (map && validCoords(p)) {
+    map.setView([Number(p.lat), Number(p.lon)], Math.max(map.getZoom(), 18));
+  }
 }
+
 function backToCatalog() {
   $("profile").classList.add("hidden"); $("catalogSection").classList.remove("hidden");
   history.replaceState(null, "", location.pathname + location.hash);
