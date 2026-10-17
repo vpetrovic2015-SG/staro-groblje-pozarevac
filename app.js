@@ -39,12 +39,30 @@ function publicUrl(id) {
 function showProfile(id, scroll = true) {
   const p = people.find(x => x.id === id);
   if (!p) return;
-  const photo = p.fotografija ? `<img class="profile-photo" src="${esc(p.fotografija)}" alt="${esc(field(p,"ime"))}" onerror="this.hidden=true">` : "";
+  
+const photo = p.fotografija
+  ? `<img class="profile-photo"
+       src="${esc(p.fotografija)}"
+       alt="${esc(field(p, "ime"))}"
+       onerror="this.hidden=true">`
+  : "";
+
+const gravePhoto = p.fotografija_groba
+  ? `<figure class="grave-photo-wrap">
+       <h3>${script === "sr" ? "Фотографија гроба" : "Fotografija groba"}</h3>
+       <img class="grave-photo"
+            src="${esc(p.fotografija_groba)}"
+            alt="${esc(script === "sr" ? "Гробно место личности" : "Grobno mesto ličnosti")}"
+            onerror="this.parentElement.hidden=true">
+     </figure>`
+  : "";
+
   const coords = validCoords(p) ? `${Number(p.lat).toFixed(6)}, ${Number(p.lon).toFixed(6)}` : "";
   const mapLink = validCoords(p) ? `https://www.google.com/maps?q=${encodeURIComponent(p.lat + "," + p.lon)}` : "";
   $("profile").classList.remove("hidden");
   $("catalogSection").classList.add("hidden");
-  $("profileContent").innerHTML = `${photo}
+ <p class="biography">${esc(field(p,"biografija") || t("noBio"))}</p>
+   ${gravePhoto}
     <p class="eyebrow dark">${esc(script === "sr" ? "БИОГРАФИЈА" : "BIOGRAFIJA")}</p>
     <h2>${esc(field(p,"ime"))}</h2>
     <p class="profession"><strong>${esc(field(p,"zanimanje"))}</strong>${p.godine ? ` · ${esc(p.godine)}` : ""}</p>
