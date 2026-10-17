@@ -61,8 +61,6 @@ const gravePhoto = p.fotografija_groba
   const mapLink = validCoords(p) ? `https://www.google.com/maps?q=${encodeURIComponent(p.lat + "," + p.lon)}` : "";
   $("profile").classList.remove("hidden");
   $("catalogSection").classList.add("hidden");
- <p class="biography">${esc(field(p,"biografija") || t("noBio"))}</p>
-   ${gravePhoto}
     <p class="eyebrow dark">${esc(script === "sr" ? "БИОГРАФИЈА" : "BIOGRAFIJA")}</p>
     <h2>${esc(field(p,"ime"))}</h2>
     <p class="profession"><strong>${esc(field(p,"zanimanje"))}</strong>${p.godine ? ` · ${esc(p.godine)}` : ""}</p>
