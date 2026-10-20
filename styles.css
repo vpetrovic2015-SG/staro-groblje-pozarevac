@@ -183,3 +183,6 @@ html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--pape
   background: #f7e9cc !important;
   border: 4px solid #94703d !important;
 }
+body {
+  outline: 8px solid red !important;
+}
