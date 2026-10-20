@@ -23,3 +23,159 @@ html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--pape
   text-align: center;
   margin-bottom: 12px;
 }
+
+/* STARINSKA BIOGRAFIJA — STARI PAPIR I ZLATNI OKVIR */
+.profile {
+  --historic-ink: #2c2115;
+  --historic-gold: #94703d;
+  position: relative;
+  overflow: hidden;
+  margin: 2rem auto;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  color: var(--historic-ink);
+  background:
+    radial-gradient(ellipse at 15% 10%, #fff8e8 0%, transparent 48%),
+    linear-gradient(135deg, #f7e9cc, #eee0c1 55%, #f8edda);
+  border: 2px solid var(--historic-gold);
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 5px #f3e3c2,
+              inset 0 0 0 6px #b69a69;
+}
+
+.profile::before {
+  content: "СТАРО ГРОБЉЕ  •  ПОЖАРЕВАЦ";
+  display: block;
+  text-align: center;
+  font-size: .85rem;
+  font-weight: bold;
+  letter-spacing: .13em;
+  padding: .15rem 0 .8rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--historic-gold);
+  color: #70502a;
+}
+
+.profile .eyebrow.dark {
+  color: #8a632d;
+  text-align: center;
+  letter-spacing: .18em;
+}
+
+.profile h2 {
+  color: #21170e;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  line-height: 1.08;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: .4rem 0 .7rem;
+}
+
+.profile .profession {
+  text-align: center;
+  color: #6e4b24;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.profile-photo {
+  float: left;
+  width: min(39%, 340px);
+  max-width: 340px;
+  max-height: 480px;
+  object-fit: cover;
+  margin: .25rem 1.5rem 1rem 0;
+  padding: 5px;
+  background: #fff4df;
+  border: 2px solid var(--historic-gold);
+  border-radius: 0;
+  box-shadow: inset 0 0 0 2px #d9c39a;
+}
+
+.profile .biography {
+  color: #302419;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  text-align: justify;
+  max-width: none;
+}
+
+.profile-details {
+  clear: both;
+  padding-top: 1rem;
+  border-top: 1px solid #b99a67;
+}
+
+.detail-pill {
+  color: #3c2b19;
+  background: #f4e5c8;
+  border: 1px solid #c7ad7c;
+  border-radius: 0;
+}
+
+.grave-photo-wrap {
+  clear: both;
+  margin: 2rem 0;
+  padding: 1rem;
+  text-align: center;
+  background: #f4e5c8;
+  border: 1px solid #b99a67;
+}
+
+.grave-photo-wrap h3 {
+  color: #674922;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+.grave-photo {
+  max-height: 520px;
+  border: 2px solid #a4834d;
+  border-radius: 0;
+}
+
+.profile-actions a,
+.profile-actions button {
+  border-color: #a4834d;
+  border-radius: 0;
+  color: #4c351c;
+}
+
+.qr-wrap {
+  clear: both;
+  border-top: 1px solid #b99a67;
+}
+
+.source-note {
+  background: #f4e5c8;
+  border-left-color: #94703d;
+  color: #493720;
+}
+
+@media (max-width: 600px) {
+  .profile {
+    padding: 1rem;
+  }
+
+  .profile-photo {
+    float: none;
+    width: 100%;
+    max-width: 320px;
+    max-height: 420px;
+    margin: 1rem auto 1.25rem;
+  }
+
+  .profile .biography {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  .profile h2 {
+    font-size: 2rem;
+  }
+}
