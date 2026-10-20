@@ -186,3 +186,20 @@ html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--pape
 body {
   outline: 8px solid red !important;
 }
+
+/* Zaglavlje JKP Komunalne službe Požarevac */
+.site-header { background:#fff; color:#183e6b; border-bottom:4px solid #183e6b; padding:1rem max(1.2rem,calc((100% - 1180px)/2)); }
+.header-inner { gap:1.25rem; }
+.jkp-logo { flex:0 0 78px; height:78px; display:grid; place-items:center; border:4px solid #1c4d83; border-radius:50%; color:#1c4d83; font:800 1.35rem Arial,sans-serif; letter-spacing:-.05em; background:#f7fbff; }
+.brand-copy { flex:1 1 auto; }
+.site-header h1 { color:#173d68; font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:clamp(1.25rem,2.7vw,2.1rem); margin:0; }
+.header-contacts { flex:0 0 auto; font:700 .95rem/1.6 Arial,sans-serif; }
+.header-contacts p { color:#173d68; margin:.15rem 0; white-space:nowrap; }
+.header-contacts a { color:inherit; text-decoration:none; }
+.header-contacts a:hover { text-decoration:underline; }
+.site-header .script-toggle { color:#173d68; border-color:#173d68; }
+.site-header .script-toggle:hover { background:#eaf1f8; }
+.memorial-quote { text-align:center; padding:1.2rem 1rem 1.35rem; background:#f7f3e8; border-bottom:1px solid #d8c9a9; color:#44331d; font:italic 600 clamp(1rem,2vw,1.25rem)/1.55 Georgia,"Times New Roman",serif; }
+.memorial-quote p { margin:0; }
+@media (max-width:760px) { .header-inner { flex-wrap:wrap; align-items:center; } .jkp-logo { flex-basis:58px; height:58px; border-width:3px; } .brand-copy { flex:1 1 calc(100% - 90px); } .header-contacts { flex:1 1 auto; margin-left:4.4rem; } .site-header .script-toggle { margin-left:auto; } }
+@media (max-width:420px) { .header-contacts { margin-left:0; width:100%; } .header-contacts p { white-space:normal; } .site-header .script-toggle { margin-left:0; } }
