@@ -161,8 +161,7 @@
     "lon": 21.18067,
     "fotografija": "",
     "parcela": "2"
-  }
-]
+  },
 {
   "id": "miomir-mica-ilic",
   "ime": "Миомир Мића Илић",
@@ -178,7 +177,7 @@
   "lon": 21.180745,
   "izvori": "Biografske podatke dostavio korisnik; potrebno je proveriti prema dostupnim arhivskim i javnim izvorima.",
   "fotografija": ""
-}
+},
 
 {
   "id": "branko-ivosevic",
@@ -195,7 +194,7 @@
   "lon": 21.179986,
   "izvori": "Biografske podatke dostavio korisnik; pojedine istorijske navode potrebno je proveriti u arhivskoj građi.",
   "fotografija": ""
-}
+},
 
 {
   "id": "dr-nikola-hadzi-nikolic",
@@ -212,6 +211,6 @@
   "lon": 21.180724,
   "izvori": "Biografske podatke dostavio korisnik; pojedine istorijske navode, naročito anegdotu o kraljici Dragi Mašin, potrebno je proveriti u istorijskim izvorima.",
   "fotografija": ""
-}
+},
 ]
 
