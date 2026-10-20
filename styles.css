@@ -183,9 +183,6 @@ html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--pape
   background: #f7e9cc !important;
   border: 4px solid #94703d !important;
 }
-body {
-  outline: 8px solid red !important;
-}
 
 /* Zaglavlje JKP Komunalne službe Požarevac */
 .site-header { background:#fff; color:#183e6b; border-bottom:4px solid #183e6b; padding:1rem max(1.2rem,calc((100% - 1180px)/2)); }
@@ -203,3 +200,9 @@ body {
 .memorial-quote p { margin:0; }
 @media (max-width:760px) { .header-inner { flex-wrap:wrap; align-items:center; } .jkp-logo { flex-basis:58px; height:58px; border-width:3px; } .brand-copy { flex:1 1 calc(100% - 90px); } .header-contacts { flex:1 1 auto; margin-left:4.4rem; } .site-header .script-toggle { margin-left:auto; } }
 @media (max-width:420px) { .header-contacts { margin-left:0; width:100%; } .header-contacts p { white-space:normal; } .site-header .script-toggle { margin-left:0; } }
+
+
+/* Korekcija zaglavlja: bez dupliranog JKP i citat tacno na sredini */
+.jkp-logo { font-size: 2rem; }
+.memorial-quote { display: block; width: 100%; max-width: none; text-align: center !important; margin: 0 auto; }
+.memorial-quote p { display: block; width: 100%; text-align: center !important; margin: 0 auto; }
