@@ -126,6 +126,15 @@ fetch(DATA_URL).then(r => { if (!r.ok) throw new Error("HTTP " + r.status); retu
 $("search").addEventListener("input", e => renderList(e.target.value));
 $("clearSearch").addEventListener("click", () => { $("search").value = ""; $("categoryFilter").value = "all"; renderList(""); $("search").focus(); });
 $("categoryFilter").addEventListener("change", () => renderList($("search").value));
+function updateRouteLinks() {
+  const origin = $("routeOrigin").value;
+  const destination = "Staro groblje, Požarevac, Serbia";
+  const makeUrl = mode => "https://www.google.com/maps/dir/?api=1&origin=" + encodeURIComponent(origin) + "&destination=" + encodeURIComponent(destination) + "&travelmode=" + mode;
+  $("routeDriving").href = makeUrl("driving");
+  $("routeTransit").href = makeUrl("transit");
+}
+$("routeOrigin").addEventListener("change", updateRouteLinks);
+updateRouteLinks();
 $("backToCatalog").addEventListener("click", backToCatalog);
 $("scriptToggle").addEventListener("click", () => setScript(script === "sr" ? "lat" : "sr"));
 if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(console.warn));
