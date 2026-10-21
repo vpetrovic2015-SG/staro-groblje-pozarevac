@@ -16,9 +16,19 @@ function field(person, key) {
 }
 function esc(value = "") { return String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch])); }
 function validCoords(p) { return Number.isFinite(Number(p.lat)) && Number.isFinite(Number(p.lon)) && p.lat !== "" && p.lon !== ""; }
-function renderList(filter = "") {
+function renderList(filter = $("search").value) {
   const q = filter.trim().toLocaleLowerCase();
-  const filtered = people.filter(p => [p.ime, p.ime_lat, p.zanimanje, p.zanimanje_lat, p.biografija, p.biografija_lat, p.parcela, p.grobno_mesto].join(" ").toLocaleLowerCase().includes(q));
+  const category = $("categoryFilter") ? $("categoryFilter").value : "all";
+  const filtered = people.filter(p => {
+    const matchesText = [p.ime, p.ime_lat, p.zanimanje, p.zanimanje_lat, p.biografija, p.biografija_lat, p.parcela, p.grobno_mesto].join(" ").toLocaleLowerCase().includes(q);
+    const matchesCategory = category === "all" || (Array.isArray(p.kategorije) && p.kategorije.includes(category));
+    return matchesText && matchesCategory;
+  });
+  const categoryNames = {
+    sr: {all:"Све категорије", umetnici:"Уметници и књижевници", politicari:"Политичари и председници општине", dobrotvori:"Добротвори и задужбинари", oficiri:"Официри и војна лица", sportisti:"Спортисти", advokati:"Адвокати и правници", lekari:"Лекари и здравствени радници", prosvetni:"Просветни радници и научници", privrednici:"Привредници и трговци", svestenici:"Свештеници и верски делатници", ostali:"Остале знамените личности"},
+    lat: {all:"Sve kategorije", umetnici:"Umetnici i književnici", politicari:"Političari i predsednici opštine", dobrotvori:"Dobrotvori i zadužbinari", oficiri:"Oficiri i vojna lica", sportisti:"Sportisti", advokati:"Advokati i pravnici", lekari:"Lekari i zdravstveni radnici", prosvetni:"Prosvetni radnici i naučnici", privrednici:"Privrednici i trgovci", svestenici:"Sveštenici i verski delatnici", ostali:"Ostale znamenite ličnosti"}
+  };
+  const selectedName = (categoryNames[script] || categoryNames.sr)[category] || category;
   $("peopleList").innerHTML = filtered.map(p => `
     <article class="person-card">
       <div class="card-top"><span class="period">${esc(p.godine || "")}</span></div>
@@ -27,101 +37,43 @@ function renderList(filter = "") {
       <div class="place">${p.parcela ? `${esc(t("parcel"))} ${esc(p.parcela)}` : ""}${p.grobno_mesto ? ` · ${esc(t("grave"))} ${esc(p.grobno_mesto)}` : ""}</div>
       <button type="button" data-person="${esc(p.id)}">${esc(t("open"))}</button>
     </article>`).join("") || `<div class="empty-state">${esc(t("noResults"))}</div>`;
-  $("resultsCount").textContent = `${filtered.length} ${t("people")}`;
-  $("clearSearch").classList.toggle("hidden", !filter);
+  $("resultsCount").textContent = `${filtered.length} ${t("people")} · ${selectedName}`;
+  $("clearSearch").classList.toggle("hidden", !filter && category === "all");
   document.querySelectorAll("[data-person]").forEach(b => b.addEventListener("click", () => showProfile(b.dataset.person, true)));
 }
+
 function publicUrl(id) {
   const url = new URL(location.href);
   url.search = ""; url.hash = ""; url.searchParams.set("id", id);
   return url.href;
 }
-
 function showProfile(id, scroll = true) {
   const p = people.find(x => x.id === id);
   if (!p) return;
-
-  const photo = p.fotografija
-    ? `<img class="profile-photo"
-         src="${esc(p.fotografija)}"
-         alt="${esc(field(p, "ime"))}"
-         onerror="this.hidden=true">`
-    : "";
-
-  const gravePhoto = p.fotografija_groba
-    ? `<figure class="grave-photo-wrap">
-         <h3>${script === "sr" ? "Фотографија гроба" : "Fotografija groba"}</h3>
-         <img class="grave-photo"
-              src="${esc(p.fotografija_groba)}"
-              alt="${esc(script === "sr" ? "Гробно место личности" : "Grobno mesto ličnosti")}"
-              onerror="this.parentElement.hidden=true">
-       </figure>`
-    : "";
-
-  const coords = validCoords(p)
-    ? `${Number(p.lat).toFixed(6)}, ${Number(p.lon).toFixed(6)}`
-    : "";
-
-  const mapLink = validCoords(p)
-    ? `https://www.google.com/maps?q=${encodeURIComponent(p.lat + "," + p.lon)}`
-    : "";
-
+  const photo = p.fotografija ? `<img class="profile-photo" src="${esc(p.fotografija)}" alt="${esc(field(p,"ime"))}" onerror="this.hidden=true">` : "";
+  const coords = validCoords(p) ? `${Number(p.lat).toFixed(6)}, ${Number(p.lon).toFixed(6)}` : "";
+  const mapLink = validCoords(p) ? `https://www.google.com/maps?q=${encodeURIComponent(p.lat + "," + p.lon)}` : "";
   $("profile").classList.remove("hidden");
   $("catalogSection").classList.add("hidden");
-
   $("profileContent").innerHTML = `${photo}
     <p class="eyebrow dark">${esc(script === "sr" ? "БИОГРАФИЈА" : "BIOGRAFIJA")}</p>
-    <h2>${esc(field(p, "ime"))}</h2>
-    <p class="profession"><strong>${esc(field(p, "zanimanje"))}</strong>${p.godine ? ` · ${esc(p.godine)}` : ""}</p>
-    <p class="biography">${esc(field(p, "biografija") || t("noBio"))}</p>
-    ${gravePhoto}
-    <div class="profile-details">
-      ${p.parcela ? `<span class="detail-pill"><strong>${esc(t("parcel"))}:</strong> ${esc(p.parcela)}</span>` : ""}
-      ${p.grobno_mesto ? `<span class="detail-pill"><strong>${esc(t("grave"))}:</strong> ${esc(p.grobno_mesto)}</span>` : ""}
-      ${coords ? `<span class="detail-pill"><strong>GPS:</strong> ${esc(coords)}</span>` : ""}
-    </div>
-    <div class="profile-actions">
-      ${mapLink ? `<a href="${mapLink}" target="_blank" rel="noopener">${esc(t("google"))} ↗</a>` : ""}
-      <button id="copyProfileLink" type="button">${esc(t("direct"))}</button>
-    </div>
+    <h2>${esc(field(p,"ime"))}</h2>
+    <p class="profession"><strong>${esc(field(p,"zanimanje"))}</strong>${p.godine ? ` · ${esc(p.godine)}` : ""}</p>
+    <p class="biography">${esc(field(p,"biografija") || t("noBio"))}</p>
+    <div class="profile-details">${p.parcela ? `<span class="detail-pill"><strong>${esc(t("parcel"))}:</strong> ${esc(p.parcela)}</span>` : ""}${p.grobno_mesto ? `<span class="detail-pill"><strong>${esc(t("grave"))}:</strong> ${esc(p.grobno_mesto)}</span>` : ""}${coords ? `<span class="detail-pill"><strong>GPS:</strong> ${esc(coords)}</span>` : ""}</div>
+    <div class="profile-actions">${mapLink ? `<a href="${mapLink}" target="_blank" rel="noopener">${esc(t("google"))} ↗</a>` : ""}<button id="copyProfileLink" type="button">${esc(t("direct"))}</button></div>
     ${p.izvori ? `<div class="source-note"><strong>${esc(t("source"))}:</strong> ${esc(p.izvori)}</div>` : ""}
-    <div class="qr-wrap">
-      <h3>${esc(t("qr"))}</h3>
-      <p class="qr-warning">${esc(t("qrNote"))}</p>
-      <div id="qrcode"></div>
-      <p><a href="${esc(publicUrl(p.id))}" target="_blank" rel="noopener">${esc(publicUrl(p.id))}</a></p>
-    </div>`;
-
-  if (window.QRCode) {
-    new QRCode($("qrcode"), {
-      text: publicUrl(p.id),
-      width: 180,
-      height: 180,
-      correctLevel: QRCode.CorrectLevel.M
-    });
-  }
-
+    <div class="qr-wrap"><h3>${esc(t("qr"))}</h3><p class="qr-warning">${esc(t("qrNote"))}</p><div id="qrcode"></div><p><a href="${esc(publicUrl(p.id))}" target="_blank" rel="noopener">${esc(publicUrl(p.id))}</a></p></div>`;
+  if (window.QRCode) new QRCode($("qrcode"), {text: publicUrl(p.id), width: 180, height: 180, correctLevel: QRCode.CorrectLevel.M});
   $("copyProfileLink").addEventListener("click", async () => {
     const value = publicUrl(p.id);
-    try {
-      await navigator.clipboard.writeText(value);
-      $("copyProfileLink").textContent = t("copied");
-    } catch {
-      window.prompt(script === "sr" ? "Копирајте линк:" : "Kopirajte link:", value);
-    }
+    try { await navigator.clipboard.writeText(value); $("copyProfileLink").textContent = t("copied"); }
+    catch { window.prompt(script === "sr" ? "Копирајте линк:" : "Kopirajte link:", value); }
   });
-
   history.replaceState(null, "", `?id=${encodeURIComponent(p.id)}`);
-
-  if (scroll) {
-    $("profile").scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-
-  if (map && validCoords(p)) {
-    map.setView([Number(p.lat), Number(p.lon)], Math.max(map.getZoom(), 18));
-  }
+  if (scroll) $("profile").scrollIntoView({behavior:"smooth", block:"start"});
+  if (map && validCoords(p)) map.setView([Number(p.lat), Number(p.lon)], Math.max(map.getZoom(), 18));
 }
-
 function backToCatalog() {
   $("profile").classList.add("hidden"); $("catalogSection").classList.remove("hidden");
   history.replaceState(null, "", location.pathname + location.hash);
@@ -172,7 +124,8 @@ fetch(DATA_URL).then(r => { if (!r.ok) throw new Error("HTTP " + r.status); retu
   console.error(err);
 });
 $("search").addEventListener("input", e => renderList(e.target.value));
-$("clearSearch").addEventListener("click", () => { $("search").value = ""; renderList(); $("search").focus(); });
+$("clearSearch").addEventListener("click", () => { $("search").value = ""; $("categoryFilter").value = "all"; renderList(""); $("search").focus(); });
+$("categoryFilter").addEventListener("change", () => renderList($("search").value));
 $("backToCatalog").addEventListener("click", backToCatalog);
 $("scriptToggle").addEventListener("click", () => setScript(script === "sr" ? "lat" : "sr"));
 if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(console.warn));
