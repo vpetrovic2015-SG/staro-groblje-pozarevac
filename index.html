@@ -1,88 +1,155 @@
 <!doctype html>
-<html lang="sr">
+<html lang="sr-Cyrl">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#26372f"><meta name="description" content="Besplatan digitalni istorijski vodič kroz znamenite ličnosti sahranjene na Starom groblju u Požarevcu.">
-  <link rel="manifest" href="manifest.json"><link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <title>Staro groblje Požarevac | Digitalni vodič</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171716">
+  <title>Старо гробље — Пожаревац</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="site-header"><div class="header-inner">
-  <div class="brand-mark" aria-hidden="true">✦</div><div class="brand-copy">
-    <p class="eyebrow" data-sr="DIGITALNA RIZNICA SEĆANJA" data-lat="DIGITALNA RIZNICA SEĆANJA">DIGITALNA RIZNICA SEĆANJA</p>
-    <h1 data-sr="Старо гробље Пожаревац" data-lat="Staro groblje Požarevac">Старо гробље Пожаревац</h1>
-    <p data-sr="Приче о људима који су обликовали историју града" data-lat="Priče o ljudima koji su oblikovali istoriju grada">Приче о људима који су обликовали историју града</p>
-  </div><button id="scriptToggle" class="script-toggle" type="button" aria-label="Promeni pismo">Latinica</button>
-</div></header>
-<main>
-  <section class="hero"><div class="hero-copy"><p class="eyebrow dark" data-sr="КУЛТУРНО-ИСТОРИЈСКИ ВОДИЧ" data-lat="KULTURNO-ISTORIJSKI VODIČ">КУЛТУРНО-ИСТОРИЈСКИ ВОДИЧ</p>
-    <h2 data-sr="Свако име чува једну причу." data-lat="Svako ime čuva jednu priču.">Свако име чува једну причу.</h2>
-    <p data-sr="Истражите биографије, пронађите гробна места на мапи и упознајте људе који су оставили траг у животу Пожаревца." data-lat="Istražite biografije, pronađite grobna mesta na mapi i upoznajte ljude koji su ostavili trag u životu Požarevca.">Истражите биографије, пронађите гробна места на мапи и упознајте људе који су оставили траг у животу Пожаревца.</p>
-    <a class="primary-link" href="#catalogSection" data-sr="Истражи каталог ↓" data-lat="Istraži katalog ↓">Истражи каталог ↓</a>
-  </div><div class="hero-stats"><div><strong id="peopleCount">31</strong><span data-sr="личности у каталогу" data-lat="ličnosti u katalogu">личности у каталогу</span></div><div><strong id="mappedCount">0</strong><span data-sr="локација на мапи" data-lat="lokacija na mapi">локација на мапи</span></div><p data-sr="Пројекат се постепено допуњује новим биографијама и фотографијама." data-lat="Projekat se postepeno dopunjuje novim biografijama i fotografijama.">Пројекат се постепено допуњује новим биографијама и фотографијама.</p></div></section>
-
-  <section class="intro-section" aria-labelledby="introTitle">
-    <div class="intro-card">
-      <p class="eyebrow dark" data-sr="УВОДНА РЕЧ" data-lat="UVODNA REČ">УВОДНА РЕЧ</p>
-      <h2 id="introTitle" class="intro-title" data-sr="Старо гробље у Пожаревцу — чувар пожаревачке историје" data-lat="Staro groblje u Požarevcu — čuvar požarevačke istorije">Старо гробље у Пожаревцу — чувар пожаревачке историје</h2>
-      <div class="intro-main">
-        <p data-sr="На узвишењу тишине, где време не протиче већ се таложи, налази се Старо гробље у Пожаревцу – простор који већ више од једног и по века чува трагове живота, моћи, задужбинарства и уметности једног града. Настало приближно шездесетих година XIX века, у времену када се Пожаревац обликовао као важан управни и културни центар, ово гробље није само место починка, већ и својеврсна хроника уклесана у камен." data-lat="Na uzvišenju tišine, gde vreme ne protiče već se taloži, nalazi se Staro groblje u Požarevcu – prostor koji već više od jednog i po veka čuva tragove života, moći, zadužbinarstva i umetnosti jednog grada. Nastalo približno šezdesetih godina XIX veka, u vremenu kada se Požarevac oblikovao kao važan upravni i kulturni centar, ovo groblje nije samo mesto počinka, već i svojevrsna hronika uklesana u kamen.">На узвишењу тишине, где време не протиче већ се таложи, налази се Старо гробље у Пожаревцу – простор који већ више од једног и по века чува трагове живота, моћи, задужбинарства и уметности једног града. Настало приближно шездесетих година XIX века, у времену када се Пожаревац обликовао као важан управни и културни центар, ово гробље није само место починка, већ и својеврсна хроника уклесана у камен.</p>
-        <p data-sr="Оно што овом простору даје посебну вредност јесте његова слојевитост: овде историја није линеарна, већ расута по стазама, у именима, симболима и архитектури надгробних обележја. Сваки гроб представља затворену причу, али заједно они чине једну велику, заједничку – причу о граду и његовим људима." data-lat="Ono što ovom prostoru daje posebnu vrednost jeste njegova slojevitost: ovde istorija nije linearna, već rasuta po stazama, u imenima, simbolima i arhitekturi nadgrobnih obeležja. Svaki grob predstavlja zatvorenu priču, ali zajedno oni čine jednu veliku, zajedničku – priču o gradu i njegovim ljudima.">Оно што овом простору даје посебну вредност јесте његова слојевитост: овде историја није линеарна, већ расута по стазама, у именима, симболима и архитектури надгробних обележја. Сваки гроб представља затворену причу, али заједно они чине једну велику, заједничку – причу о граду и његовим људима.</p>
-        <p data-sr="Зато истраживање познатих личности сахрањених на Старом гробљу није само биографски подухват, већ покушај да се разуме дух једног времена. То је повратак коренима, али и подсећање да трајање једног града не почива само на живима, већ и на онима који су га градили и оставили иза себе траг вредан памћења. Као једно од најстаријих организованих гробаља у овом делу Србије, оно не представља искључиво простор сахрањивања, већ и важан извор за проучавање друштвене структуре, културних образаца и историјских токова који су обликовали Пожаревац и његову околину." data-lat="Zato istraživanje poznatih ličnosti sahranjenih na Starom groblju nije samo biografski poduhvat, već pokušaj da se razume duh jednog vremena. To je povratak korenima, ali i podsećanje da trajanje jednog grada ne počiva samo na živima, već i na onima koji su ga gradili i ostavili iza sebe trag vredan pamćenja. Kao jedno od najstarijih organizovanih grobalja u ovom delu Srbije, ono ne predstavlja isključivo prostor sahranjivanja, već i važan izvor za proučavanje društvene strukture, kulturnih obrazaca i istorijskih tokova koji su oblikovali Požarevac i njegovu okolinu.">Зато истраживање познатих личности сахрањених на Старом гробљу није само биографски подухват, већ покушај да се разуме дух једног времена. То је повратак коренима, али и подсећање да трајање једног града не почива само на живима, већ и на онима који су га градили и оставили иза себе траг вредан памћења. Као једно од најстаријих организованих гробаља у овом делу Србије, оно не представља искључиво простор сахрањивања, већ и важан извор за проучавање друштвене структуре, културних образаца и историјских токова који су обликовали Пожаревац и његову околину.</p>
+  <div class="site-bg" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#pocetna" aria-label="Старо гробље — почетна">
+      <span class="brand-mark">✦</span>
+      <span class="brand-copy"><strong>СТАРО ГРОБЉЕ</strong><small>ПОЖАРЕВАЦ</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Главна навигација">
+      <a class="nav-link active" href="#licnosti">Личности</a>
+      <a class="nav-link" href="#mapa">Мапа</a>
+      <a class="nav-link" href="#o-groblju">О гробљу</a>
+      <a class="nav-link" href="#3d-prikaz">3D приказ</a>
+      <a class="nav-link" href="#kontakt">Контакт</a>
+    </nav>
+    <div class="header-tools">
+      <div class="language-switch" aria-label="Избор писма">
+        <button class="lang active" type="button" data-lang="cir">ЋИР</button>
+        <button class="lang" type="button" data-lang="lat">LAT</button>
       </div>
-      <details>
-        <summary data-sr="Прочитај целу уводну реч" data-lat="Pročitaj celu uvodnu reč">Прочитај целу уводну реч</summary>
-        <div class="intro-full">
-          <p data-sr="Простирући се на површини од приближно 13 хектара, са око 9.500 гробних места, гробље сведочи о континуитету живота и смрти кроз више од једног века. Његов значај додатно је наглашен чињеницом да су на њему сахрањени бројни истакнути појединци који су обележили политички, друштвени и културни живот града, међу којима се издваја око тридесет председника општине и градоначелника. Поред њих, овде почивају и добротвори и задужбинари, чувени лекари и апотекари, као и уметници – глумци, певачи и други ствараоци чији је рад оставио трајан траг у локалној и широј заједници." data-lat="Prostirući se na površini od približno 13 hektara, sa oko 9.500 grobnih mesta, groblje svedoči o kontinuitetu života i smrti kroz više od jednog veka. Njegov značaj dodatno je naglašen činjenicom da su na njemu sahranjeni brojni istaknuti pojedinci koji su obeležili politički, društveni i kulturni život grada, među kojima se izdvaja oko trideset predsednika opštine i gradonačelnika. Pored njih, ovde počivaju i dobrotvori i zadužbinari, čuveni lekari i apotekari, kao i umetnici – glumci, pevači i drugi stvaraoci čiji je rad ostavio trajan trag u lokalnoj i široj zajednici.">Простирући се на површини од приближно 13 хектара, са око 9.500 гробних места, гробље сведочи о континуитету живота и смрти кроз више од једног века. Његов значај додатно је наглашен чињеницом да су на њему сахрањени бројни истакнути појединци који су обележили политички, друштвени и културни живот града, међу којима се издваја око тридесет председника општине и градоначелника. Поред њих, овде почивају и добротвори и задужбинари, чувени лекари и апотекари, као и уметници – глумци, певачи и други ствараоци чији је рад оставио трајан траг у локалној и широј заједници.</p>
-          <p data-sr="Посебну димензију овом простору даје и присуство војних личности, које сведоче о улози Пожаревца у националним и историјским оквирима. На Старом гробљу сахрањена су и четири генерала, као и значајан број високих официра – пуковника, потпуковника и других припадника војног врха, чиме гробље добија и карактер места сећања на војну традицију и државну службу." data-lat="Posebnu dimenziju ovom prostoru daje i prisustvo vojnih ličnosti, koje svedoče o ulozi Požarevca u nacionalnim i istorijskim okvirima. Na Starom groblju sahranjena su i četiri generala, kao i značajan broj visokih oficira – pukovnika, potpukovnika i drugih pripadnika vojnog vrha, čime groblje dobija i karakter mesta sećanja na vojnu tradiciju i državnu službu.">Посебну димензију овом простору даје и присуство војних личности, које сведоче о улози Пожаревца у националним и историјским оквирима. На Старом гробљу сахрањена су и четири генерала, као и значајан број високих официра – пуковника, потпуковника и других припадника војног врха, чиме гробље добија и карактер места сећања на војну традицију и државну службу.</p>
-          <p data-sr="У том смислу, Старо гробље може се посматрати као специфичан историјски архив на отвореном, у коме надгробни споменици, епитафи и симболика представљају релевантан материјал за интердисциплинарна истраживања, нарочито у областима историје, културне антропологије и историје уметности. Анализа личности сахрањених на овом простору омогућава реконструкцију друштвених мрежа, хијерархија и вредносних система који су били карактеристични за одређене историјске периоде." data-lat="U tom smislu, Staro groblje može se posmatrati kao specifičan istorijski arhiv na otvorenom, u kome nadgrobni spomenici, epitafi i simbolika predstavljaju relevantan materijal za interdisciplinarna istraživanja, naročito u oblastima istorije, kulturne antropologije i istorije umetnosti. Analiza ličnosti sahranjenih na ovom prostoru omogućava rekonstrukciju društvenih mreža, hijerarhija i vrednosnih sistema koji su bili karakteristični za određene istorijske periode.">У том смислу, Старо гробље може се посматрати као специфичан историјски архив на отвореном, у коме надгробни споменици, епитафи и симболика представљају релевантан материјал за интердисциплинарна истраживања, нарочито у областима историје, културне антропологије и историје уметности. Анализа личности сахрањених на овом простору омогућава реконструкцију друштвених мрежа, хијерархија и вредносних система који су били карактеристични за одређене историјске периоде.</p>
-          <p data-sr="Предмет овог рада јесте сагледавање и интерпретација живота и доприноса истакнутих појединаца сахрањених на Старом гробљу у Пожаревцу, са циљем да се укаже на њихов значај у ширем друштвеном и културном контексту. На тај начин, гробље се не посматра само као место сећања, већ и као релевантан извор за разумевање идентитета града и његовог историјског континуитета." data-lat="Predmet ovog rada jeste sagledavanje i interpretacija života i doprinosa istaknutih pojedinaca sahranjenih na Starom groblju u Požarevcu, sa ciljem da se ukaže na njihov značaj u širem društvenom i kulturnom kontekstu. Na taj način, groblje se ne posmatra samo kao mesto sećanja, već i kao relevantan izvor za razumevanje identiteta grada i njegovog istorijskog kontinuiteta.">Предмет овог рада јесте сагледавање и интерпретација живота и доприноса истакнутих појединаца сахрањених на Старом гробљу у Пожаревцу, са циљем да се укаже на њихов значај у ширем друштвеном и културном контексту. На тај начин, гробље се не посматра само као место сећања, већ и као релевантан извор за разумевање идентитета града и његовог историјског континуитета.</p>
-          <p class="intro-signature" data-sr="мр Владимир Петровић" data-lat="mr Vladimir Petrović">мр Владимир Петровић</p>
-        </div>
-      </details>
-    </div>
-  </section>
-
-  <section id="profile" class="profile hidden" aria-live="polite"><button id="backToCatalog" class="text-button" type="button" data-sr="← Назад на каталог" data-lat="← Nazad na katalog">← Назад на каталог</button><div id="profileContent"></div></section>
-
-  <section id="catalogSection" class="catalog-section"><div class="section-heading"><div><p class="eyebrow dark" data-sr="ИСТРАЖИТЕ" data-lat="ISTRAŽITE">ИСТРАЖИТЕ</p><h2 data-sr="Каталог личности" data-lat="Katalog ličnosti">Каталог личности</h2><p data-sr="Претражите имена, занимања и биографије." data-lat="Pretražite imena, zanimanja i biografije.">Претражите имена, занимања и биографије.</p></div><div class="catalog-filters">
-      <label class="filter-wrap"><span data-sr="Категорија" data-lat="Kategorija">Категорија</span><select id="categoryFilter" aria-label="Категорија личности">
-        <option value="all" data-sr="Све категорије" data-lat="Sve kategorije">Све категорије</option>
-        <option value="umetnici" data-sr="Уметници и књижевници" data-lat="Umetnici i književnici">Уметници и књижевници</option>
-        <option value="politicari" data-sr="Политичари и председници општине" data-lat="Političari i predsednici opštine">Политичари и председници општине</option>
-        <option value="dobrotvori" data-sr="Добротвори и задужбинари" data-lat="Dobrotvori i zadužbinari">Добротвори и задужбинари</option>
-        <option value="oficiri" data-sr="Официри и војна лица" data-lat="Oficiri i vojna lica">Официри и војна лица</option>
-        <option value="sportisti" data-sr="Спортисти" data-lat="Sportisti">Спортисти</option>
-        <option value="advokati" data-sr="Адвокати и правници" data-lat="Advokati i pravnici">Адвокати и правници</option>
-        <option value="lekari" data-sr="Лекари и здравствени радници" data-lat="Lekari i zdravstveni radnici">Лекари и здравствени радници</option>
-        <option value="prosvetni" data-sr="Просветни радници и научници" data-lat="Prosvetni radnici i naučnici">Просветни радници и научници</option>
-        <option value="privrednici" data-sr="Привредници и трговци" data-lat="Privrednici i trgovci">Привредници и трговци</option>
-        <option value="svestenici" data-sr="Свештеници и верски делатници" data-lat="Sveštenici i verski delatnici">Свештеници и верски делатници</option>
-        <option value="ostali" data-sr="Остале знамените личности" data-lat="Ostale znamenite ličnosti">Остале знамените личности</option>
-      </select></label>
-      <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Претрага имена или занимања…" aria-label="Претрага личности"></label>
-    </div></div>
-    <div class="catalog-tools"><span id="resultsCount" aria-live="polite">31 личности</span><button id="clearSearch" class="text-button subtle hidden" type="button" data-sr="Обриши претрагу" data-lat="Obriši pretragu">Обриши претрагу</button></div><div id="peopleList" class="people-grid"></div>
-  </section>
-
-  <section class="map-section"><div class="section-heading"><div><p class="eyebrow dark" data-sr="ОРИЈЕНТАЦИЈА НА ТЕРЕНУ" data-lat="ORIJENTACIJA NA TERENU">ОРИЈЕНТАЦИЈА НА ТЕРЕНУ</p><h2 data-sr="Мапа гробља" data-lat="Mapa groblja">Мапа гробља</h2><p data-sr="Изаберите маркер да бисте отворили биографију." data-lat="Izaberite marker da biste otvorili biografiju.">Изаберите маркер да бисте отворили биографију.</p></div></div>
-    <div class="route-planner">
-      <div class="route-planner-heading"><h3 data-sr="Како стићи до Старог гробља?" data-lat="Kako stići do Starog groblja?">Како стићи до Старог гробља?</h3><p data-sr="Изаберите полазну локацију, па отворите руту за аутомобил или јавни превоз." data-lat="Izaberite polaznu lokaciju, pa otvorite rutu za automobil ili javni prevoz.">Изаберите полазну локацију, па отворите руту за аутомобил или јавни превоз.</p></div>
-      <label class="route-origin-label" for="routeOrigin"><span data-sr="Полазна локација" data-lat="Polazna lokacija">Полазна локација</span>
-        <select id="routeOrigin">
-          <option value="Belgrade Nikola Tesla Airport, Serbia" data-sr="Аеродром Никола Тесла — Београд" data-lat="Aerodrom Nikola Tesla — Beograd">Аеродром Никола Тесла — Београд</option>
-          <option value="Belgrade Bus Station BAS, Novi Beograd, Serbia" data-sr="Главна аутобуска станица — Београд (БАС)" data-lat="Glavna autobuska stanica — Beograd (BAS)">Главна аутобуска станица — Београд (БАС)</option>
-          <option value="Nis Constantine the Great Airport, Serbia" data-sr="Аеродром Константин Велики — Ниш" data-lat="Aerodrom Konstantin Veliki — Niš">Аеродром Константин Велики — Ниш</option>
-          <option value="Novi Sad Bus Station, Serbia" data-sr="Аутобуска станица — Нови Сад" data-lat="Autobuska stanica — Novi Sad">Аутобуска станица — Нови Сад</option>
-        </select>
+      <label class="global-search">
+        <span class="sr-only">Претрага</span>
+        <input type="search" placeholder="Претрага..." />
+        <span class="search-icon">⌕</span>
       </label>
-      <div class="route-actions"><a id="routeDriving" class="route-button" href="https://www.google.com/maps/dir/?api=1&origin=Belgrade%20Nikola%20Tesla%20Airport%2C%20Serbia&destination=Staro%20groblje%2C%20Po%C5%BEarevac%2C%20Serbia&travelmode=driving" target="_blank" rel="noopener" data-sr="🚗 Рута аутомобилом ↗" data-lat="🚗 Ruta automobilom ↗">🚗 Рута аутомобилом ↗</a><a id="routeTransit" class="route-button secondary" href="https://www.google.com/maps/dir/?api=1&origin=Belgrade%20Nikola%20Tesla%20Airport%2C%20Serbia&destination=Staro%20groblje%2C%20Po%C5%BEarevac%2C%20Serbia&travelmode=transit" target="_blank" rel="noopener" data-sr="🚌 Јавни превоз / аутобус ↗" data-lat="🚌 Javni prevoz / autobus ↗">🚌 Јавни превоз / аутобус ↗</a></div>
-      <p class="route-note" data-sr="Руте се отварају у Google мапама. Време вожње и јавни превоз зависе од датума и услова на путу; поласке међуградских аутобуса проверите пре пута код превозника." data-lat="Rute se otvaraju u Google mapama. Vreme vožnje i javni prevoz zavise od datuma i uslova na putu; polaske međugradskih autobusa proverite pre puta kod prevoznika.">Руте се отварају у Google мапама. Време вожње и јавни превоз зависе од датума и услова на путу; поласке међуградских аутобуса проверите пре пута код превозника.</p>
+      <button class="mobile-menu" type="button" aria-label="Отвори мени">☰</button>
     </div>
-    <div id="map" role="application" aria-label="Интерактивна мапа Старог гробља"></div><p class="map-note" data-sr="Координате су унете на основу достављених података и треба их проверити на терену. Подлога: © OpenStreetMap contributors." data-lat="Koordinate su unete na osnovu dostavljenih podataka i treba ih proveriti na terenu. Podloga: © OpenStreetMap contributors.">Координате су унете на основу достављених података и треба их проверити на терену. Подлога: © OpenStreetMap contributors.</p></section>
-  <section class="about"><div><p class="eyebrow dark" data-sr="О ПРОЈЕКТУ" data-lat="O PROJEKTU">О ПРОЈЕКТУ</p><h2 data-sr="Сећање доступно свима." data-lat="Sećanje dostupno svima.">Сећање доступно свима.</h2></div><p data-sr="Овај дигитални водич замишљен је као бесплатна јавна ризница локалне историје. База је отворена за постепено допуњавање биографијама, фотографијама и провереним изворима." data-lat="Ovaj digitalni vodič zamišljen je kao besplatna javna riznica lokalne istorije. Baza je otvorena za postepeno dopunjavanje biografijama, fotografijama i proverenim izvorima.">Овај дигитални водич замишљен је као бесплатна јавна ризница локалне историје. База је отворена за постепено допуњавање биографијама, фотографијама и провереним изворима.</p></section>
-</main>
-<footer><div><strong data-sr="Старо гробље Пожаревац" data-lat="Staro groblje Požarevac">Старо гробље Пожаревац</strong><p data-sr="Бесплатан дигитални историјски водич · Радна верзија" data-lat="Besplatan digitalni istorijski vodič · Radna verzija">Бесплатан дигитални историјски водич · Радна верзија</p></div><p data-sr="Пре јавног објављивања проверити биографије, изворе, фотографије и координате." data-lat="Pre javnog objavljivanja proveriti biografije, izvore, fotografije i koordinate.">Пре јавног објављивања проверити биографије, изворе, фотографије и координате.</p></footer>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script src="app.js"></script>
-</body></html>
+  </header>
+
+  <main class="workspace" id="pocetna">
+    <aside class="people-panel panel" id="licnosti">
+      <div class="panel-heading">
+        <span class="eyebrow">ИСТОРИЈА И СЕЋАЊЕ</span>
+        <h2>Знамените личности</h2>
+      </div>
+      <label class="people-search">
+        <span>⌕</span><input type="search" placeholder="Претрага личности..." />
+      </label>
+      <div class="filter-row">
+        <button class="filter-chip selected" type="button">Све личности</button>
+        <button class="filter-chip" type="button">Категорије⌄</button>
+      </div>
+      <div class="people-list">
+        <button class="person-card selected" type="button">
+          <span class="portrait placeholder-portrait">ФОТО</span>
+          <span class="person-info"><strong>Изаберите личност</strong><small>Година рођења — година смрти</small><em>Кратак опис занимања</em></span>
+          <span class="chevron">›</span>
+        </button>
+        <button class="person-card" type="button">
+          <span class="portrait placeholder-portrait">ФОТО</span>
+          <span class="person-info"><strong>Личност 2</strong><small>Година рођења — година смрти</small><em>Кратак опис занимања</em></span>
+          <span class="chevron">›</span>
+        </button>
+        <button class="person-card" type="button">
+          <span class="portrait placeholder-portrait">ФОТО</span>
+          <span class="person-info"><strong>Личност 3</strong><small>Година рођења — година смрти</small><em>Кратак опис занимања</em></span>
+          <span class="chevron">›</span>
+        </button>
+        <button class="person-card" type="button">
+          <span class="portrait placeholder-portrait">ФОТО</span>
+          <span class="person-info"><strong>Личност 4</strong><small>Година рођења — година смрти</small><em>Кратак опис занимања</em></span>
+          <span class="chevron">›</span>
+        </button>
+        <div class="list-placeholder">Овде ће бити учитан комплетан каталог личности из базе података.</div>
+      </div>
+      <div class="panel-foot"><span class="status-dot"></span> ДИГИТАЛНИ КАТАЛОГ СТАРОГ ГРОБЉА</div>
+    </aside>
+
+    <section class="profile-panel panel" aria-label="Подаци о изабраној личности">
+      <div class="profile-head">
+        <div>
+          <span class="eyebrow">ДИГИТАЛНИ ЛЕГАТ</span>
+          <h1>Име и презиме личности</h1>
+          <p class="lifespan">Година рођења — година смрти</p>
+          <p class="subtitle">Звање, занимање или кратак опис личности</p>
+        </div>
+        <button class="download-button" type="button"><span class="download-icon">⇩</span><span>Преузми биографију<small>PDF документ</small></span></button>
+      </div>
+      <div class="profile-tabs" role="tablist" aria-label="Детаљи о личности">
+        <button class="tab active" type="button">Биографија</button>
+        <button class="tab" type="button">Фотографије</button>
+        <button class="tab" type="button">Гробно место</button>
+        <button class="tab" type="button">3D приказ</button>
+        <button class="tab" type="button">QR код</button>
+      </div>
+      <div class="profile-content">
+        <section class="bio-card inner-card">
+          <div class="section-title"><span class="section-symbol">❧</span><div><h2>Живот и дело</h2><p>Биографија и историјски значај</p></div></div>
+          <div class="bio-placeholder">
+            <p>На овом месту биће приказана проверена биографија из базе података, са очуваним историјским подацима и изворима.</p>
+            <p>Распоред текста, наслова, година и фотографија биће уједначен за све личности, без губитка постојећих података.</p>
+          </div>
+          <div class="metadata-grid">
+            <div><span>ЗАНИМАЊЕ</span><strong>Податак из базе</strong></div>
+            <div><span>ПАРЦЕЛА</span><strong>—</strong></div>
+            <div><span>ГРОБНО МЕСТО</span><strong>—</strong></div>
+          </div>
+        </section>
+        <section class="model-card" id="3d-prikaz">
+          <div class="model-topline"><div><span class="eyebrow">ДИГИТАЛНА РЕКОНСТРУКЦИЈА</span><h2>Приказ гробног места</h2></div><span class="model-badge">3D / 360°</span></div>
+          <div class="model-stage">
+            <div class="stage-glow"></div>
+            <div class="stone-illustration"><div class="stone-cross">✝</div><div class="stone-lines"></div><div class="stone-caption">МОДЕЛ ГРОБНОГ МЕСТА</div></div>
+            <div class="stage-note"><span class="cube-icon">◇</span><strong>3D модел није повезан</strong><small>Овде ће бити уграђен стварни GLB/GLTF модел.</small></div>
+            <div class="stage-controls"><button type="button" aria-label="Ротирај">⟳</button><button type="button" aria-label="Увећај">＋</button><button type="button" aria-label="Умањи">−</button><button type="button" aria-label="Пун екран">⛶</button></div>
+          </div>
+          <div class="model-caption"><span>Приказ модела</span><span>Место за контроле и галерију углова</span></div>
+        </section>
+      </div>
+    </section>
+
+    <aside class="right-panel">
+      <section class="map-card panel" id="mapa">
+        <div class="card-heading"><div><span class="eyebrow">ОРИЈЕНТАЦИЈА</span><h2>Мапа гробља</h2></div><button class="icon-button" type="button" aria-label="Прикажи мапу преко целог екрана">⛶</button></div>
+        <div class="map-placeholder">
+          <div class="map-grid"></div><div class="map-road road-one"></div><div class="map-road road-two"></div>
+          <div class="map-pin">●<span></span></div>
+          <div class="map-label"><strong>Гробно место</strong><small>Парцелa — · место —</small></div>
+          <div class="map-zoom"><button type="button">＋</button><button type="button">−</button></div>
+          <div class="map-watermark">ПРИКАЗ МАПЕ</div>
+        </div>
+        <div class="map-meta"><span class="pin-mini">●</span><span>Локација ће бити повезана са подацима личности.</span></div>
+      </section>
+      <section class="gallery-card panel">
+        <div class="card-heading"><div><span class="eyebrow">ФОТО-ДОКУМЕНТАЦИЈА</span><h2>Фотографије гробног места</h2></div><button class="text-button" type="button">Све фотографије ↗</button></div>
+        <div class="gallery-main placeholder-photo"><span>ФОТОГРАФИЈА ГРОБА</span><small>Главна фотографија</small></div>
+        <div class="gallery-thumbs">
+          <div class="thumb placeholder-photo">01</div><div class="thumb placeholder-photo">02</div><div class="thumb placeholder-photo">03</div><div class="thumb placeholder-photo">04</div>
+        </div>
+      </section>
+      <section class="qr-card panel">
+        <div class="qr-emblem">▦</div><div><h2>QR код за посету</h2><p>Брз приступ биографији са телефона.</p></div><button class="icon-button" type="button" aria-label="Отвори QR код">↗</button>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="feature-footer" id="o-groblju">
+    <div class="feature"><span class="feature-icon">◇</span><div><strong>3D приказ гробних места</strong><small>Простор за реалистичне моделе</small></div></div>
+    <div class="feature"><span class="feature-icon">360°</span><div><strong>Преглед из свих углова</strong><small>Ротација и приближавање</small></div></div>
+    <div class="feature"><span class="feature-icon">⌖</span><div><strong>Повезано са мапом</strong><small>Јасна локација у гробљу</small></div></div>
+    <div class="feature"><span class="feature-icon">▧</span><div><strong>Фотографије и подаци</strong><small>Портрет, споменик и биографија</small></div></div>
+    <div class="feature"><span class="feature-icon">▦</span><div><strong>QR код за посету</strong><small>Приступ са телефона</small></div></div>
+  </footer>
+  <footer class="bottom-footer" id="kontakt"><span>СТАРО ГРОБЉЕ · ПОЖАРЕВАЦ</span><span>ДИГИТАЛНИ КАТАЛОГ КУЛТУРНО-ИСТОРИЈСКОГ НАСЛЕЂА</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
