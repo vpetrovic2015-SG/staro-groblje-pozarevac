@@ -13,7 +13,10 @@
     "lat": 44.63042,
     "lon": 21.178519,
     "fotografija": "",
-    "parcela": "7"
+    "parcela": "7",
+    "kategorije": [
+      "umetnici"
+    ]
   },
   {
     "id": "stojan-stojancic-pavlovic",
@@ -29,7 +32,11 @@
     "lat": 44.629968,
     "lon": 21.178491,
     "izvori": "Tekst dostavio korisnik; istorijske navode i datume proveriti prema pouzdanim izvorima.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "politicari",
+      "privrednici"
+    ]
   },
   {
     "id": "dimitrije-mita-sapinac",
@@ -45,7 +52,10 @@
     "lat": 44.629752,
     "lon": 21.179434,
     "izvori": "Tekst dostavio korisnik; navode o drugim članovima porodice i vojnoj karijeri proveriti u istorijskim izvorima.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "privrednici"
+    ]
   },
   {
     "id": "ignjat-todorovic",
@@ -62,7 +72,11 @@
     "lon": 21.180238,
     "izvori": "Текст доставио корисник; историјске податке проверити према поузданим изворима.",
     "fotografija": "assets/licnosti/ignjat-todorovic.jpg",
-    "fotografija_groba": "assets/grobna-mesta/ignjat-todorovic-grob.jpg"
+    "fotografija_groba": "assets/grobna-mesta/ignjat-todorovic-grob.jpg",
+    "kategorije": [
+      "politicari",
+      "privrednici"
+    ]
   },
   {
     "id": "sava-a-jovanovic",
@@ -78,7 +92,11 @@
     "lat": 44.629514,
     "lon": 21.180801,
     "izvori": "Текст доставио корисник; историјске наводе проверити према поузданим изворима.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "politicari",
+      "privrednici"
+    ]
   },
   {
     "id": "vasa-pelagic",
@@ -95,7 +113,11 @@
     "lon": 21.177321,
     "izvori": "Текст доставио корисник; датум и место рођења, школовање и податке о сахрани проверити у поузданим изворима.",
     "fotografija": "",
-    "napomena": "У достављеном тексту појављују се различите године рођења (1833. и 1838); проверити меродаван биографски извор пре јавног објављивања."
+    "napomena": "У достављеном тексту појављују се различите године рођења (1833. и 1838); проверити меродаван биографски извор пре јавног објављивања.",
+    "kategorije": [
+      "umetnici",
+      "prosvetni"
+    ]
   },
   {
     "id": "josif-a-cecelski",
@@ -112,7 +134,11 @@
     "lon": 21.180127,
     "izvori": "Текст доставио корисник; историјске наводе, укључујући оснивање штедионице и локацију млина, проверити у поузданим изворима.",
     "fotografija": "",
-    "napomena": "Биографија је језички уређена на основу достављеног текста; проверити све историјске податке пре јавног објављивања."
+    "napomena": "Биографија је језички уређена на основу достављеног текста; проверити све историјске податке пре јавног објављивања.",
+    "kategorije": [
+      "dobrotvori",
+      "privrednici"
+    ]
   },
   {
     "id": "dusan-vujicic",
@@ -128,7 +154,10 @@
     "lat": 44.631031,
     "lon": 21.179588,
     "fotografija": "",
-    "parcela": "5"
+    "parcela": "5",
+    "kategorije": [
+      "politicari"
+    ]
   },
   {
     "id": "jovan-jovanovic-joska-bankarce",
@@ -144,7 +173,11 @@
     "lat": 44.62988,
     "lon": 21.178861,
     "fotografija": "",
-    "parcela": "6"
+    "parcela": "6",
+    "kategorije": [
+      "politicari",
+      "privrednici"
+    ]
   },
   {
     "id": "mihailo-dusmanic",
@@ -160,7 +193,12 @@
     "lat": 44.629546,
     "lon": 21.18067,
     "fotografija": "",
-    "parcela": "2"
+    "parcela": "2",
+    "kategorije": [
+      "politicari",
+      "lekari",
+      "privrednici"
+    ]
   },
   {
     "id": "miomir-mica-ilic",
@@ -176,7 +214,11 @@
     "lat": 44.630306,
     "lon": 21.180745,
     "izvori": "Biografske podatke dostavio korisnik; potrebno je proveriti prema dostupnim arhivskim i javnim izvorima.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "politicari",
+      "privrednici"
+    ]
   },
   {
     "id": "branko-ivosevic",
@@ -192,7 +234,11 @@
     "lat": 44.62998,
     "lon": 21.179986,
     "izvori": "Biografske podatke dostavio korisnik; pojedine istorijske navode potrebno je proveriti u arhivskoj građi.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "advokati",
+      "politicari"
+    ]
   },
   {
     "id": "dr-nikola-hadzi-nikolic",
@@ -208,7 +254,10 @@
     "lat": 44.629549,
     "lon": 21.180724,
     "izvori": "Biografske podatke dostavio korisnik; pojedine istorijske navode, naročito anegdotu o kraljici Dragi Mašin, potrebno je proveriti u istorijskim izvorima.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "lekari"
+    ]
   },
   {
     "id": "milutin-obradovic",
@@ -225,7 +274,11 @@
     "lon": 21.180643,
     "izvori": "Биографски текст и подаци о гробном месту достављени од корисника.",
     "fotografija": "",
-    "napomena": "Човек великог срца"
+    "napomena": "Човек великог срца",
+    "kategorije": [
+      "dobrotvori",
+      "privrednici"
+    ]
   },
   {
     "id": "mihailo-krstic",
@@ -241,7 +294,12 @@
     "lat": 44.629465,
     "lon": 21.17908,
     "izvori": "Биографски текст и подаци о гробном месту достављени од корисника.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "advokati",
+      "oficiri",
+      "politicari"
+    ]
   },
   {
     "id": "zivorad-zika-petrovic",
@@ -257,7 +315,10 @@
     "lat": 44.629465,
     "lon": 21.180583,
     "izvori": "Биографски текст и подаци о гробном месту достављени од корисника.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "privrednici"
+    ]
   },
   {
     "id": "vladimir-sukljevic",
@@ -273,7 +334,11 @@
     "lat": 44.630416,
     "lon": 21.178097,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "umetnici",
+      "prosvetni"
+    ]
   },
   {
     "id": "slobodan-stojanovic",
@@ -289,7 +354,11 @@
     "lat": 44.629214,
     "lon": 21.179204,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "umetnici",
+      "prosvetni"
+    ]
   },
   {
     "id": "milica-stojadinovic-srpkinja",
@@ -305,7 +374,10 @@
     "lat": 44.629682,
     "lon": 21.180326,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "umetnici"
+    ]
   },
   {
     "id": "bozidar-dimitrijevic-kozica",
@@ -321,7 +393,11 @@
     "lat": 44.629707,
     "lon": 21.180489,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "oficiri",
+      "politicari"
+    ]
   },
   {
     "id": "petar-tamburas",
@@ -337,7 +413,12 @@
     "lat": 44.629843,
     "lon": 21.178906,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "politicari",
+      "privrednici",
+      "dobrotvori"
+    ]
   },
   {
     "id": "glisa-petrovic",
@@ -353,7 +434,10 @@
     "lat": 44.629683,
     "lon": 21.179727,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника; године захтевају проверу.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "politicari"
+    ]
   },
   {
     "id": "dimitrije-mita-protic",
@@ -369,7 +453,10 @@
     "lat": 44.629399,
     "lon": 21.180061,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "politicari"
+    ]
   },
   {
     "id": "bozidar-boza-tadic",
@@ -385,7 +472,10 @@
     "lat": 44.629499,
     "lon": 21.17949,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "politicari"
+    ]
   },
   {
     "id": "bora-spuzic-kvaka",
@@ -401,7 +491,10 @@
     "lat": 44.630031,
     "lon": 21.179485,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "umetnici"
+    ]
   },
   {
     "id": "vladan-popovic-sulja",
@@ -417,7 +510,10 @@
     "lat": 44.629747,
     "lon": 21.180384,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "prosvetni"
+    ]
   },
   {
     "id": "dr-sava-dimitrijevic",
@@ -433,7 +529,10 @@
     "lat": 44.629599,
     "lon": 21.180411,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "lekari"
+    ]
   },
   {
     "id": "petar-petrika-nikolaevic",
@@ -449,7 +548,11 @@
     "lat": 44.62928,
     "lon": 21.18019,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "privrednici",
+      "politicari"
+    ]
   },
   {
     "id": "aleksandar-s-nikolaevic",
@@ -465,7 +568,11 @@
     "lat": 44.62928,
     "lon": 21.18019,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
-    "fotografija": ""
+    "fotografija": "",
+    "kategorije": [
+      "privrednici",
+      "politicari"
+    ]
   },
   {
     "zanimanje": "Трговац извозник, председник општине и добротвор",
@@ -482,7 +589,12 @@
     "ime": "Илија (Бело) Савић",
     "ime_lat": "Ilija (Belo) Savić",
     "biografija": "Илија (Бело) Савић био је пожаревачки трговац извозник, представник Либералне странке и учесник либералне политичке активности повезане са Стојаном Рибарцем. Председник пожаревачке општине био је 1895. године. Према памфлету, био је добротвор и приложник удружењу „Слога“, као и дародавац Пожаревцу и Старом гробљу. Породична гробница Белосавић налази се на парцели 12, гробно место 38.",
-    "biografija_lat": "Ilija (Belo) Savić bio je požarevački izvozni trgovac, predstavnik Liberalne stranke i učesnik liberalne političke aktivnosti povezane sa Stojanom Ribarцем. Predsednik požarevačke opštine bio je 1895. godine. Prema pamfletu, bio je dobrotvor i priložnik udruženju „Sloga“, kao i darodavac Požarevcu i Starom groblju. Porodična grobnica Belosavić nalazi se na parceli 12, grobno mesto 38."
+    "biografija_lat": "Ilija (Belo) Savić bio je požarevački izvozni trgovac, predstavnik Liberalne stranke i učesnik liberalne političke aktivnosti povezane sa Stojanom Ribarцем. Predsednik požarevačke opštine bio je 1895. godine. Prema pamfletu, bio je dobrotvor i priložnik udruženju „Sloga“, kao i darodavac Požarevcu i Starom groblju. Porodična grobnica Belosavić nalazi se na parceli 12, grobno mesto 38.",
+    "kategorije": [
+      "privrednici",
+      "politicari",
+      "dobrotvori"
+    ]
   },
   {
     "zanimanje": "Трговац извозник, председник општине и добротвор",
@@ -499,6 +611,11 @@
     "ime": "Станко Бело Савић",
     "ime_lat": "Stanko Belo Savić",
     "biografija": "Станко Бело Савић био је пожаревачки јавни и политички делатник, члан Либералне странке. Председник пожаревачке општине био је 1907–1908. године. Памфлет га наводи као оснивача Пожаревачке читаонице и стрељачког друштва. Према податку који је доставио корисник, браћа Белосавић била су значајни приложници цркви и Старом гробљу, укључујући прилог за матичну гробницу. Породична гробница Белосавић налази се на парцели 12, гробно место 38.",
-    "biografija_lat": "Stanko Belo Savić bio je požarevački javni i politički delatnik, član Liberalne stranke. Predsednik požarevačke opštine bio je 1907–1908. godine. Pamflet ga navodi kao osnivača Požarevačke čitaonice i streljačkog društva. Prema podatku koji je dostavio korisnik, braća Belosavić bila su značajni priložnici crkvi i Starom groblju, uključujući prilog za matičnu grobnicu. Porodična grobnica Belosavić nalazi se na parceli 12, grobno mesto 38."
+    "biografija_lat": "Stanko Belo Savić bio je požarevački javni i politički delatnik, član Liberalne stranke. Predsednik požarevačke opštine bio je 1907–1908. godine. Pamflet ga navodi kao osnivača Požarevačke čitaonice i streljačkog društva. Prema podatku koji je dostavio korisnik, braća Belosavić bila su značajni priložnici crkvi i Starom groblju, uključujući prilog za matičnu grobnicu. Porodična grobnica Belosavić nalazi se na parceli 12, grobno mesto 38.",
+    "kategorije": [
+      "privrednici",
+      "politicari",
+      "dobrotvori"
+    ]
   }
 ]
