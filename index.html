@@ -1,155 +1,59 @@
 <!doctype html>
 <html lang="sr-Cyrl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#171716">
-  <title>Старо гробље — Пожаревац</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171716">
+<meta name="description" content="Дигитални каталог, мапа и виртуелни водич кроз Старо гробље у Пожаревцу.">
+<title>Старо гробље • Пожаревац</title>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
-  <div class="site-bg" aria-hidden="true"></div>
-  <header class="topbar">
-    <a class="brand" href="#pocetna" aria-label="Старо гробље — почетна">
-      <span class="brand-mark">✦</span>
-      <span class="brand-copy"><strong>СТАРО ГРОБЉЕ</strong><small>ПОЖАРЕВАЦ</small></span>
-    </a>
-    <nav class="main-nav" aria-label="Главна навигација">
-      <a class="nav-link active" href="#licnosti">Личности</a>
-      <a class="nav-link" href="#mapa">Мапа</a>
-      <a class="nav-link" href="#o-groblju">О гробљу</a>
-      <a class="nav-link" href="#3d-prikaz">3D приказ</a>
-      <a class="nav-link" href="#kontakt">Контакт</a>
-    </nav>
-    <div class="header-tools">
-      <div class="language-switch" aria-label="Избор писма">
-        <button class="lang active" type="button" data-lang="cir">ЋИР</button>
-        <button class="lang" type="button" data-lang="lat">LAT</button>
-      </div>
-      <label class="global-search">
-        <span class="sr-only">Претрага</span>
-        <input type="search" placeholder="Претрага..." />
-        <span class="search-icon">⌕</span>
-      </label>
-      <button class="mobile-menu" type="button" aria-label="Отвори мени">☰</button>
-    </div>
-  </header>
-
-  <main class="workspace" id="pocetna">
-    <aside class="people-panel panel" id="licnosti">
-      <div class="panel-heading">
-        <span class="eyebrow">ИСТОРИЈА И СЕЋАЊЕ</span>
-        <h2>Знамените личности</h2>
-      </div>
-      <label class="people-search">
-        <span>⌕</span><input type="search" placeholder="Претрага личности..." />
-      </label>
-      <div class="filter-row">
-        <button class="filter-chip selected" type="button">Све личности</button>
-        <button class="filter-chip" type="button">Категорије⌄</button>
-      </div>
-      <div class="people-list">
-        <button class="person-card selected" type="button">
-          <span class="portrait placeholder-portrait">ФОТО</span>
-          <span class="person-info"><strong>Изаберите личност</strong><small>Година рођења — година смрти</small><em>Кратак опис занимања</em></span>
-          <span class="chevron">›</span>
-        </button>
-        <button class="person-card" type="button">
-          <span class="portrait placeholder-portrait">ФОТО</span>
-          <span class="person-info"><strong>Личност 2</strong><small>Година рођења — година смрти</small><em>Кратак опис занимања</em></span>
-          <span class="chevron">›</span>
-        </button>
-        <button class="person-card" type="button">
-          <span class="portrait placeholder-portrait">ФОТО</span>
-          <span class="person-info"><strong>Личност 3</strong><small>Година рођења — година смрти</small><em>Кратак опис занимања</em></span>
-          <span class="chevron">›</span>
-        </button>
-        <button class="person-card" type="button">
-          <span class="portrait placeholder-portrait">ФОТО</span>
-          <span class="person-info"><strong>Личност 4</strong><small>Година рођења — година смрти</small><em>Кратак опис занимања</em></span>
-          <span class="chevron">›</span>
-        </button>
-        <div class="list-placeholder">Овде ће бити учитан комплетан каталог личности из базе података.</div>
-      </div>
-      <div class="panel-foot"><span class="status-dot"></span> ДИГИТАЛНИ КАТАЛОГ СТАРОГ ГРОБЉА</div>
+<header class="topbar">
+  <a class="brand" href="#pocetna"><span class="brand-mark">✦</span><span><b>СТАРО ГРОБЉЕ</b><small>ПОЖАРЕВАЦ</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Отвори мени">☰</button>
+  <nav id="mainNav">
+    <a href="#pocetna">Почетна</a><a href="#licnosti">Личности</a><a href="#mapa">Мапа</a><a href="#rute">Руте</a><a href="#o-groblju">О гробљу</a><a href="#3d-prikaz">3D приказ</a>
+  </nav>
+  <div class="header-tools"><button class="lang active" data-lang="cir">ЋИР</button><button class="lang" data-lang="lat">LAT</button></div>
+</header>
+<main>
+<section class="hero" id="pocetna">
+  <div class="hero-overlay"></div><div class="hero-content">
+    <p class="eyebrow" data-t="eyebrow">ДИГИТАЛНИ ИСТОРИЈСКИ ВОДИЧ</p>
+    <h1 data-t="heroTitle">Старо гробље<br><em>Пожаревац</em></h1>
+    <p class="hero-lead" data-t="heroLead">Место сећања, културе и прича о људима који су обележили историју нашег града.</p>
+    <div class="hero-actions"><a class="btn gold" href="#licnosti" data-t="browse">Истражи личности</a><a class="btn ghost" href="#o-groblju" data-t="intro">Уводна реч</a></div>
+  </div><div class="hero-note"><span>✦</span> <span data-t="memory">СЕЋАЊЕ КОЈЕ ТРАЈЕ</span></div>
+</section>
+<section class="intro section" id="o-groblju">
+  <div class="section-kicker" data-t="kicker">О МЕСТУ</div><h2 data-t="introTitle">Уводна реч</h2>
+  <div class="intro-grid"><div class="ornament">❦</div><div>
+  <p data-t="introText">Старо гробље у Пожаревцу представља драгоцено место историјског и културног памћења. У његовим алејама почивају људи чији су живот, рад и стваралаштво оставили траг у развоју града и шире заједнице.</p>
+  <p data-t="introText2">Овај дигитални каталог повезује биографије, фотографије, податке о гробним местима, интерактивну мапу и 3D приказе тамо где су доступни. Циљ је да се наслеђе сачува и учини приступачним свим посетиоцима.</p>
+  </div></div>
+</section>
+<section class="section people-section" id="licnosti">
+  <div class="section-head"><div><div class="section-kicker" data-t="kickerPeople">ДИГИТАЛНИ КАТАЛОГ</div><h2 data-t="peopleTitle">Знамените личности</h2><p data-t="peopleLead">Изаберите личност да бисте прочитали биографију и видели доступне фотографије, мапу и QR код.</p></div><div class="count" id="peopleCount">—</div></div>
+  <div class="catalog-layout">
+    <aside class="list-panel">
+      <label class="search-label" for="searchInput" data-t="searchLabel">Претрага каталога</label><input id="searchInput" type="search" placeholder="Име, занимање, парцела..." autocomplete="off">
+      <select id="categoryFilter" aria-label="Категорија"><option value="">Све категорије</option></select>
+      <div id="peopleList" class="people-list"><div class="loading">Учитавање каталога…</div></div>
     </aside>
-
-    <section class="profile-panel panel" aria-label="Подаци о изабраној личности">
-      <div class="profile-head">
-        <div>
-          <span class="eyebrow">ДИГИТАЛНИ ЛЕГАТ</span>
-          <h1>Име и презиме личности</h1>
-          <p class="lifespan">Година рођења — година смрти</p>
-          <p class="subtitle">Звање, занимање или кратак опис личности</p>
-        </div>
-        <button class="download-button" type="button"><span class="download-icon">⇩</span><span>Преузми биографију<small>PDF документ</small></span></button>
-      </div>
-      <div class="profile-tabs" role="tablist" aria-label="Детаљи о личности">
-        <button class="tab active" type="button">Биографија</button>
-        <button class="tab" type="button">Фотографије</button>
-        <button class="tab" type="button">Гробно место</button>
-        <button class="tab" type="button">3D приказ</button>
-        <button class="tab" type="button">QR код</button>
-      </div>
-      <div class="profile-content">
-        <section class="bio-card inner-card">
-          <div class="section-title"><span class="section-symbol">❧</span><div><h2>Живот и дело</h2><p>Биографија и историјски значај</p></div></div>
-          <div class="bio-placeholder">
-            <p>На овом месту биће приказана проверена биографија из базе података, са очуваним историјским подацима и изворима.</p>
-            <p>Распоред текста, наслова, година и фотографија биће уједначен за све личности, без губитка постојећих података.</p>
-          </div>
-          <div class="metadata-grid">
-            <div><span>ЗАНИМАЊЕ</span><strong>Податак из базе</strong></div>
-            <div><span>ПАРЦЕЛА</span><strong>—</strong></div>
-            <div><span>ГРОБНО МЕСТО</span><strong>—</strong></div>
-          </div>
-        </section>
-        <section class="model-card" id="3d-prikaz">
-          <div class="model-topline"><div><span class="eyebrow">ДИГИТАЛНА РЕКОНСТРУКЦИЈА</span><h2>Приказ гробног места</h2></div><span class="model-badge">3D / 360°</span></div>
-          <div class="model-stage">
-            <div class="stage-glow"></div>
-            <div class="stone-illustration"><div class="stone-cross">✝</div><div class="stone-lines"></div><div class="stone-caption">МОДЕЛ ГРОБНОГ МЕСТА</div></div>
-            <div class="stage-note"><span class="cube-icon">◇</span><strong>3D модел није повезан</strong><small>Овде ће бити уграђен стварни GLB/GLTF модел.</small></div>
-            <div class="stage-controls"><button type="button" aria-label="Ротирај">⟳</button><button type="button" aria-label="Увећај">＋</button><button type="button" aria-label="Умањи">−</button><button type="button" aria-label="Пун екран">⛶</button></div>
-          </div>
-          <div class="model-caption"><span>Приказ модела</span><span>Место за контроле и галерију углова</span></div>
-        </section>
-      </div>
-    </section>
-
-    <aside class="right-panel">
-      <section class="map-card panel" id="mapa">
-        <div class="card-heading"><div><span class="eyebrow">ОРИЈЕНТАЦИЈА</span><h2>Мапа гробља</h2></div><button class="icon-button" type="button" aria-label="Прикажи мапу преко целог екрана">⛶</button></div>
-        <div class="map-placeholder">
-          <div class="map-grid"></div><div class="map-road road-one"></div><div class="map-road road-two"></div>
-          <div class="map-pin">●<span></span></div>
-          <div class="map-label"><strong>Гробно место</strong><small>Парцелa — · место —</small></div>
-          <div class="map-zoom"><button type="button">＋</button><button type="button">−</button></div>
-          <div class="map-watermark">ПРИКАЗ МАПЕ</div>
-        </div>
-        <div class="map-meta"><span class="pin-mini">●</span><span>Локација ће бити повезана са подацима личности.</span></div>
-      </section>
-      <section class="gallery-card panel">
-        <div class="card-heading"><div><span class="eyebrow">ФОТО-ДОКУМЕНТАЦИЈА</span><h2>Фотографије гробног места</h2></div><button class="text-button" type="button">Све фотографије ↗</button></div>
-        <div class="gallery-main placeholder-photo"><span>ФОТОГРАФИЈА ГРОБА</span><small>Главна фотографија</small></div>
-        <div class="gallery-thumbs">
-          <div class="thumb placeholder-photo">01</div><div class="thumb placeholder-photo">02</div><div class="thumb placeholder-photo">03</div><div class="thumb placeholder-photo">04</div>
-        </div>
-      </section>
-      <section class="qr-card panel">
-        <div class="qr-emblem">▦</div><div><h2>QR код за посету</h2><p>Брз приступ биографији са телефона.</p></div><button class="icon-button" type="button" aria-label="Отвори QR код">↗</button>
-      </section>
-    </aside>
-  </main>
-
-  <footer class="feature-footer" id="o-groblju">
-    <div class="feature"><span class="feature-icon">◇</span><div><strong>3D приказ гробних места</strong><small>Простор за реалистичне моделе</small></div></div>
-    <div class="feature"><span class="feature-icon">360°</span><div><strong>Преглед из свих углова</strong><small>Ротација и приближавање</small></div></div>
-    <div class="feature"><span class="feature-icon">⌖</span><div><strong>Повезано са мапом</strong><small>Јасна локација у гробљу</small></div></div>
-    <div class="feature"><span class="feature-icon">▧</span><div><strong>Фотографије и подаци</strong><small>Портрет, споменик и биографија</small></div></div>
-    <div class="feature"><span class="feature-icon">▦</span><div><strong>QR код за посету</strong><small>Приступ са телефона</small></div></div>
-  </footer>
-  <footer class="bottom-footer" id="kontakt"><span>СТАРО ГРОБЉЕ · ПОЖАРЕВАЦ</span><span>ДИГИТАЛНИ КАТАЛОГ КУЛТУРНО-ИСТОРИЈСКОГ НАСЛЕЂА</span></footer>
-  <script src="app.js"></script>
-</body>
-</html>
+    <article id="profileContent" class="profile-panel"><div class="empty-profile"><span class="empty-icon">✦</span><h3 data-t="choosePerson">Изаберите личност</h3><p data-t="chooseHint">Подаци о личности ће се приказати овде.</p></div></article>
+  </div>
+</section>
+<section class="section map-section" id="mapa"><div class="section-head"><div><div class="section-kicker" data-t="kickerMap">ОРИЈЕНТАЦИЈА</div><h2 data-t="mapTitle">Интерактивна мапа</h2><p data-t="mapLead">Изаберите означено гробно место да бисте отворили профил личности.</p></div></div><div id="map" class="map"></div><p class="map-note" data-t="mapNote">Мапа приказује само локације за које су координате унете у базу.</p></section>
+<section class="section routes-section" id="rute"><div class="section-kicker" data-t="kickerRoutes">ПЛАНИРАЈТЕ ПОСЕТУ</div><h2 data-t="routesTitle">Руте до гробља</h2><p data-t="routesLead">Отворите навигацију до Старог гробља или направите пешачку руту до изабране личности када су координате доступне.</p>
+<div class="route-cards"><a class="route-card" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Staro+groblje,+Po%C5%BEarevac"><span>↗</span><b data-t="routeDrive">Навигација до Старог гробља</b><small data-t="routeDriveSub">Отвори Google Maps</small></a><a class="route-card" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Staro+groblje,+Po%C5%BEarevac"><span>⌖</span><b data-t="routeFind">Пронађи гробље</b><small data-t="routeFindSub">Приказ локације на мапи</small></a><div class="route-card static"><span>♧</span><b data-t="routeOnSite">Рута унутар гробља</b><small data-t="routeOnSiteSub">Изаберите личност са координатама на мапи.</small></div></div>
+</section>
+<section class="section model-section" id="3d-prikaz"><div class="section-head"><div><div class="section-kicker" data-t="kicker3d">ВИРТУЕЛНО НАСЛЕЂЕ</div><h2 data-t="modelTitle">3D прикази</h2><p data-t="modelLead">3D модели се приказују у профилу личности за коју су припремљени.</p></div></div><div id="modelsOverview" class="models-overview"><p data-t="modelHint">Отворите профил личности и изаберите картицу „3D приказ“ ако је модел доступан.</p></div></section>
+</main>
+<footer><div class="footer-brand">✦ СТАРО ГРОБЉЕ • ПОЖАРЕВАЦ</div><p data-t="footerText">Дигитални каталог културног и историјског наслеђа.</p><a href="#pocetna" data-t="toTop">Назад на врх ↑</a></footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="app.js"></script>
+</body></html>
