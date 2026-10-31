@@ -415,13 +415,16 @@
     "grobno_mesto": "58 N.B.",
     "lat": 44.629707,
     "lon": 21.180489,
-    "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
-    "fotografija": "",
+    "izvori": "Биографија и подаци о гробном месту достављени од корисника. Фотографије портрета, гроба и спомен-плоче доставио корисник.",
+    "fotografija": "assets/licnosti/bozidar-dimitrijevic-kozica.jpg",
     "kategorije": [
       "oficiri",
       "politicari"
     ],
-    "fotografija_groba": ""
+    "fotografija_groba": "assets/grobna mesta/bozidar-dimitrijevic-kozica-grob.jpg",
+    "fotografije_dodatne": [
+      "assets/grobna mesta/bozidar-dimitrijevic-kozica-ploca.jpg"
+    ]
   },
   {
     "id": "petar-tamburas",
@@ -710,5 +713,65 @@
     ],
     "fotografija_groba": "",
     "model_3d": "assets/3d/draza-markovic-grob.glb"
+  },
+  {
+    "id": "antonije-pekic",
+    "ime": "Генерал Антоније Пекић",
+    "ime_lat": "General Antonije Pekić",
+    "zanimanje": "Генерал српске војске",
+    "zanimanje_lat": "General srpske vojske",
+    "godine": "",
+    "biografija": "Биографски подаци и подаци о гробном месту биће допуњени након провере архивске грађе.",
+    "biografija_lat": "Biografski podaci i podaci o grobnom mestu biće dopunjeni nakon provere arhivske građe.",
+    "fotografija": "assets/licnosti/antonije-pekic-porodica.jpg",
+    "fotografija_groba": "",
+    "kategorije": [
+      "oficiri"
+    ],
+    "izvori": "Породична фотографија генерала Антонија Пекића; извор наведен у самој фотографији: Историјски архив Пожаревац, Лична збирка генерала А. Пекића."
+  },
+  {
+    "id": "dusan-r-dimitrijevic",
+    "ime": "Душан Р. Димитријевић",
+    "ime_lat": "Dušan R. Dimitrijević",
+    "zanimanje": "Пуковник",
+    "zanimanje_lat": "Pukovnik",
+    "godine": "",
+    "biografija": "Биографски подаци и подаци о гробном месту биће допуњени након провере архивске грађе.",
+    "biografija_lat": "Biografski podaci i podaci o grobnom mestu biće dopunjeni nakon provere arhivske građe.",
+    "fotografija": "assets/licnosti/dusan-r-dimitrijevic.jpg",
+    "fotografija_groba": "assets/grobna mesta/dusan-r-dimitrijevic-grob.jpg",
+    "kategorije": [
+      "oficiri"
+    ],
+    "izvori": "Портрет је означен као пуковник Душан Р. Димитријевић; фотографије доставио корисник."
+  },
+  {
+    "id": "simeon-jovanovic",
+    "ime": "Симеон Јовановић",
+    "ime_lat": "Simeon Jovanović",
+    "zanimanje": "",
+    "zanimanje_lat": "",
+    "godine": "",
+    "biografija": "Биографски подаци биће допуњени након провере архивске грађе.",
+    "biografija_lat": "Biografski podaci biće dopunjeni nakon provere arhivske građe.",
+    "fotografija": "",
+    "fotografija_groba": "assets/grobna mesta/simeon-jovanovic-grob.jpg",
+    "kategorije": [],
+    "izvori": "Фотографија гробног места достављена од корисника."
+  },
+  {
+    "id": "djordje-arandjelovic",
+    "ime": "Ђорђе Аранђеловић",
+    "ime_lat": "Đorđe Aranđelović",
+    "zanimanje": "",
+    "zanimanje_lat": "",
+    "godine": "",
+    "biografija": "Биографски подаци биће допуњени након провере архивске грађе.",
+    "biografija_lat": "Biografski podaci biće dopunjeni nakon provere arhivske građe.",
+    "fotografija": "",
+    "fotografija_groba": "assets/grobna mesta/djordje-arandjelovic-grob.jpg",
+    "kategorije": [],
+    "izvori": "Фотографија породичне гробнице са натписом Ђорђа Аранђеловића; доставио корисник."
   }
 ]
