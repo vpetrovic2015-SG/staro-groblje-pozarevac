@@ -687,9 +687,9 @@
     "kategorije": [
       "istorija",
       "javne-licnosti"
-],
-      "model_3d": "assets/3d/Vlajko-Stojiljkovic.glb",
-   },
+    ],
+    "model_3d": "assets/3d/Vlajko-Stojiljkovic.glb"
+  },
   {
     "id": "draza-markovic",
     "ime": "Дража Марковић",
