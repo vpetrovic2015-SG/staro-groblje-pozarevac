@@ -415,7 +415,7 @@
     "grobno_mesto": "58 N.B.",
     "lat": 44.629707,
     "lon": 21.180489,
-    "izvori": "Биографија и подаци о гробном месту достављени од корисника. Фотографије портрета, гроба и спомен-плоче доставио корисник.",
+    "izvori": "Портрет, фотографија гробнице и спомен-плоче достављени од корисника.",
     "fotografija": "assets/licnosti/bozidar-dimitrijevic-kozica.jpg",
     "kategorije": [
       "oficiri",
@@ -439,7 +439,7 @@
     "grobno_mesto": "1",
     "lat": 44.629843,
     "lon": 21.178906,
-    "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
+    "izvori": "Портрет достављен од корисника.",
     "fotografija": "assets/licnosti/petar-tamburas.jpg",
     "kategorije": [
       "politicari",
@@ -461,8 +461,8 @@
     "grobno_mesto": "9 N.B.",
     "lat": 44.629683,
     "lon": 21.179727,
-    "izvori": "Биографија и подаци о гробном месту достављени од корисника; године захтевају проверу.",
-    "fotografija": "",
+    "izvori": "Портрет достављен од корисника.",
+    "fotografija": "assets/licnosti/glisa-petrovic.jpg",
     "kategorije": [
       "politicari"
     ],
@@ -686,12 +686,13 @@
     "grobno_mesto": "",
     "parcela": "",
     "fotografija": "assets/licnosti/vlajko-stojiljkovic.jpg",
-    "fotografija_groba": "assets/grobna-mesta/Vlajko-stojiljkovic-grob",
+    "fotografija_groba": "",
     "kategorije": [
       "istorija",
       "javne-licnosti"
     ],
-    "model_3d": "assets/3d/Vlajko-Stojiljkovic.glb"
+    "model_3d": "assets/3d/Vlajko-Stojiljkovic.glb",
+    "izvori": "Портрет достављен од корисника. Фотографија гробног места није приложена у овом пакету."
   },
   {
     "id": "draza-markovic",
