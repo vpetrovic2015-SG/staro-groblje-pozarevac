@@ -42,7 +42,7 @@ function activateTab(p,tab){
  const el=$("tabContent");
  if(tab==="bio")el.innerHTML=bioPanel(p);
  if(tab==="photos"){
-  const pics=[];if(p.fotografija)pics.push([p.fotografija,nameOf(p)]);if(p.fotografija_groba)pics.push([p.fotografija_groba,tr("grave")]);
+  const pics=[];if(p.fotografija)pics.push([p.fotografija,nameOf(p)]);if(p.fotografija_groba)pics.push([p.fotografija_groba,tr("grave")]);(p.fotografije_dodatne||[]).forEach((src,i)=>{if(src)pics.push([src,script==="lat"?"Dodatna fotografija "+(i+1):"Додатна фотографија "+(i+1)])});
   el.innerHTML=pics.length?`<div class="photo-gallery">${pics.map(([src,cap])=>`<figure><a href="${escapeAttr(src)}" target="_blank" rel="noopener"><img src="${escapeAttr(src)}" alt="${escapeAttr(cap)}"></a><figcaption>${escapeHtml(cap)}</figcaption></figure>`).join("")}</div>`:`<p>${tr("noPhotos")}</p>`;
  }
  if(tab==="grave"){
