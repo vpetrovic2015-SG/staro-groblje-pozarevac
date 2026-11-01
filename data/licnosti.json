@@ -17,7 +17,7 @@
     "kategorije": [
       "umetnici"
     ],
-    "fotografija_groba": "assets/grobna mesta/zivka-matic-grob.jpg",
+    "fotografija_groba": "assets/grobna-mesta/zivka-matic-grob.jpg",
     "model_3d": "assets/3D/Zivka-Matic.glb"
   },
   {
@@ -39,7 +39,7 @@
       "politicari",
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna mesta/Stojan-Pavlovic-grob.jpg"
+    "fotografija_groba": "assets/grobna-mesta/Stojan-Pavlovic-grob.jpg"
   },
   {
     "id": "dimitrije-mita-sapinac",
@@ -59,7 +59,7 @@
     "kategorije": [
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna mesta/Dimitrije-Sapinac-grob.jpg"
+    "fotografija_groba": "assets/grobna-mesta/Dimitrije-Sapinac-grob.jpg"
   },
   {
     "id": "ignjat-todorovic",
@@ -76,7 +76,7 @@
     "lon": 21.180238,
     "izvori": "Текст доставио корисник; историјске податке проверити према поузданим изворима.",
     "fotografija": "assets/licnosti/ignjat-todorovic.jpg",
-    "fotografija_groba": "assets/grobna mesta/Ignjat-Todorovic-grob.jpeg",
+    "fotografija_groba": "assets/grobna-mesta/Ignjat-Todorovic-grob.jpeg",
     "kategorije": [
       "politicari",
       "privrednici"
@@ -147,7 +147,7 @@
       "dobrotvori",
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna mesta/Cecelski-grob.jpeg"
+    "fotografija_groba": "assets/grobna-mesta/Cecelski-grob.jpeg"
   },
   {
     "id": "dusan-vujicic",
@@ -211,7 +211,7 @@
       "lekari",
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna mesta/Dusmanic-grob.jpeg"
+    "fotografija_groba": "assets/grobna-mesta/Dusmanic-grob.jpeg"
   },
   {
     "id": "miomir-mica-ilic",
@@ -253,7 +253,7 @@
       "advokati",
       "politicari"
     ],
-    "fotografija_groba": "assets/grobna mesta/Branko-Ivosevic-grob.jpg"
+    "fotografija_groba": "assets/grobna-mesta/Branko-Ivosevic-grob.jpg"
   },
   {
     "id": "dr-nikola-hadzi-nikolic",
@@ -273,7 +273,7 @@
     "kategorije": [
       "lekari"
     ],
-    "fotografija_groba": "assets/grobna mesta/Hadzi-Nikolic-grob.jpeg"
+    "fotografija_groba": "assets/grobna-mesta/Hadzi-Nikolic-grob.jpeg"
   },
   {
     "id": "milutin-obradovic",
@@ -295,7 +295,7 @@
       "dobrotvori",
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna mesta/milutin-obradovic-grob.jpg",
+    "fotografija_groba": "assets/grobna-mesta/milutin-obradovic-grob.jpg",
     "model_3d": "assets/3D/milutin-obradovic-grob.glb"
   },
   {
@@ -338,7 +338,7 @@
     "kategorije": [
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna mesta/Zivorad-Zika-Petrovic-grob.jpeg"
+    "fotografija_groba": "assets/grobna-mesta/Zivorad-Zika-Petrovic-grob.jpeg"
   },
   {
     "id": "vladimir-sukljevic",
@@ -421,9 +421,9 @@
       "oficiri",
       "politicari"
     ],
-    "fotografija_groba": "assets/grobna mesta/bozidar-dimitrijevic-kozica-grob.jpg",
+    "fotografija_groba": "assets/grobna-mesta/bozidar-dimitrijevic-kozica-grob.jpg",
     "fotografije_dodatne": [
-      "assets/grobna mesta/bozidar-dimitrijevic-kozica-ploca.jpg"
+      "assets/grobna-mesta/bozidar-dimitrijevic-kozica-ploca.jpg"
     ]
   },
   {
@@ -446,7 +446,7 @@
       "privrednici",
       "dobrotvori"
     ],
-    "fotografija_groba": "assets/grobna mesta/Petar-Tamburas-grob.jpg"
+    "fotografija_groba": "assets/grobna-mesta/Petar-Tamburas-grob.jpg"
   },
   {
     "id": "glisa-petrovic",
@@ -466,7 +466,7 @@
     "kategorije": [
       "politicari"
     ],
-    "fotografija_groba": "assets/grobna mesta/Glisa-Petrovic-grob.jpg"
+    "fotografija_groba": "assets/grobna-mesta/Glisa-Petrovic-grob.jpg"
   },
   {
     "id": "dimitrije-mita-protic",
@@ -546,7 +546,7 @@
     "kategorije": [
       "prosvetni"
     ],
-    "fotografija_groba": "assets/grobna mesta/vladan-popovic-sulja-grob.jpg",
+    "fotografija_groba": "assets/grobna-mesta/vladan-popovic-sulja-grob.jpg",
     "model_3d": "assets/3D/Vladan-Popovic-Sulja.glb"
   },
   {
@@ -609,7 +609,7 @@
       "privrednici",
       "politicari"
     ],
-    "fotografija_groba": "assets/grobna mesta/Nikolajevic-Aleksandar-grob.jpg"
+    "fotografija_groba": "assets/grobna-mesta/Nikolajevic-Aleksandar-grob.jpg"
   },
   {
     "zanimanje": "Трговац извозник, председник општине и добротвор",
@@ -620,7 +620,7 @@
     "lat": null,
     "lon": null,
     "fotografija": "assets/licnosti/belo-savic-iz-pamfleta.jpeg",
-    "fotografija_groba": "assets/grobna mesta/Belosavic-grob.jpeg",
+    "fotografija_groba": "assets/grobna-mesta/Belosavic-grob.jpeg",
     "izvori": "Памфлет „Стари гробљe у Пожаревцу“, одељак о Илији (Белу) Савићу и Станку Бело Савићу; породична гробница Белосавић, парцела 12, гробно место 38. Dodatak o prilogu crkvi i matičnoj grobnici: податак корисника.",
     "id": "ilija-belosavic",
     "ime": "Илија (Бело) Савић",
@@ -642,7 +642,7 @@
     "lat": null,
     "lon": null,
     "fotografija": "",
-    "fotografija_groba": "assets/grobna mesta/Belosavic-grob.jpeg",
+    "fotografija_groba": "assets/grobna-mesta/Belosavic-grob.jpeg",
     "izvori": "Памфлет „Стари гробљe у Пожаревцу“, одељак о Илији (Белу) Савићу и Станку Бело Савићу; породична гробница Белосавић, парцела 12, гробно место 38. Dodatak o prilogu crkvi i matičnoj grobnici: податак корисника.",
     "id": "stanko-belosavic",
     "ime": "Станко Бело Савић",
@@ -741,7 +741,7 @@
     "biografija": "Биографски подаци и подаци о гробном месту биће допуњени након провере архивске грађе.",
     "biografija_lat": "Biografski podaci i podaci o grobnom mestu biće dopunjeni nakon provere arhivske građe.",
     "fotografija": "assets/licnosti/dusan-r-dimitrijevic.jpg",
-    "fotografija_groba": "assets/grobna mesta/dusan-r-dimitrijevic-grob.jpg",
+    "fotografija_groba": "assets/grobna-mesta/dusan-r-dimitrijevic-grob.jpg",
     "kategorije": [
       "oficiri"
     ],
@@ -757,7 +757,7 @@
     "biografija": "Биографски подаци биће допуњени након провере архивске грађе.",
     "biografija_lat": "Biografski podaci biće dopunjeni nakon provere arhivske građe.",
     "fotografija": "",
-    "fotografija_groba": "assets/grobna mesta/simeon-jovanovic-grob.jpg",
+    "fotografija_groba": "assets/grobna-mesta/simeon-jovanovic-grob.jpg",
     "kategorije": [],
     "izvori": "Фотографија гробног места достављена од корисника."
   },
@@ -771,7 +771,7 @@
     "biografija": "Биографски подаци биће допуњени након провере архивске грађе.",
     "biografija_lat": "Biografski podaci biće dopunjeni nakon provere arhivske građe.",
     "fotografija": "",
-    "fotografija_groba": "assets/grobna mesta/djordje-arandjelovic-grob.jpg",
+    "fotografija_groba": "assets/grobna-mesta/djordje-arandjelovic-grob.jpg",
     "kategorije": [],
     "izvori": "Фотографија породичне гробнице са натписом Ђорђа Аранђеловића; доставио корисник."
   }
