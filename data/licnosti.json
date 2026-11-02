@@ -713,15 +713,15 @@
     "ime_lat": "General Antonije Pekić",
     "zanimanje": "Генерал српске војске",
     "zanimanje_lat": "General srpske vojske",
-    "godine": "",
-    "biografija": "Биографски подаци и подаци о гробном месту биће допуњени након провере архивске грађе.",
-    "biografija_lat": "Biografski podaci i podaci o grobnom mestu biće dopunjeni nakon provere arhivske građe.",
+    "godine": "Активан у првој половини XX века",
+    "biografija": "Генерал Антоније Пекић био је официр српске, а потом и југословенске војске. Историјски архив Пожаревац бележи га као генерала у пензији из Пожаревца у документу из 1950. године, којим му је додељена стална новчана награда. Архивска монографија „Освајање сфере јавног живота“ објављује породичну фотографију генерала Пекића насталу у Пожаревцу након Великог рата, из његове личне збирке. Ови подаци потврђују његову везу са Пожаревцем, али детаљнија хронологија војне службе и датум рођења и смрти захтевају додатну архивску проверу.",
+    "biografija_lat": "General Antonije Pekić bio je oficir srpske, a potom i jugoslovenske vojske. Istorijski arhiv Požarevac beleži ga kao generala u penziji iz Požarevca u dokumentu iz 1950. godine, kojim mu je dodeljena stalna novčana nagrada. Arhivska monografija „Osvajanje sfere javnog života“ objavljuje porodičnu fotografiju generala Pekića nastalu u Požarevcu nakon Velikog rata, iz njegove lične zbirke. Ovi podaci potvrđuju njegovu vezu sa Požarevcem, ali detaljnija hronologija vojne službe i datum rođenja i smrti zahtevaju dodatnu arhivsku proveru.",
     "fotografija": "assets/licnosti/antonije-pekic-porodica.jpg",
     "fotografija_groba": "",
     "kategorije": [
       "oficiri"
     ],
-    "izvori": "Породична фотографија генерала Антонија Пекића; извор наведен у самој фотографији: Историјски архив Пожаревац, Лична збирка генерала А. Пекића."
+    "izvori": "Историјски архив Пожаревац, Збирка VARIA 1791–, свеска 5 (2013), запис о решењу из 1950; Драгана Милорадовић, Освајање сфере јавног живота (2019), фотографија генерала Антонија Пекића са породицом."
   },
   {
     "id": "dusan-r-dimitrijevic",
@@ -757,14 +757,14 @@
     "id": "djordje-arandjelovic",
     "ime": "Ђорђе Аранђеловић",
     "ime_lat": "Đorđe Aranđelović",
-    "zanimanje": "",
-    "zanimanje_lat": "",
-    "godine": "",
-    "biografija": "Биографски подаци биће допуњени након провере архивске грађе.",
-    "biografija_lat": "Biografski podaci biće dopunjeni nakon provere arhivske građe.",
+    "zanimanje": "Генерал",
+    "zanimanje_lat": "General",
+    "godine": "1884 – после 1945",
+    "biografija": "Према одредници Српске енциклопедије, Ђорђе Аранђеловић рођен је 30. марта 1884. године у Ивањици. Завршио је Нижу и Вишу школу Војне академије. У балканским ратовима био је командир чете, а у Првом светском рату начелник штаба Обреновачког одреда и помоћник начелника штаба Комбинованог одреда. После рата обављао је више командних дужности, између осталог командовао је пешадијом Косовске и Јадранске дивизије, Вардарском и Потиском дивизијском облашћу. Пензионисан је 1940. године. У Априлском рату 1941. заробљен је у Петрињи и после завршетка рата остао је у емиграцији, где је умро. Пошто енциклопедијска одредница не потврђује место његове смрти, податак о истоветности са личношћу сахрањеном на овом гробљу треба потврдити натписом и архивском грађом.",
+    "biografija_lat": "Prema odrednici Srpske enciklopedije, Đorđe Aranđelović rođen je 30. marta 1884. godine u Ivanjici. Završio je Nižu i Višu školu Vojne akademije. U balkanskim ratovima bio je komandir čete, a u Prvom svetskom ratu načelnik štaba Obrenovačkog odreda i pomoćnik načelnika štaba Kombinovanog odreda. Posle rata obavljao je više komandnih dužnosti, između ostalog komandovao je pešadijom Kosovske i Jadranske divizije, Vardarskom i Potiskom divizijskom oblasti. Penzionisan je 1940. godine. U Aprilskom ratu 1941. zarobljen je u Petrinji i posle završetka rata ostao je u emigraciji, gde je umro. Pošto enciklopedijska odrednica ne potvrđuje mesto njegove smrti, podatak o istovetnosti sa ličnošću sahranjenom na ovom groblju treba potvrditi natpisom i arhivskom građom.",
     "fotografija": "",
     "fotografija_groba": "assets/grobna-mesta/djordje-arandjelovic-grob.jpg",
     "kategorije": [],
-    "izvori": "Фотографија породичне гробнице са натписом Ђорђа Аранђеловића; доставио корисник."
+    "izvori": "Српска енциклопедија, одредница „Аранђеловић, Ђорђе“, аутор Александар Животић (2010). Идентификацију са гробним местом треба додатно проверити."
   }
 ]
