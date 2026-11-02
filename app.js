@@ -1,4 +1,4 @@
-const DATA_URL = "data/licnosti.json";
+const DATA_URL = "data/licnosti.json?v=20261102";
 let people = [], selectedId = null, script = "cir", mapInstance = null, mapMarkers = [];
 const $ = id => document.getElementById(id);
 const T = {
