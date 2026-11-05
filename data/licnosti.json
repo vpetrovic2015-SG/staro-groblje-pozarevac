@@ -76,7 +76,7 @@
     "lon": 21.180238,
     "izvori": "Текст доставио корисник; историјске податке проверити према поузданим изворима.",
     "fotografija": "assets/licnosti/ignjat-todorovic.jpg",
-    "fotografija_groba": "assets/grobna-mesta/Ignjat-Todorovic-grob.jpeg",
+    "fotografija_groba": "assets/grobna-mesta/ignjat-todorovic-grob.jpg",
     "kategorije": [
       "politicari",
       "privrednici"
@@ -162,7 +162,7 @@
     "izvori": "Tekst dostavio korisnik; proveriti istorijske i pravne navode pre javnog objavljivanja.",
     "lat": 44.631031,
     "lon": 21.179588,
-    "fotografija": "assets/licnosti/dusan-vujicic.jpg",
+    "fotografija": "assets/licnosti/Dusan-Vujicic.jpg",
     "parcela": "5",
     "kategorije": [
       "politicari"
@@ -182,7 +182,7 @@
     "izvori": "Tekst dostavio korisnik; proveriti datume, funkcije i detalje internacije u pouzdanim izvorima.",
     "lat": 44.62988,
     "lon": 21.178861,
-    "fotografija": "assets/licnosti/jovan-jovanovic-joska.jpg",
+    "fotografija": "assets/licnosti/Jovan-jovanovic-Joska.jpg",
     "parcela": "6",
     "kategorije": [
       "politicari",
@@ -203,7 +203,7 @@
     "izvori": "Текст доставио корисник; проверити биографске податке, функције и породичне детаље у поузданим историјским изворима.",
     "lat": 44.629546,
     "lon": 21.18067,
-    "fotografija": "assets/licnosti/mihailo-dusmanic.jpg",
+    "fotografija": "assets/licnosti/mihajlo-dusmanic.jpg",
     "parcela": "2",
     "kategorije": [
       "politicari",
@@ -226,7 +226,7 @@
     "lat": 44.630306,
     "lon": 21.180745,
     "izvori": "Biografske podatke dostavio korisnik; potrebno je proveriti prema dostupnim arhivskim i javnim izvorima.",
-    "fotografija": "assets/licnosti/miomir-mica-ilic.jpg",
+    "fotografija": "assets/licnosti/Miomir-ilic.jpg",
     "kategorije": [
       "politicari",
       "privrednici"
@@ -603,7 +603,7 @@
     "lat": 44.62928,
     "lon": 21.18019,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
-    "fotografija": "assets/licnosti/aleksandar-s-nikolaevic.jpg",
+    "fotografija": "assets/licnosti/Aleksandar-nikolajevic.jpg",
     "kategorije": [
       "privrednici",
       "politicari"
