@@ -210,7 +210,8 @@
       "lekari",
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna-mesta/Dusmanic-grob.jpeg"
+    "fotografija_groba": "assets/grobna-mesta/Dusmanic-grob.jpeg",
+    "model_3d": "assets/3d/dusmanica-grob.glb"
   },
   {
     "id": "miomir-mica-ilic",
