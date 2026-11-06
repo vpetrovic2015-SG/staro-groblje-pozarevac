@@ -695,20 +695,21 @@
   },
   {
     "id": "draza-markovic",
-    "ime": "Дража Марковић",
-    "ime_lat": "Draža Marković",
-    "zanimanje": "Јавна личност",
-    "zanimanje_lat": "Javna ličnost",
-    "godine": "",
-    "biografija": "За Дражу Марковића за сада немамо опширнију биографију. Профил је отворен ради евидентирања гробног места и његовог 3D приказа. Биографски подаци биће допуњени када буду доступни поуздани извори.",
-    "biografija_lat": "Za Dražu Markovića za sada nemamo opširniju biografiju. Profil je otvoren radi evidentiranja grobnog mesta i njegovog 3D prikaza. Biografski podaci biće dopunjeni kada budu dostupni pouzdani izvori.",
+    "ime": "Дража Марковић Рођа",
+    "ime_lat": "Draža Marković Rođa",
+    "zanimanje": "Локални револуционар и партизански борац",
+    "zanimanje_lat": "Lokalni revolucionar i partizanski borac",
+    "godine": "погинуо/стрељан 1943.",
+    "biografija": "Дража Марковић Рођа био је локални револуционар и партизански борац из пожаревачког краја, који је погинуо или је стрељан током Другог светског рата 1943. године. Био је старији брат пожаревачког публицисте, новинара и револуционара Александра Саше Марковића (1927–1994). Потицао је из угледне пожаревачке породице Марковић. Према достављеној биографији, током рата прикључио се Народноослободилачком покрету и био активан партизански борац на територији Браничевског округа и Пожаревачког партизанског одреда. У знак сећања на његову борбу, његово име добили су улица у центру Пожаревца и Основна школа „Дража Марковић Рођа“ у Смољинцу, која то име носи од 1966. године. Његовим именом називана је и омладинска радна бригада из Малог Црнића, учесница савезних радних акција. Податак о тачном начину погибије захтева архивску потврду.",
+    "biografija_lat": "Draža Marković Rođa bio je lokalni revolucionar i partizanski borac iz požarevačkog kraja, koji je poginuo ili je streljan tokom Drugog svetskog rata 1943. godine. Bio je stariji brat požarevačkog publiciste, novinara i revolucionara Aleksandra Saše Markovića (1927–1994). Poticao je iz ugledne požarevačke porodice Marković. Prema dostavljenoj biografiji, tokom rata priključio se Narodnooslobodilačkom pokretu i bio aktivan partizanski borac na teritoriji Braničevskog okruga i Požarevačkog partizanskog odreda. U znak sećanja na njegovu borbu, njegovo ime dobili su ulica u centru Požarevca i Osnovna škola „Draža Marković Rođa“ u Smoljincu, koja to ime nosi od 1966. godine. Njegovim imenom nazivana je i omladinska radna brigada iz Malog Crnića, učesnica saveznih radnih akcija. Podatak o tačnom načinu pogibije zahteva arhivsku potvrdu.",
     "grobno_mesto": "",
-    "izvori": "Podatak o grobnom mestu i 3D model dostavio korisnik; biografski podaci nisu dostavljeni.",
+    "izvori": "Биографија достављена од корисника; податке о погибији и називима установа потребно је потврдити архивским изворима.",
     "lat": null,
     "lon": null,
     "fotografija": "",
     "parcela": "",
     "kategorije": [
+      "istorija",
       "javne-licnosti"
     ],
     "fotografija_groba": ""
@@ -773,5 +774,50 @@
     "kategorije": [],
     "izvori": "Српска енциклопедија, одредница „Аранђеловић, Ђорђе“, аутор Александар Животић (2010). Идентификацију са гробним местом треба додатно проверити.",
     "model_3d": "djordje-arandjelovic.glb"
+  },
+  {
+    "id": "jovan-jelicic",
+    "ime": "Јован Јеличић",
+    "ime_lat": "Jovan Jeličić",
+    "zanimanje": "Правник и председник пожаревачке општине",
+    "zanimanje_lat": "Pravnik i predsednik požarevačke opštine",
+    "godine": "председник општине 1900–1902",
+    "biografija": "Јован Јеличић био је српски политичар и правник с краја 19. и почетка 20. века. Обављао је функцију председника Пожаревачке општине од 1900. до 1902. године, у време владавине краља Александра Обреновића. Према достављеној биографији, на функцији је наследио Панту Стевановића, а 1902. године наследио га је Петар (Пера) Тамбураш. Његов мандат пада у период урбане и комуналне трансформације Пожаревца. Детаљнији подаци о његовом животу и раду нису наведени у достављеном материјалу.",
+    "biografija_lat": "Jovan Jeličić bio je srpski političar i pravnik s kraja 19. i početka 20. veka. Obavljao je funkciju predsednika Požarevačke opštine od 1900. do 1902. godine, u vreme vladavine kralja Aleksandra Obrenovića. Prema dostavljenoj biografiji, na funkciji je nasledio Pantu Stevanovića, a 1902. godine nasledio ga je Petar (Pera) Tamburaš. Njegov mandat pada u period urbane i komunalne transformacije Požarevca. Detaljniji podaci o njegovom životu i radu nisu navedeni u dostavljenom materijalu.",
+    "kategorije": [
+      "politicari",
+      "advokati"
+    ],
+    "izvori": "Биографија достављена од корисника."
+  },
+  {
+    "id": "simo-brkic",
+    "ime": "Симо Бркић",
+    "ime_lat": "Simo Brkić",
+    "zanimanje": "Адвокат и председник општине Пожаревац",
+    "zanimanje_lat": "Advokat i predsednik opštine Požarevac",
+    "godine": "активан 1970–1972",
+    "biografija": "Сима Бркић, у појединим изворима забележен и као Симо, био је југословенски и српски друштвено-политички радник и адвокат који је обављао функцију председника Скупштине општине Пожаревац почетком 1970-их година. У марту 1970. године именован је за привременог вршиоца дужности председника општине, након оставке претходника. Пре тога је обављао функцију председника Већа удруженог рада у локалном парламенту. Према достављеном тексту, након консолидације локалне власти преузео је пун мандат, а његово присуство на челу града документовано је током 1970, 1971. и 1972. године. Учествовао је у привредном и индустријском развоју града и свечано отварао нове погоне. У октобру 1970. године отворио је новоизграђени вртић капацитета 120 деце. Навод о вредности инвестиције и детаљи мандата захтевају проверу у тадашњој штампи и општинским записницима.",
+    "biografija_lat": "Sima Brkić, u pojedinim izvorima zabeležen i kao Simo, bio je jugoslovenski i srpski društveno-politički radnik i advokat koji je obavljao funkciju predsednika Skupštine opštine Požarevac početkom 1970-ih godina. U martu 1970. godine imenovan je za privremenog vršioca dužnosti predsednika opštine, nakon ostavke prethodnika. Pre toga je obavljao funkciju predsednika Veća udruženog rada u lokalnom parlamentu. Prema dostavljenom tekstu, nakon konsolidacije lokalne vlasti preuzeo je pun mandat, a njegovo prisustvo na čelu grada dokumentovano je tokom 1970, 1971. i 1972. godine. Učestvovao je u privrednom i industrijskom razvoju grada i svečano otvarao nove pogone. U oktobru 1970. godine otvorio je novoizgrađeni vrtić kapaciteta 120 dece. Navod o vrednosti investicije i detalji mandata zahtevaju proveru u tadašnjoj štampi i opštinskim zapisnicima.",
+    "kategorije": [
+      "politicari",
+      "advokati"
+    ],
+    "izvori": "Биографија достављена од корисника."
+  },
+  {
+    "id": "milutin-d-milojkovic-dronja",
+    "ime": "Милутин Д. Милојковић – Дроња",
+    "ime_lat": "Milutin D. Miloјković – Dronja",
+    "zanimanje": "Трговац и председник пожаревачке општине",
+    "zanimanje_lat": "Trgovac i predsednik požarevačke opštine",
+    "godine": "председник општине 1936–1941",
+    "biografija": "Милутин Д. Милојковић – Дроња био је пожаревачки трговац и предратни политичар, председник Општине пожаревачке од 1936. до 1941. године. Према достављеној биографији, изабран је на локалним изборима 25. октобра 1936. године. Градско поглаварство у време његовог мандата бројало је 35 већника (одборника). Његов рад на челу општине прекинут је Априлским ратом и окупацијом Краљевине Југославије 1941. године. Детаљнији подаци о његовом животу и послератној судбини нису наведени у достављеном материјалу.",
+    "biografija_lat": "Milutin D. Milojković – Dronja bio je požarevački trgovac i predratni političar, predsednik Opštine požarevačke od 1936. do 1941. godine. Prema dostavljenoj biografiji, izabran je na lokalnim izborima 25. oktobra 1936. godine. Gradsko poglavarstvo u vreme njegovog mandata brojalo je 35 većnika (odbornika). Njegov rad na čelu opštine prekinut je Aprilskim ratom i okupacijom Kraljevine Jugoslavije 1941. godine. Detaljniji podaci o njegovom životu i posleratnoj sudbini nisu navedeni u dostavljenom materijalu.",
+    "kategorije": [
+      "politicari",
+      "privrednici"
+    ],
+    "izvori": "Биографија достављена од корисника."
   }
 ]
