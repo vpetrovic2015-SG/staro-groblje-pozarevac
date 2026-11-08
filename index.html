@@ -2,57 +2,38 @@
 <html lang="sr-Cyrl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#171716">
-<meta name="description" content="Дигитални каталог, мапа и виртуелни водич кроз Старо гробље у Пожаревцу.">
+<meta name="theme-color" content="#101827">
+<meta name="description" content="Дигитални водич кроз историју Старог гробља у Пожаревцу.">
 <title>Старо гробље • Пожаревац</title>
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="styles.css">
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
 <header class="topbar">
-  <a class="brand" href="#pocetna"><span class="brand-mark">✦</span><span><b>СТАРО ГРОБЉЕ</b><small>ПОЖАРЕВАЦ</small></span></a>
-  <button class="menu-toggle" id="menuToggle" aria-label="Отвори мени">☰</button>
-  <nav id="mainNav">
-    <a href="#pocetna">Почетна</a><a href="#licnosti">Личности</a><a href="#mapa">Мапа</a><a href="#rute">Руте</a><a href="#o-groblju">О гробљу</a><a href="#3d-prikaz">3D приказ</a>
-  </nav>
-  <div class="header-tools"><button class="lang active" data-lang="cir">ЋИР</button><button class="lang" data-lang="lat">LAT</button></div>
+ <a class="brand" href="#pocetna"><span class="brand-cross">✝</span><span><b>СТАРО ГРОБЉЕ</b><strong>ПОЖАРЕВАЦ</strong><small>Дигитални водич кроз историју</small></span></a>
+ <button class="menu-toggle" id="menuToggle" aria-label="Отвори мени">☰</button>
+ <nav id="mainNav"><a href="#pocetna" class="nav-active">Почетна</a><a href="#licnosti">Личности</a><a href="#mapa">Мапа</a><a href="#kategorije">Категорије</a><a href="#o-projektu">О пројекту</a></nav>
+ <div class="header-tools"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Претрага..." autocomplete="off"></label><button class="lang active" data-lang="cir">СРБ</button><button class="lang" data-lang="lat">LAT</button></div>
 </header>
-<main>
-<section class="hero" id="pocetna">
-  <div class="hero-overlay"></div><div class="hero-content">
-    <p class="eyebrow" data-t="eyebrow">ДИГИТАЛНИ ИСТОРИЈСКИ ВОДИЧ</p>
-    <h1 data-t="heroTitle">Старо гробље<br><em>Пожаревац</em></h1>
-    <p class="hero-lead" data-t="heroLead">Место сећања, културе и прича о људима који су обележили историју нашег града.</p>
-    <div class="hero-actions"><a class="btn gold" href="#licnosti" data-t="browse">Истражи личности</a><a class="btn ghost" href="#o-groblju" data-t="intro">Уводна реч</a></div>
-  </div><div class="hero-note"><span>✦</span> <span data-t="memory">СЕЋАЊЕ КОЈЕ ТРАЈЕ</span></div>
-</section>
-<section class="intro section" id="o-groblju">
-  <div class="section-kicker" data-t="kicker">О МЕСТУ</div><h2 data-t="introTitle">Уводна реч</h2>
-  <div class="intro-grid"><div class="ornament">❦</div><div>
-  <p data-t="introText">Старо гробље у Пожаревцу представља драгоцено место историјског и културног памћења. У његовим алејама почивају људи чији су живот, рад и стваралаштво оставили траг у развоју града и шире заједнице.</p>
-  <p data-t="introText2">Овај дигитални каталог повезује биографије, фотографије, податке о гробним местима, интерактивну мапу и 3D приказе тамо где су доступни. Циљ је да се наслеђе сачува и учини приступачним свим посетиоцима.</p>
-  </div></div>
-</section>
-<section class="section people-section" id="licnosti">
-  <div class="section-head"><div><div class="section-kicker" data-t="kickerPeople">ДИГИТАЛНИ КАТАЛОГ</div><h2 data-t="peopleTitle">Знамените личности</h2><p data-t="peopleLead">Изаберите личност да бисте прочитали биографију и видели доступне фотографије, мапу и QR код.</p></div><div class="count" id="peopleCount">—</div></div>
-  <div class="catalog-layout">
-    <aside class="list-panel">
-      <label class="search-label" for="searchInput" data-t="searchLabel">Претрага каталога</label><input id="searchInput" type="search" placeholder="Име, занимање, парцела..." autocomplete="off">
-      <select id="categoryFilter" aria-label="Категорија"><option value="">Све категорије</option></select>
-      <div id="peopleList" class="people-list"><div class="loading">Учитавање каталога…</div></div>
-    </aside>
-    <article id="profileContent" class="profile-panel"><div class="empty-profile"><span class="empty-icon">✦</span><h3 data-t="choosePerson">Изаберите личност</h3><p data-t="chooseHint">Подаци о личности ће се приказати овде.</p></div></article>
-  </div>
-</section>
-<section class="section map-section" id="mapa"><div class="section-head"><div><div class="section-kicker" data-t="kickerMap">ОРИЈЕНТАЦИЈА</div><h2 data-t="mapTitle">Интерактивна мапа</h2><p data-t="mapLead">Изаберите означено гробно место да бисте отворили профил личности.</p></div></div><div id="map" class="map"></div><p class="map-note" data-t="mapNote">Мапа приказује само локације за које су координате унете у базу.</p></section>
-<section class="section routes-section" id="rute"><div class="section-kicker" data-t="kickerRoutes">ПЛАНИРАЈТЕ ПОСЕТУ</div><h2 data-t="routesTitle">Руте до гробља</h2><p data-t="routesLead">Отворите навигацију до Старог гробља или направите пешачку руту до изабране личности када су координате доступне.</p>
-<div class="route-cards"><a class="route-card" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Staro+groblje,+Po%C5%BEarevac"><span>↗</span><b data-t="routeDrive">Навигација до Старог гробља</b><small data-t="routeDriveSub">Отвори Google Maps</small></a><a class="route-card" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Staro+groblje,+Po%C5%BEarevac"><span>⌖</span><b data-t="routeFind">Пронађи гробље</b><small data-t="routeFindSub">Приказ локације на мапи</small></a><div class="route-card static"><span>♧</span><b data-t="routeOnSite">Рута унутар гробља</b><small data-t="routeOnSiteSub">Изаберите личност са координатама на мапи.</small></div></div>
-</section>
-<section class="section model-section" id="3d-prikaz"><div class="section-head"><div><div class="section-kicker" data-t="kicker3d">ВИРТУЕЛНО НАСЛЕЂЕ</div><h2 data-t="modelTitle">3D прикази</h2><p data-t="modelLead">3D модели се приказују у профилу личности за коју су припремљени.</p></div></div><div id="modelsOverview" class="models-overview"><p data-t="modelHint">Отворите профил личности и изаберите картицу „3D приказ“ ако је модел доступан.</p></div></section>
+<main id="pocetna" class="app-shell">
+ <aside class="sidebar">
+  <div class="side-heading" id="kategorije">Категорије</div>
+  <div id="categoryList" class="category-list"></div>
+  <div class="side-heading people-heading" id="sidePeopleTitle">Личности</div>
+  <div id="peopleCount" class="side-count"></div>
+  <div id="peopleList" class="people-list"><div class="loading">Учитавање каталога…</div></div>
+ </aside>
+ <section class="main-content" id="licnosti">
+  <article id="profileContent" class="profile-panel"><div class="empty-profile"><h2>Изаберите личност</h2><p>Биографија, фотографије и подаци о гробном месту приказаће се овде.</p></div></article>
+  <section class="all-map" id="mapa"><h2>Мапа Старог гробља</h2><div id="map" class="map"></div><p class="map-note">Приказане су само личности за које су координате гробног места унете у базу.</p></section>
+  <section class="about-panel" id="o-projektu"><h2>О дигиталном водичу</h2><p>Дигитални водич повезује биографије, фотографије, гробна места, интерактивну мапу, QR кодове и доступне 3D приказе знаменитих личности сахрањених на Старом гробљу у Пожаревцу.</p></section>
+ </section>
 </main>
-<footer><div class="footer-brand">✦ СТАРО ГРОБЉЕ • ПОЖАРЕВАЦ</div><p data-t="footerText">Дигитални каталог културног и историјског наслеђа.</p><a href="#pocetna" data-t="toTop">Назад на врх ↑</a></footer>
+<footer>СТАРО ГРОБЉЕ • ПОЖАРЕВАЦ <span>Дигитални водич кроз историју</span></footer>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="app.js"></script>
