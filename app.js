@@ -50,7 +50,7 @@ function mapCard(p){
  const lat=Number(p.lat),lon=Number(p.lon);
  return '<div class="mini-map" id="profileMap"></div><div class="coords">♧ '+lat.toFixed(6)+', '+lon.toFixed(6)+'</div><a class="maps-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+lat+','+lon+'">↗ '+L("open")+'</a>';
 }
-function qrCard(p){const qrUrl="https://api.qrserver.com/v1/create-qr-code/?size=112x112&margin=2&data="+encodeURIComponent(profileUrl(p));return '<section class="qr-card"><h3>'+L("qr")+'</h3><div class="qr-layout"><div class="qr-box" id="profileQr"><img src="'+esc(qrUrl)+'" alt="QR kod za profil" width="108" height="108" loading="lazy" onerror="this.parentNode.textContent="QR kod trenutno nije dostupan""></div><p>'+L("qrHelp")+'</p></div></section>'}
+function qrCard(p){const qrUrl="https://api.qrserver.com/v1/create-qr-code/?size=112x112&margin=2&data="+encodeURIComponent(profileUrl(p));return '<section class="qr-card"><h3>'+L("qr")+'</h3><div class="qr-layout"><div class="qr-box" id="profileQr"><img src="'+esc(qrUrl)+'" alt="QR kod za profil" width="108" height="108" loading="lazy" onerror="this.remove()"></div><p>'+L("qrHelp")+'</p></div></section>'}
 function showProfile(id){
  const p=people.find(x=>x.id===id);if(!p)return;selectedId=id;renderList();
  const extras=(p.fotografije_dodatne||[]).filter(Boolean);
