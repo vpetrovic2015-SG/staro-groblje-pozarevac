@@ -50,7 +50,7 @@ function mapCard(p){
  const lat=Number(p.lat),lon=Number(p.lon);
  return '<div class="mini-map" id="profileMap"></div><div class="coords">♧ '+lat.toFixed(6)+', '+lon.toFixed(6)+'</div><a class="maps-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+lat+','+lon+'">↗ '+L("open")+'</a>';
 }
-function qrCard(p){return '<section class="qr-card"><h3>'+L("qr")+'</h3><div class="qr-layout"><div class="qr-box" id="profileQr"></div><p>'+L("qrHelp")+'</p></div></section>'}
+function qrCard(p){const qrUrl="https://api.qrserver.com/v1/create-qr-code/?size=112x112&margin=2&data="+encodeURIComponent(profileUrl(p));return '<section class="qr-card"><h3>'+L("qr")+'</h3><div class="qr-layout"><div class="qr-box" id="profileQr"><img src="'+esc(qrUrl)+'" alt="QR kod za profil" width="108" height="108" loading="lazy" onerror="this.parentNode.textContent="QR kod trenutno nije dostupan""></div><p>'+L("qrHelp")+'</p></div></section>'}
 function showProfile(id){
  const p=people.find(x=>x.id===id);if(!p)return;selectedId=id;renderList();
  const extras=(p.fotografije_dodatne||[]).filter(Boolean);
@@ -63,13 +63,13 @@ function showProfile(id){
  (extras.length?'<section class="extra-card"><h2>'+L("extra")+'</h2><div class="extra-gallery">'+extras.map((src,i)=>'<a href="'+esc(src)+'" target="_blank" rel="noopener">'+photo(src,L("extra")+" "+(i+1),"extra-image")+'</a>').join("")+'</div></section>':'')+
  '<div class="profile-bottom-meta">'+(p.parcela?'<span>Парцела: '+esc(p.parcela)+'</span>':'')+(p.grobno_mesto?'<span>Гробно место: '+esc(p.grobno_mesto)+'</span>':'')+'<button id="copyLink">Копирај линк профила</button></div>';
  document.querySelectorAll(".profile-tabs .tab").forEach(a=>a.onclick=()=>{document.querySelectorAll(".profile-tabs .tab").forEach(x=>x.classList.remove("selected"));a.classList.add("selected")});
- if(p.lat&&p.lon&&window.L){const mapEl=$("profileMap");if(mapEl){const m=L.map(mapEl,{scrollWheelZoom:false,zoomControl:true}).setView([p.lat,p.lon],18);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:20,attribution:"© OpenStreetMap"}).addTo(m);L.marker([p.lat,p.lon]).addTo(m);setTimeout(()=>m.invalidateSize(),150)}}
- const qr=$("profileQr");if(qr&&window.QRCode)new QRCode(qr,{text:profileUrl(p),width:112,height:112,colorDark:"#080808",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M});
+ if(hasCoord(p)){const mapEl=$("profileMap");if(mapEl){if(window.L){const m=L.map(mapEl,{scrollWheelZoom:false,zoomControl:true}).setView([Number(p.lat),Number(p.lon)],18);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:20,attribution:"© OpenStreetMap"}).addTo(m);L.marker([Number(p.lat),Number(p.lon)]).addTo(m);setTimeout(()=>m.invalidateSize(),150)}else{const a=Number(p.lat),o=Number(p.lon),d=.0012;mapEl.outerHTML='<iframe class="mini-map map-fallback" title="Lokacija grobnog mesta" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox='+(o-d)+','+(a-d)+','+(o+d)+','+(a+d)+'&layer=mapnik&marker='+a+','+o+'"></iframe>'}}}
+
  $("copyLink").onclick=async()=>{try{await navigator.clipboard.writeText(profileUrl(p));$("copyLink").textContent="Линк је копиран"}catch(e){prompt("Копирајте линк:",profileUrl(p))}};
  history.replaceState(null,"","#licnost="+encodeURIComponent(id));
 }
 function initMap(){
- if(!window.L)return;mapInstance=L.map("map").setView([44.6301,21.1791],17);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:20,attribution:"© OpenStreetMap"}).addTo(mapInstance);
+ if(!window.L){const pts=people.filter(hasCoord);if(pts.length){const lats=pts.map(p=>Number(p.lat)),lons=pts.map(p=>Number(p.lon));const minLat=Math.min(...lats)-.0008,maxLat=Math.max(...lats)+.0008,minLon=Math.min(...lons)-.0008,maxLon=Math.max(...lons)+.0008;$("map").innerHTML='<iframe class="map map-fallback" title="Mapa Starog groblja" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox='+minLon+','+minLat+','+maxLon+','+maxLat+'&layer=mapnik"></iframe>'}return;}mapInstance=L.map("map").setView([44.6301,21.1791],17);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:20,attribution:"© OpenStreetMap"}).addTo(mapInstance);
  people.filter(hasCoord).forEach(p=>{const marker=L.marker([Number(p.lat),Number(p.lon)]).addTo(mapInstance).bindPopup('<b>'+esc(name(p))+'</b><br><a href="#licnost='+encodeURIComponent(p.id)+'" data-id="'+esc(p.id)+'">Отвори профил</a>');marker.on("popupopen",()=>{document.querySelectorAll("#map [data-id]").forEach(a=>a.onclick=e=>{e.preventDefault();showProfile(a.dataset.id);window.scrollTo({top:0,behavior:"smooth"})})})});
 }
 function setLanguage(lang){script=lang;document.documentElement.lang=lang==="lat"?"sr-Latn":"sr-Cyrl";document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));$("searchInput").placeholder=L("search");renderCategories();renderList();if(selectedId)showProfile(selectedId)}
