@@ -475,13 +475,13 @@
     "zanimanje": "Председник пожаревачке општине",
     "zanimanje_lat": "Predsednik požarevačke opštine",
     "godine": "1914–1915",
-    "biografija": "Димитрија–Мита Протић (1914–1915), који је био последњи изабрани председник општине пожаревачке у слободној земљи пре окупације 1915. године. Сахрањен је на старом гробљу у Пожаревцу  у парцели 13 гробно место 010.",
-    "biografija_lat": "Dimitrija–Mita Protić (1914–1915), koji je bio poslednji izabrani predsednik opštine požarevačke u slobodnoj zemlji pre okupacije 1915. godine. Sahranjen je na starom groblju u Požarevcu  u parceli 13 grobno mesto 010.",
+    "biografija": "Димитрије–Мита Протић био је председник пожаревачке општине у периоду 1914–1915. године. Према достављеном памфлету, био је последњи изабрани председник општине пожаревачке у слободној земљи пре окупације 1915. године. Сахрањен је на Старом гробљу у Пожаревцу, у парцели 13, гробно место 010.",
+    "biografija_lat": "Dimitrije–Mita Protić bio je predsednik požarevačke opštine u periodu 1914–1915. godine. Prema dostavljenom pamfletu, bio je poslednji izabrani predsednik požarevačke opštine u slobodnoj zemlji pre okupacije 1915. godine. Sahranjen je na Starom groblju u Požarevcu, u parceli 13, grobno mesto 010.",
     "parcela": "13",
     "grobno_mesto": "010",
     "lat": 44.629399,
     "lon": 21.180061,
-    "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
+    "izvori": "Памфлет „Познати Пожаревљани“, одељак о осталим председницима општине сахрањеним на Старом гробљу.",
     "fotografija": "",
     "kategorije": [
       "politicari"
@@ -495,13 +495,13 @@
     "zanimanje": "Председник пожаревачке општине",
     "zanimanje_lat": "Predsednik požarevačke opštine",
     "godine": "1944–1945",
-    "biografija": "Божидар–Божа Тадић био је председник пожаревачке општине непосредно после Другог светског рата, у периоду 1944–1945. године. Обављао је јавну функцију у време обнове локалне управе након ослобођења.",
-    "biografija_lat": "Božidar–Boža Tadić bio je predsednik požarevačke opštine neposredno posle Drugog svetskog rata, u periodu 1944–1945. godine. Obavljao je javnu funkciju u vreme obnove lokalne uprave nakon oslobođenja.",
+    "biografija": "Божидар–Божа Тадић био је председник Пожаревачке општине од 1944. до 1945. године, непосредно након завршетка Другог светског рата. Према достављеном памфлету, сахрањен је на Старом гробљу у Пожаревцу, у парцели 15, гробно место 19.",
+    "biografija_lat": "Božidar–Boža Tadić bio je predsednik Požarevačke opštine od 1944. do 1945. godine, neposredno nakon završetka Drugog svetskog rata. Prema dostavljenom pamfletu, sahranjen je na Starom groblju u Požarevcu, u parceli 15, grobno mesto 19.",
     "parcela": "15",
     "grobno_mesto": "19",
     "lat": 44.629499,
     "lon": 21.17949,
-    "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
+    "izvori": "Памфлет „Познати Пожаревљани“, одељак о осталим председницима општине сахрањеним на Старом гробљу.",
     "fotografija": "",
     "kategorije": [
       "politicari"
@@ -738,14 +738,14 @@
     "zanimanje": "Пуковник",
     "zanimanje_lat": "Pukovnik",
     "godine": "",
-    "biografija": "Биографски подаци и подаци о гробном месту биће допуњени након провере архивске грађе.",
-    "biografija_lat": "Biografski podaci i podaci o grobnom mestu biće dopunjeni nakon provere arhivske građe.",
+    "biografija": "Пуковник Душан Р. Димитријевић био је један од браће Саве и Душана Димитријевића, синова Радојка Димитријевића, некадашњег председника Пожаревачке општине. Према историјској монографији „Пожаревац, окружна варош 1858–1918“ др Мирољуба Манојловића, браћа Сава и Душан завршили су Војну академију и заузимали високе положаје у српској војсци. Доступни одломак наводи да је Душан дуго година био водник, али се наставак податка у тренутно доступном изводу не види. Зато се датум рођења, смрти и потпуни ток његове војне службе не наводе без додатне архивске провере.",
+    "biografija_lat": "Pukovnik Dušan R. Dimitrijević bio je jedan od braće Save i Dušana Dimitrijevića, sinova Radojka Dimitrijevića, nekadašnjeg predsednika Požarevačke opštine. Prema istorijskoj monografiji „Požarevac, okružna varoš 1858–1918“ dr Miroljuba Manojlovića, braća Sava i Dušan završili su Vojnu akademiju i zauzimali visoke položaje u srpskoj vojsci. Dostupni odlomak navodi da je Dušan dugo godina bio vodnik, ali se nastavak podatka u trenutno dostupnom izvodu ne vidi. Zato se datum rođenja, smrti i potpun tok njegove vojne službe ne navode bez dodatne arhivske provere.",
     "fotografija": "assets/licnosti/dusan-r-dimitrijevic.jpg",
     "fotografija_groba": "assets/grobna-mesta/dusan-r-dimitrijevic-grob.jpg",
     "kategorije": [
       "oficiri"
     ],
-    "izvori": "Портрет је означен као пуковник Душан Р. Димитријевић; фотографије доставио корисник."
+    "izvori": "Др Мирољуб Манојловић, „Пожаревац, окружна варош 1858–1918“, Историјски архив Пожаревац, 2011, стр. 93; фотографије доставио корисник."
   },
   {
     "id": "simeon-jovanovic",
