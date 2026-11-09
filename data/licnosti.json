@@ -17,7 +17,7 @@
     "kategorije": [
       "umetnici"
     ],
-    "fotografija_groba": "assets/grobna-mesta/zivka-matic-grob.jpg",
+    "fotografija_groba": "",
     "model_3d": "assets/3d/zivka-matic.glb"
   },
   {
@@ -39,7 +39,7 @@
       "politicari",
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna-mesta/Stojan-Pavlovic-grob.jpg"
+    "fotografija_groba": ""
   },
   {
     "id": "dimitrije-mita-sapinac",
@@ -147,7 +147,7 @@
       "dobrotvori",
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna-mesta/Cecelski-grob.jpeg"
+    "fotografija_groba": ""
   },
   {
     "id": "dusan-vujicic",
@@ -210,7 +210,7 @@
       "lekari",
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna-mesta/Dusmanic-grob.jpeg",
+    "fotografija_groba": "",
     "model_3d": "assets/3d/dusmanica-grob.glb"
   },
   {
@@ -253,7 +253,7 @@
       "advokati",
       "politicari"
     ],
-    "fotografija_groba": "assets/grobna-mesta/Branko-Ivosevic-grob.jpg"
+    "fotografija_groba": ""
   },
   {
     "id": "dr-nikola-hadzi-nikolic",
@@ -273,7 +273,7 @@
     "kategorije": [
       "lekari"
     ],
-    "fotografija_groba": "assets/grobna-mesta/Hadzi-Nikolic-grob.jpeg"
+    "fotografija_groba": ""
   },
   {
     "id": "milutin-obradovic",
@@ -295,7 +295,7 @@
       "dobrotvori",
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna-mesta/milutin-obradovic-grob.jpg"
+    "fotografija_groba": ""
   },
   {
     "id": "mihailo-krstic",
@@ -337,7 +337,7 @@
     "kategorije": [
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna-mesta/Zivorad-Zika-Petrovic-grob.jpeg"
+    "fotografija_groba": ""
   },
   {
     "id": "vladimir-sukljevic",
@@ -440,7 +440,7 @@
     "lat": 44.629843,
     "lon": 21.178906,
     "izvori": "Портрет достављен од корисника.",
-    "fotografija": "assets/licnosti/petar-tamburas.jpg",
+    "fotografija": "",
     "kategorije": [
       "politicari",
       "privrednici",
@@ -542,11 +542,11 @@
     "lat": 44.629747,
     "lon": 21.180384,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
-    "fotografija": "assets/licnosti/vladan-popovic-sulja.jpg",
+    "fotografija": "",
     "kategorije": [
       "prosvetni"
     ],
-    "fotografija_groba": "assets/grobna-mesta/vladan-popovic-sulja-grob.jpg",
+    "fotografija_groba": "",
     "model_3d": "assets/3d/vladan-popovic-sulja.glb"
   },
   {
@@ -609,7 +609,7 @@
       "privrednici",
       "politicari"
     ],
-    "fotografija_groba": "assets/grobna-mesta/Nikolajevic-Aleksandar-grob.jpg"
+    "fotografija_groba": ""
   },
   {
     "zanimanje": "Трговац извозник, председник општине и добротвор",
@@ -620,7 +620,7 @@
     "lat": null,
     "lon": null,
     "fotografija": "",
-    "fotografija_groba": "assets/grobna-mesta/Belosavic-grob.jpeg",
+    "fotografija_groba": "",
     "izvori": "Памфлет „Стари гробљe у Пожаревцу“, одељак о Илији (Белу) Савићу и Станку Бело Савићу; породична гробница Белосавић, парцела 12, гробно место 38. Dodatak o prilogu crkvi i matičnoj grobnici: податак корисника.",
     "id": "ilija-belosavic",
     "ime": "Илија (Бело) Савић",
@@ -642,7 +642,7 @@
     "lat": null,
     "lon": null,
     "fotografija": "",
-    "fotografija_groba": "assets/grobna-mesta/Belosavic-grob.jpeg",
+    "fotografija_groba": "",
     "izvori": "Памфлет „Стари гробљe у Пожаревцу“, одељак о Илији (Белу) Савићу и Станку Бело Савићу; породична гробница Белосавић, парцела 12, гробно место 38. Dodatak o prilogu crkvi i matičnoj grobnici: податак корисника.",
     "id": "stanko-belosavic",
     "ime": "Станко Бело Савић",
@@ -685,7 +685,7 @@
     "biografija_lat": "Vlajko Stojiljković rođen je 1946. godine. Osnovnu školu završio je u Maloj Krsni, a gimnaziju u Požarevcu, nakon čega je diplomirao na Pravnom fakultetu u Beogradu. Profesionalnu karijeru započeo je kao sudski pripravnik u Opštinskom sudu u Požarevcu, a potom je radio u policiji i postao načelnik SUP-a Požarevac. Od 1978. do 1982. godine bio je predsednik Izvršnog saveta Skupštine opštine Požarevac, a kratko vreme i upravnik KPZ Zabela. Od 1984. do 1990. godine bio je generalni direktor Poljoprivredno-industrijskog kombinata u Požarevcu. Potom je bio potpredsednik Privredne komore Jugoslavije i Privredne komore Srbije, čiji je predsednik postao 1991. godine. Prema dostavljenom tekstu, 13. maja 2000. godine odlikovan je Ordenom jugoslovenske zastave prvog reda. Nakon političkih promena 2000. godine podneo je ostavku na funkciju republičkog ministra. Dana 11. aprila 2002. godine pokušao je samoubistvo ispred zgrade Savezne skupštine, a preminuo je 13. aprila u Urgentnom centru u Beogradu. Sahranjen je 16. aprila 2002. godine na Starom groblju u Požarevcu. Fotografija njegove grobnice biće dodata kada bude dostavljena ispravna fotografija.",
     "grobno_mesto": "",
     "parcela": "",
-    "fotografija": "assets/licnosti/vlajko-stojiljkovic.jpg",
+    "fotografija": "",
     "fotografija_groba": "assets/grobna-mesta/vlajko-stojiljkovic.jpg",
     "kategorije": [
       "istorija",
