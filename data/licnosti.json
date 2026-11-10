@@ -446,7 +446,7 @@
       "privrednici",
       "dobrotvori"
     ],
-    "fotografija_groba": "assets/grobna-mesta/Petar-Tamburas-grob.jpg"
+    "fotografija_groba": "assets/grobna-mesta/petar-tamburas.jpg"
   },
   {
     "id": "glisa-petrovic",
@@ -542,7 +542,7 @@
     "lat": 44.629747,
     "lon": 21.180384,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
-    "fotografija": "assets/licnosti/vladan-popovic-sulja.jpg",
+    "fotografija": "assets/licnosti/Vladan-Popovic-sulja.jpg",
     "kategorije": [
       "prosvetni"
     ],
@@ -686,7 +686,7 @@
     "grobno_mesto": "",
     "parcela": "",
     "fotografija": "",
-    "fotografija_groba": "assets/grobna-mesta/Vlajko-stojiljkovic-grob.jpg",
+    "fotografija_groba": "assets/grobna-mesta/vlajko-stojiljkovic.jpg",
     "kategorije": [
       "istorija",
       "javne-licnosti"
