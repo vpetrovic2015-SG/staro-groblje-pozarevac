@@ -17,7 +17,7 @@
     "kategorije": [
       "umetnici"
     ],
-    "fotografija_groba": "assets/grobna-mesta/zivka-matic-grob.jpg",
+    "fotografija_groba": "",
     "model_3d": "assets/3d/zivka-matic.glb"
   },
   {
@@ -39,7 +39,7 @@
       "politicari",
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna-mesta/Stojan-Pavlovic-grob.jpg"
+    "fotografija_groba": ""
   },
   {
     "id": "dimitrije-mita-sapinac",
@@ -59,7 +59,7 @@
     "kategorije": [
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna-mesta/Dimitrije-Sapinac-grob.jpg"
+    "fotografija_groba": ""
   },
   {
     "id": "ignjat-todorovic",
@@ -125,7 +125,7 @@
       "umetnici",
       "prosvetni"
     ],
-    "fotografija_groba": "assets/grobna-mesta/Vasa Pelagić.jpeg"
+    "fotografija_groba": ""
   },
   {
     "id": "josif-a-cecelski",
@@ -147,7 +147,7 @@
       "dobrotvori",
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna-mesta/Cecelski-grob.jpeg"
+    "fotografija_groba": ""
   },
   {
     "id": "dusan-vujicic",
@@ -210,7 +210,7 @@
       "lekari",
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna-mesta/Dusmanic-grob.jpeg",
+    "fotografija_groba": "",
     "model_3d": "assets/3d/dusmanica-grob.glb"
   },
   {
@@ -253,7 +253,7 @@
       "advokati",
       "politicari"
     ],
-    "fotografija_groba": "assets/grobna-mesta/Branko-Ivosevic-grob.jpg"
+    "fotografija_groba": ""
   },
   {
     "id": "dr-nikola-hadzi-nikolic",
@@ -273,7 +273,7 @@
     "kategorije": [
       "lekari"
     ],
-    "fotografija_groba": "assets/grobna-mesta/Hadzi-Nikolic-grob.jpeg"
+    "fotografija_groba": ""
   },
   {
     "id": "milutin-obradovic",
@@ -295,7 +295,7 @@
       "dobrotvori",
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna-mesta/milutin-obradovic-grob.jpg"
+    "fotografija_groba": ""
   },
   {
     "id": "mihailo-krstic",
@@ -337,7 +337,7 @@
     "kategorije": [
       "privrednici"
     ],
-    "fotografija_groba": "assets/grobna-mesta/Zivorad-Zika-Petrovic-grob.jpeg"
+    "fotografija_groba": ""
   },
   {
     "id": "vladimir-sukljevic",
@@ -440,7 +440,7 @@
     "lat": 44.629843,
     "lon": 21.178906,
     "izvori": "Портрет достављен од корисника.",
-    "fotografija": "assets/licnosti/petar-tamburas.jpg",
+    "fotografija": "",
     "kategorije": [
       "politicari",
       "privrednici",
@@ -542,11 +542,11 @@
     "lat": 44.629747,
     "lon": 21.180384,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
-    "fotografija": "assets/licnosti/Vladan-Popovic-sulja.jpg",
+    "fotografija": "",
     "kategorije": [
       "prosvetni"
     ],
-    "fotografija_groba": "assets/grobna-mesta/vladan-popovic-sulja-grob.jpg",
+    "fotografija_groba": "",
     "model_3d": "assets/3d/vladan-popovic-sulja.glb"
   },
   {
@@ -620,7 +620,7 @@
     "lat": null,
     "lon": null,
     "fotografija": "",
-    "fotografija_groba": "assets/grobna-mesta/Belosavic-grob.jpeg",
+    "fotografija_groba": "",
     "izvori": "Памфлет „Стари гробљe у Пожаревцу“, одељак о Илији (Белу) Савићу и Станку Бело Савићу; породична гробница Белосавић, парцела 12, гробно место 38. Dodatak o prilogu crkvi i matičnoj grobnici: податак корисника.",
     "id": "ilija-belosavic",
     "ime": "Илија (Бело) Савић",
@@ -642,7 +642,7 @@
     "lat": null,
     "lon": null,
     "fotografija": "",
-    "fotografija_groba": "assets/grobna-mesta/Belosavic-grob.jpeg",
+    "fotografija_groba": "",
     "izvori": "Памфлет „Стари гробљe у Пожаревцу“, одељак о Илији (Белу) Савићу и Станку Бело Савићу; породична гробница Белосавић, парцела 12, гробно место 38. Dodatak o prilogu crkvi i matičnoj grobnici: податак корисника.",
     "id": "stanko-belosavic",
     "ime": "Станко Бело Савић",
@@ -713,7 +713,7 @@
       "istorija",
       "javne-licnosti"
     ],
-    "fotografija_groba": "assets/grobna-mesta/draza-markovic-grob.jpg"
+    "fotografija_groba": ""
   },
   {
     "id": "antonije-pekic",
@@ -823,6 +823,6 @@
       "privrednici"
     ],
     "izvori": "Биографија достављена од корисника.",
-    "fotografija_groba": "assets/grobna-mesta/milutin-dronja-grob.jpg"
+    "fotografija_groba": ""
   }
 ]
