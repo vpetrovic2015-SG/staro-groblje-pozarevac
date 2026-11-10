@@ -39,7 +39,7 @@
       "politicari",
       "privrednici"
     ],
-    "fotografija_groba": ""
+    "fotografija_groba": "assets/grobna-mesta/Stojan-Pavlovic-grob.jpg"
   },
   {
     "id": "dimitrije-mita-sapinac",
@@ -59,7 +59,7 @@
     "kategorije": [
       "privrednici"
     ],
-    "fotografija_groba": ""
+    "fotografija_groba": "assets/grobna-mesta/Dimitrije-Sapinac-grob.jpg"
   },
   {
     "id": "ignjat-todorovic",
@@ -210,7 +210,7 @@
       "lekari",
       "privrednici"
     ],
-    "fotografija_groba": "",
+    "fotografija_groba": "assets/grobna-mesta/Dusmanic-grob.jpeg",
     "model_3d": "assets/3d/dusmanica-grob.glb"
   },
   {
@@ -253,7 +253,7 @@
       "advokati",
       "politicari"
     ],
-    "fotografija_groba": ""
+    "fotografija_groba": "assets/grobna-mesta/Branko-Ivosevic-grob.jpg"
   },
   {
     "id": "dr-nikola-hadzi-nikolic",
@@ -273,7 +273,7 @@
     "kategorije": [
       "lekari"
     ],
-    "fotografija_groba": ""
+    "fotografija_groba": "assets/grobna-mesta/Hadzi-Nikolic-grob.jpeg"
   },
   {
     "id": "milutin-obradovic",
@@ -337,7 +337,7 @@
     "kategorije": [
       "privrednici"
     ],
-    "fotografija_groba": ""
+    "fotografija_groba": "assets/grobna-mesta/Zivorad-Zika-Petrovic-grob.jpeg"
   },
   {
     "id": "vladimir-sukljevic",
@@ -440,7 +440,7 @@
     "lat": 44.629843,
     "lon": 21.178906,
     "izvori": "Портрет достављен од корисника.",
-    "fotografija": "",
+    "fotografija": "assets/licnosti/petar-tamburas.jpg",
     "kategorije": [
       "politicari",
       "privrednici",
@@ -807,7 +807,7 @@
       "advokati"
     ],
     "izvori": "Биографија достављена од корисника.",
-    "fotografija_groba": ""
+    "fotografija_groba": "assets/grobna-mesta/Simo-Brkic-grob.jpeg"
   },
   {
     "id": "milutin-d-milojkovic-dronja",
