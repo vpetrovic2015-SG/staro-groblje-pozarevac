@@ -147,7 +147,7 @@
       "dobrotvori",
       "privrednici"
     ],
-    "fotografija_groba": ""
+    "fotografija_groba": "assets/grobna-mesta/Cecelski-grob.jpeg"
   },
   {
     "id": "dusan-vujicic",
@@ -295,7 +295,7 @@
       "dobrotvori",
       "privrednici"
     ],
-    "fotografija_groba": ""
+    "fotografija_groba": "assets/grobna-mesta/milutin-obradovic-grob.jpg"
   },
   {
     "id": "mihailo-krstic",
@@ -446,7 +446,7 @@
       "privrednici",
       "dobrotvori"
     ],
-    "fotografija_groba": "assets/grobna-mesta/petar-tamburas.jpg"
+    "fotografija_groba": "assets/grobna-mesta/Petar-Tamburas-grob.jpg"
   },
   {
     "id": "glisa-petrovic",
@@ -466,7 +466,7 @@
     "kategorije": [
       "politicari"
     ],
-    "fotografija_groba": "assets/grobna-mesta/glisa-petrovic.jpg"
+    "fotografija_groba": "assets/grobna-mesta/Glisa-Petrovic-grob.jpg"
   },
   {
     "id": "dimitrije-mita-protic",
@@ -609,7 +609,7 @@
       "privrednici",
       "politicari"
     ],
-    "fotografija_groba": ""
+    "fotografija_groba": "assets/grobna-mesta/Nikolajevic-Aleksandar-grob.jpg"
   },
   {
     "zanimanje": "Трговац извозник, председник општине и добротвор",
@@ -686,7 +686,7 @@
     "grobno_mesto": "",
     "parcela": "",
     "fotografija": "",
-    "fotografija_groba": "assets/grobna-mesta/vlajko-stojiljkovic.jpg",
+    "fotografija_groba": "assets/grobna-mesta/Vlajko-stojiljkovic-grob.jpg",
     "kategorije": [
       "istorija",
       "javne-licnosti"
