@@ -24,6 +24,26 @@ const job=p=>script==="cir"?(p.zanimanje||p.zanimanje_lat):script==="en"?(p.zani
 const bio=p=>script==="cir"?(p.biografija||p.biografija_lat):script==="en"?(p.biografija_en||p.biografija_lat||p.biografija):(p.biografija_lat||p.biografija);
 const L=k=>(labels[script]&&labels[script][k])||k;
 function profileUrl(p){const u=new URL(location.href);u.hash="licnost="+encodeURIComponent(p.id);return u.href}
+function openPortraitLightbox(src,alt){
+ let overlay=document.getElementById("portraitLightbox");
+ if(!overlay){
+  overlay=document.createElement("div");overlay.id="portraitLightbox";overlay.className="portrait-lightbox";
+  overlay.innerHTML='<button class="lightbox-close" type="button" aria-label="Затвори увећану фотографију">×</button><img class="lightbox-image" alt=""><div class="lightbox-caption"></div>';
+  document.body.appendChild(overlay);
+  const close=()=>{overlay.classList.remove("is-open");document.body.classList.remove("lightbox-open");};
+  overlay.addEventListener("click",e=>{if(e.target===overlay||e.target.classList.contains("lightbox-close"))close();});
+  document.addEventListener("keydown",e=>{if(e.key==="Escape")close();});
+ }
+ const image=overlay.querySelector(".lightbox-image");
+ image.src=src;image.alt=alt||"";
+ overlay.querySelector(".lightbox-caption").textContent=alt||"";
+ overlay.classList.add("is-open");document.body.classList.add("lightbox-open");
+}
+document.addEventListener("click",e=>{
+ const img=e.target.closest(".people-list img, #profileContent img");
+ if(!img||img.classList.contains("broken-image"))return;
+ e.preventDefault();openPortraitLightbox(img.currentSrc||img.src,img.alt);
+});
 function photo(path,alt,cls=""){return path?'<img class="'+cls+'" src="'+esc(path)+'" alt="'+esc(alt)+'" loading="lazy" decoding="async" onerror="this.classList.add(\'broken-image\');this.alt=\'Фотографија није пронађена: '+esc(path)+'\'">':'<div class="image-placeholder">'+L("noPhoto")+'</div>'}
 function hasCoord(p){if(!p||p.lat===null||p.lon===null||p.lat===undefined||p.lon===undefined||p.lat===""||p.lon==="")return false;const lat=Number(p.lat),lon=Number(p.lon);return Number.isFinite(lat)&&Number.isFinite(lon)&&lat>=-90&&lat<=90&&lon>=-180&&lon<=180&&(lat!==0||lon!==0)}
 function categoryKey(p){return (p.kategorije||[]).map(norm)}
