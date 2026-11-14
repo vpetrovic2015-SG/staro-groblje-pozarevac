@@ -333,6 +333,7 @@
       "politicari"
     ],
     "fotografija_groba": "assets/grobna-mesta/Mihajlo Krstic-grob.jpg",
+     "model_3d": "assets/3d/mihailo-krstic.glb",
     "biografija_en": "Mihailo Krstić (1887–1969) was a Serbian lawyer, military officer and public figure from Požarevac. He was born into a respected local family. His father Petko was a prosperous gardener, while his mother Darinka came from another established Požarevac family. Krstić studied law in Berlin and, on returning to Serbia, began a legal career. He later took part in the Balkan Wars and the First World War, including the Serbian Army’s retreat across Albania, its recovery on Corfu and the fighting on the Salonika Front. He rose to the rank of colonel.\n\nAfter the war, he returned to Požarevac and became active in municipal and public affairs. He served as president of the municipality in 1926–1929 and 1932–1936, and also held the office of mayor in 1934. He influenced the town’s administration and local development and was regarded as an educated and influential figure with connections in state circles. In the late 1930s, he served as an attaché at the embassy of the Kingdom of Yugoslavia in Berlin. He died in Požarevac in 1969."
   },
   {
@@ -415,6 +416,7 @@
     "lon": 21.180326,
     "izvori": "Биографија и подаци о гробном месту достављени од корисника.",
     "fotografija": "assets/licnosti/Milica-Srpkinja.jpg",
+      "model_3d": "assets/3d/milica-stojadinovic-srpkinja.glb",
     "kategorije": [
       "umetnici"
     ],
@@ -445,6 +447,7 @@
       "assets/grobna-mesta/bozidar-dimitrijevic-kozica-ploca.jpg"
     ],
     "fotografija_dodatna": "assets/grobna-mesta/bozidar-dimitrijevic-kozica-ploca.jpg",
+     "model_3d": "assets/3d/bozidar-dimitrijevic-kozica.glb",
     "biografija_en": "Božidar Dimitrijević, known as Kozica, was born on 6 December 1914 in the village of Drmno near Požarevac. He lost his parents at an early age and was raised by his grandparents. He completed primary school and gymnasium in Požarevac before enrolling in the civil engineering department of the Great School of Technology in Belgrade. He was soon elected to the board of the association of civil engineering students.\n\nFrom 1934, he took an active part in the activities of the revolutionary student movement at the University of Belgrade. After a strike organised by the Action Committee to improve conditions in the student residence, he was expelled from the university for one year in late 1935. He returned to Požarevac and became active in the workers’ educational group “Čiča Ilija”, the sports society “Mladi radnik” and the local students’ association. In 1937, he returned to Belgrade, but an eye condition forced him to change his studies; in 1938, he enrolled at the Faculty of Philosophy. That year he joined the Communist Party of Yugoslavia.\n\nIn 1939 and 1940, he worked in the technical section of the Central Committee of the Communist Party. He was later reassigned to Požarevac, where he worked in the district party leadership and helped expand the organisation’s influence in rural areas. After the occupation of Yugoslavia, he took part in preparations for the uprising, helped organise armed groups and contributed to the formation of the Požarevac Partisan Detachment, where he served as political commissar until around mid-September 1941.\n\nIn the summer of 1943, while travelling to a meeting of military and political leaders in Šumadija, he was wounded in the village of Kovačevac near Mladenovac. The bullet remained in his leg, and the wound never healed properly. Despite his deteriorating health, he continued his political work, particularly in Požarevac and Kostolac. On 12 August 1944, enemy forces surrounded the house in the village of Petka where he was recovering. Rather than be captured, he detonated a hand grenade. By decree of the President of the Federal People’s Republic of Yugoslavia, Josip Broz Tito, on 6 July 1953, he was proclaimed a National Hero of Yugoslavia."
   },
   {
