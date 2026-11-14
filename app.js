@@ -24,7 +24,7 @@ const bio=p=>script==="lat"?(p.biografija_lat||p.biografija):(p.biografija||p.bi
 const L=k=>labels[script][k]||k;
 function profileUrl(p){const u=new URL(location.href);u.hash="licnost="+encodeURIComponent(p.id);return u.href}
 function photo(path,alt,cls=""){return path?'<img class="'+cls+'" src="'+esc(path)+'" alt="'+esc(alt)+'" loading="lazy" onerror="this.classList.add(\'broken-image\');this.alt=\'Фотографија није пронађена: '+esc(path)+'\'">':'<div class="image-placeholder">'+L("noPhoto")+'</div>'}
-function hasCoord(p){return Number.isFinite(Number(p.lat))&&Number.isFinite(Number(p.lon))&&p.lat!==""&&p.lon!==""}
+function hasCoord(p){if(!p||p.lat===null||p.lon===null||p.lat===undefined||p.lon===undefined||p.lat===""||p.lon==="")return false;const lat=Number(p.lat),lon=Number(p.lon);return Number.isFinite(lat)&&Number.isFinite(lon)&&lat>=-90&&lat<=90&&lon>=-180&&lon<=180&&(lat!==0||lon!==0)}
 function categoryKey(p){return (p.kategorije||[]).map(norm)}
 function renderCategories(){
  const selected=$("categoryList");
