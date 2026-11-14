@@ -24,7 +24,7 @@ const job=p=>script==="cir"?(p.zanimanje||p.zanimanje_lat):script==="en"?(p.zani
 const bio=p=>script==="cir"?(p.biografija||p.biografija_lat):script==="en"?(p.biografija_en||p.biografija_lat||p.biografija):(p.biografija_lat||p.biografija);
 const L=k=>(labels[script]&&labels[script][k])||k;
 function profileUrl(p){const u=new URL(location.href);u.hash="licnost="+encodeURIComponent(p.id);return u.href}
-function photo(path,alt,cls=""){return path?'<img class="'+cls+'" src="'+esc(path)+'" alt="'+esc(alt)+'" loading="lazy" onerror="this.classList.add(\'broken-image\');this.alt=\'Фотографија није пронађена: '+esc(path)+'\'">':'<div class="image-placeholder">'+L("noPhoto")+'</div>'}
+function photo(path,alt,cls=""){return path?'<img class="'+cls+'" src="'+esc(path)+'" alt="'+esc(alt)+'" loading="lazy" decoding="async" onerror="this.classList.add(\'broken-image\');this.alt=\'Фотографија није пронађена: '+esc(path)+'\'">':'<div class="image-placeholder">'+L("noPhoto")+'</div>'}
 function hasCoord(p){if(!p||p.lat===null||p.lon===null||p.lat===undefined||p.lon===undefined||p.lat===""||p.lon==="")return false;const lat=Number(p.lat),lon=Number(p.lon);return Number.isFinite(lat)&&Number.isFinite(lon)&&lat>=-90&&lat<=90&&lon>=-180&&lon<=180&&(lat!==0||lon!==0)}
 function categoryKey(p){return (p.kategorije||[]).map(norm)}
 function renderCategories(){
@@ -52,23 +52,67 @@ function mapCard(p){
  return '<div class="mini-map" id="profileMap"></div><div class="coords">♧ '+lat.toFixed(6)+', '+lon.toFixed(6)+'</div><a class="maps-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+lat+','+lon+'">↗ '+L("open")+'</a>';
 }
 function qrCard(p){const qrUrl="https://api.qrserver.com/v1/create-qr-code/?size=112x112&margin=2&data="+encodeURIComponent(profileUrl(p));return '<section class="qr-card"><h3>'+L("qr")+'</h3><div class="qr-layout"><div class="qr-box" id="profileQr"><img src="'+esc(qrUrl)+'" alt="QR kod za profil" width="108" height="108" loading="lazy" onerror="this.remove()"></div><p>'+L("qrHelp")+'</p></div></section>'}
+let modelViewerPromise=null;
+function loadModelViewer(){
+ if(customElements.get("model-viewer"))return Promise.resolve();
+ if(modelViewerPromise)return modelViewerPromise;
+ modelViewerPromise=new Promise((resolve,reject)=>{
+  const s=document.createElement("script");s.type="module";
+  s.src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js";
+  s.onload=()=>customElements.whenDefined("model-viewer").then(resolve,reject);
+  s.onerror=reject;document.head.appendChild(s);
+ });
+ return modelViewerPromise;
+}
+function activateLazyModelViewer(p){
+ if(!p.model_3d)return;
+ const viewer=document.querySelector("#model model-viewer");if(!viewer)return;
+ let started=false;
+ const load=()=>{if(started)return;started=true;loadModelViewer().catch(()=>{const note=document.createElement("p");note.className="panel-placeholder";note.textContent="3D приказ тренутно није доступан.";viewer.after(note);});};
+ if("IntersectionObserver" in window){
+  const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){observer.disconnect();load();}},{rootMargin:"200px"});
+  observer.observe(viewer);
+ }else load();
+}
 function showProfile(id){
  const p=people.find(x=>x.id===id);if(!p)return;selectedId=id;renderList();
  const extras=(p.fotografije_dodatne||[]).filter(Boolean);
  $("profileContent").innerHTML=
  '<div class="profile-heading"><div class="portrait-wrap">'+(p.fotografija?photo(p.fotografija,name(p),"main-portrait"):'<div class="portrait-placeholder">✦</div>')+'</div><div class="identity"><h1>'+esc(name(p))+'</h1><div class="occupation">'+esc(job(p)||"")+'</div>'+(p.godine?'<div class="years">'+esc(p.godine)+'</div>':'')+'<div class="profile-tabs"><a class="tab selected" href="#bio">Почетна</a><a class="tab" href="#biografija">Биографија</a><a class="tab" href="#grobno">Гробно место</a><a class="tab" href="#model">3D приказ</a><a class="tab" href="#profileMap">Карта</a></div></div></div>'+
  '<div class="feature-grid"><section class="feature-card" id="grobno"><h3>'+L("grave")+'</h3>'+(p.fotografija_groba?photo(p.fotografija_groba,L("grave"),"feature-image"):'<div class="panel-placeholder">'+L("noPhoto")+'</div>')+'</section>'+
- '<section class="feature-card model-card" id="model"><h3>'+L("model")+'</h3>'+(p.model_3d?'<model-viewer class="model-view" src="'+esc(p.model_3d)+'" camera-controls auto-rotate loading="eager" reveal="auto" shadow-intensity="1" exposure="1" alt="3D модел гробног места"></model-viewer>':'<div class="panel-placeholder">'+L("noModel")+'</div>')+'</section>'+
+ '<section class="feature-card model-card" id="model"><h3>'+L("model")+'</h3>'+(p.model_3d?'<model-viewer class="model-view" src="'+esc(p.model_3d)+'" camera-controls auto-rotate loading="lazy" reveal="auto" shadow-intensity="1" exposure="1" alt="3D модел гробног места"></model-viewer>':'<div class="panel-placeholder">'+L("noModel")+'</div>')+'</section>'+
  '<div class="side-feature"><section class="feature-card map-card"><h3>'+L("map")+'</h3>'+mapCard(p)+'</section>'+qrCard(p)+'</div></div>'+
  '<section class="biography-card" id="biografija"><h2>'+L("bio")+'</h2><div class="bio-text">'+esc(bio(p)||L("noBio"))+'</div>'+(p.izvori?'<small class="source-note">'+esc(p.izvori)+'</small>':'')+'</section>'+
  (extras.length?'<section class="extra-card"><h2>'+L("extra")+'</h2><div class="extra-gallery">'+extras.map((src,i)=>'<a href="'+esc(src)+'" target="_blank" rel="noopener">'+photo(src,L("extra")+" "+(i+1),"extra-image")+'</a>').join("")+'</div></section>':'')+
  '<div class="profile-bottom-meta">'+(p.parcela?'<span>Парцела: '+esc(p.parcela)+'</span>':'')+(p.grobno_mesto?'<span>Гробно место: '+esc(p.grobno_mesto)+'</span>':'')+'<button id="copyLink">Копирај линк профила</button></div>';
- if(script==="en"&&!p.biografija_en){const source=document.querySelector(".biography-card .source-note");if(source)source.textContent="English translation is being prepared; the original Serbian text is retained for now.";}
+ activateLazyModelViewer(p);\n if(script==="en"&&!p.biografija_en){const source=document.querySelector(".biography-card .source-note");if(source)source.textContent="English translation is being prepared; the original Serbian text is retained for now.";}
  document.querySelectorAll(".profile-tabs .tab").forEach(a=>a.onclick=()=>{document.querySelectorAll(".profile-tabs .tab").forEach(x=>x.classList.remove("selected"));a.classList.add("selected")});
  if(hasCoord(p)){const mapEl=$("profileMap");if(mapEl){if(window.L){const m=L.map(mapEl,{scrollWheelZoom:false,zoomControl:true}).setView([Number(p.lat),Number(p.lon)],18);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:20,attribution:"© OpenStreetMap"}).addTo(m);L.marker([Number(p.lat),Number(p.lon)]).addTo(m);setTimeout(()=>m.invalidateSize(),150)}else{const a=Number(p.lat),o=Number(p.lon),d=.0012;mapEl.outerHTML='<iframe class="mini-map map-fallback" title="Lokacija grobnog mesta" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox='+(o-d)+','+(a-d)+','+(o+d)+','+(a+d)+'&layer=mapnik&marker='+a+','+o+'"></iframe>'}}}
 
  $("copyLink").onclick=async()=>{try{await navigator.clipboard.writeText(profileUrl(p));$("copyLink").textContent="Линк је копиран"}catch(e){prompt("Копирајте линк:",profileUrl(p))}};
  history.replaceState(null,"","#licnost="+encodeURIComponent(id));
+}
+let leafletPromise=null;
+function loadLeaflet(){
+ if(window.L)return Promise.resolve();
+ if(leafletPromise)return leafletPromise;
+ leafletPromise=new Promise((resolve,reject)=>{
+  if(!document.querySelector("link[data-leaflet-css]")){
+   const link=document.createElement("link");link.rel="stylesheet";link.href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";link.dataset.leafletCss="true";document.head.appendChild(link);
+  }
+  const s=document.createElement("script");s.src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";s.async=true;
+  s.onload=resolve;s.onerror=reject;document.head.appendChild(s);
+ });
+ return leafletPromise;
+}
+function initMapOnDemand(){
+ const el=$("map");if(!el)return;
+ let started=false;
+ const run=()=>{if(started)return;started=true;loadLeaflet().then(initMap).catch(initMap);};
+ if("IntersectionObserver" in window){
+  const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){observer.disconnect();run();}},{rootMargin:"300px"});
+  observer.observe(el);
+ }else run();
 }
 function initMap(){
  const pts=people.filter(hasCoord);
@@ -110,7 +154,7 @@ function initMap(){
 }
 function setLanguage(lang){script=lang;document.documentElement.lang=lang==="lat"?"sr-Latn":lang==="en"?"en":"sr-Cyrl";document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));$("searchInput").placeholder=L("search");const t=lang==="en"?{brand:"OLD CEMETERY",city:"POŽAREVAC",tagline:"A digital guide to history",navHome:"Home",navPeople:"Notable people",navMap:"Map",navCategories:"Categories",navAbout:"About",navDownload:"Download",downloadTitle:"Download documents",downloadIntro:"Documents and publications about the Old Cemetery in Požarevac.",docCultureTitle:"The Old Cemetery – Immovable Cultural Heritage (2025)",docCultureMeta:"Dr Miroljub Manojlović • 33 pages • PDF",docPamphletTitle:"Notable People of Požarevac – Through the Monuments",docPamphletMeta:"Pamphlet • DOCX",docPending:"The document has been received; public download hosting is being prepared.",categoriesTitle:"Categories",peopleTitle:"People",choosePerson:"Select a person",choosePersonHelp:"Biographies, photographs and grave details will appear here.",mapTitle:"Map of the Old Cemetery",mapNote:"Only people whose grave coordinates are recorded in the database are shown.",aboutTitle:"About this digital guide",aboutText:"This digital guide brings together biographies, photographs, burial places, an interactive map, QR codes and available 3D models of notable people buried at the Old Cemetery in Požarevac.",footerBrand:"OLD CEMETERY • POŽAREVAC"}:lang==="lat"?{brand:"STARO GROBLJE",city:"POŽAREVAC",tagline:"Digitalni vodič kroz istoriju",navHome:"Početna",navPeople:"Ličnosti",navMap:"Mapa",navCategories:"Kategorije",navAbout:"O projektu",navDownload:"Preuzimanje",downloadTitle:"Preuzimanje dokumenata",downloadIntro:"Dokumenti i publikacije o Starom groblju u Požarevcu.",docCultureTitle:"Staro groblje – nepokretni spomenik kulture (2025)",docCultureMeta:"dr Miroljub Manojlović • 33 strane • PDF",docPamphletTitle:"Poznati Požarevljani – kroz spomenike poznatih ličnosti",docPamphletMeta:"Pamflet • DOCX",docPending:"Dokument je primljen; postavljanje datoteke za javno preuzimanje je u toku.",categoriesTitle:"Kategorije",peopleTitle:"Ličnosti",choosePerson:"Izaberite ličnost",choosePersonHelp:"Biografija, fotografije i podaci o grobnom mestu prikazaće se ovde.",mapTitle:"Mapa Starog groblja",mapNote:"Prikazane su samo ličnosti za koje su koordinate grobnog mesta unete u bazu.",aboutTitle:"O digitalnom vodiču",aboutText:"Digitalni vodič povezuje biografije, fotografije, grobna mesta, interaktivnu mapu, QR kodove i dostupne 3D prikaze znamenitih ličnosti sahranjenih na Starom groblju u Požarevcu.",footerBrand:"STARO GROBLJE • POŽAREVAC"}:{brand:"СТАРО ГРОБЉЕ",city:"ПОЖАРЕВАЦ",tagline:"Дигитални водич кроз историју",navHome:"Почетна",navPeople:"Личности",navMap:"Мапа",navCategories:"Категорије",navAbout:"О пројекту",navDownload:"Преузимање",downloadTitle:"Преузимање докумената",downloadIntro:"Документи и публикације о Старом гробљу у Пожаревцу.",docCultureTitle:"Старо гробље – непокретни споменик културе (2025)",docCultureMeta:"др Миролуб Манојловић • 33 стране • PDF",docPamphletTitle:"Познати Пожаревљани – кроз споменике познатих личности",docPamphletMeta:"Памфлет • DOCX",docPending:"Документ је примљен; постављање датотеке за јавно преузимање је у току.",categoriesTitle:"Категорије",peopleTitle:"Личности",choosePerson:"Изаберите личност",choosePersonHelp:"Биографија, фотографије и подаци о гробном месту приказаће се овде.",mapTitle:"Мапа Старог гробља",mapNote:"Приказане су само личности за које су координате гробног места унете у базу.",aboutTitle:"О дигиталном водичу",aboutText:"Дигитални водич повезује биографије, фотографије, гробна места, интерактивну мапу, QR кодове и доступне 3D приказе знаменитих личности сахрањених на Старом гробљу у Пожаревцу.",footerBrand:"СТАРО ГРОБЉЕ • ПОЖАРЕВАЦ"};document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;if(t[k])el.textContent=t[k]});renderCategories();renderList();if(selectedId)showProfile(selectedId)}
 async function start(){
- try{const r=await fetch(DATA_URL);if(!r.ok)throw new Error(r.status);people=await r.json();$("searchInput").placeholder=L("search");renderCategories();renderList();initMap();$("searchInput").addEventListener("input",renderList);document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>setLanguage(b.dataset.lang));$("menuToggle").onclick=()=>$("mainNav").classList.toggle("open");const id=decodeURIComponent(location.hash.replace(/^#licnost=/,""));showProfile(people.some(p=>p.id===id)?id:(people[0]?.id));}
+ try{const r=await fetch(DATA_URL);if(!r.ok)throw new Error(r.status);people=await r.json();$("searchInput").placeholder=L("search");renderCategories();renderList();initMapOnDemand();$("searchInput").addEventListener("input",renderList);document.querySelectorAll("[data-lang]").forEach(b=>b.onclick=()=>setLanguage(b.dataset.lang));$("menuToggle").onclick=()=>$("mainNav").classList.toggle("open");const id=decodeURIComponent(location.hash.replace(/^#licnost=/,""));showProfile(people.some(p=>p.id===id)?id:(people[0]?.id));}
  catch(e){$("peopleList").textContent="Каталог није учитан. Проверите data/licnosti.json.";console.error(e)}
 }
 start();
