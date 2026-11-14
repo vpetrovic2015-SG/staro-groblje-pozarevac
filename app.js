@@ -109,7 +109,9 @@ function loadLeaflet(){
  });
  return leafletPromise;
 }
+let profileMapInstance=null;
 function initProfileMap(p){
+ if(profileMapInstance){profileMapInstance.remove();profileMapInstance=null;}
  const mapEl=$("profileMap");if(!mapEl)return;
  const lat=Number(p.lat),lon=Number(p.lon);
  const fallback=()=>{
@@ -119,7 +121,7 @@ function initProfileMap(p){
  };
  loadLeaflet().then(()=>{
   if(!mapEl.isConnected)return;
-  const map=L.map(mapEl,{scrollWheelZoom:false,zoomControl:true,preferCanvas:true}).setView([lat,lon],18);
+  const map=L.map(mapEl,{scrollWheelZoom:false,zoomControl:true,preferCanvas:true}).setView([lat,lon],18);profileMapInstance=map;
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:20,attribution:"© OpenStreetMap"}).addTo(map);
   L.marker([lat,lon]).addTo(map).bindPopup(esc(name(p)));
   setTimeout(()=>{if(mapEl.isConnected)map.invalidateSize();},250);
