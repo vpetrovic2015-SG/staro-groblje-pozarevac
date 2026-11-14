@@ -1,4 +1,4 @@
-const DATA_URL="data/licnosti.json?v=20261114-en1";
+const DATA_URL="data/licnosti.json?v=20261114-en2";
 let people=[],selectedId=null,script="cir",mapInstance=null,mapMarkers=[];
 const $=id=>document.getElementById(id);
 const labels={
