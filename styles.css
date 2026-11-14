@@ -8,3 +8,70 @@
 
 /* Document downloads */
 .downloads-panel{margin-top:24px}.download-list{display:grid;gap:12px;margin-top:18px}.download-item{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 18px;border:1px solid var(--line,#d8d0c2);border-radius:12px;background:rgba(255,255,255,.55)}.download-item strong{display:block;font-family:inherit;font-size:1rem}.download-item p{margin:6px 0;color:var(--muted,#777);font-size:.9rem}.download-item small{color:var(--muted,#777)}
+\n
+/* Final heritage catalogue layout */
+:root{--navy:#13251f;--navy2:#1c342b;--blue:#9b7625;--blue-soft:#f3e7c5;--ink:#251d13;--muted:#766b58;--line:#d8c8a5;--paper:#eee8d9;--white:#fffaf0;--shadow:0 3px 14px #1a130d16}
+body{background:#eee8d9;color:#251d13;font-family:"Source Serif 4",Georgia,serif}
+.site-header{position:sticky;top:0;z-index:1000;box-shadow:0 3px 14px #0004}
+.header-masthead{min-height:112px;display:grid;grid-template-columns:120px 1fr 210px;align-items:center;gap:20px;padding:8px 28px;background:linear-gradient(90deg,#101b14ed,#172419e8),url("assets/grobna-mesta/ignjat-todorovic-grob.jpg") center 45%/cover;color:#f8e7b4;border-bottom:1px solid #b99a55}
+.city-emblem{display:flex;align-items:center;justify-content:center;height:96px}
+.city-emblem img{height:90px;max-width:86px;object-fit:contain;filter:drop-shadow(0 2px 3px #0008)}
+.masthead-title{text-align:center}
+.masthead-title h1{font:700 clamp(30px,3.3vw,48px)/1.03 "Source Serif 4",Georgia,serif;margin:0;color:#f7e5b4;text-shadow:0 2px 4px #000}
+.masthead-title p{font:500 clamp(17px,1.7vw,24px) "Source Serif 4",Georgia,serif;margin:5px 0 0;color:#fff5df}
+.masthead-title small{display:block;font:italic 13px Georgia,serif;color:#e0d1aa;margin-top:4px}
+.jkp-brand{display:flex;justify-content:center;align-items:center;background:#fffaf0e8;border-radius:12px;padding:8px 10px;max-width:190px;justify-self:end}
+.jkp-brand img{display:block;max-width:170px;width:100%;height:auto;object-fit:contain}
+.header-navigation{min-height:52px;display:flex;align-items:center;gap:20px;padding:0 24px;background:linear-gradient(90deg,#101b14,#26372b);color:#fff4d8;border-bottom:2px solid #b99a55}
+.header-navigation nav{display:flex;align-items:center;gap:clamp(12px,2vw,28px);flex:1;white-space:nowrap}
+.header-navigation nav a{font:600 16px "Source Serif 4",Georgia,serif;padding:13px 4px 11px;border-bottom:3px solid transparent;color:#fff4d8}
+.header-navigation nav a:hover,.header-navigation nav a.nav-active{border-color:#d8ad4b;color:#f5d98b}
+.header-tools{display:flex;align-items:center;gap:0;flex-shrink:0}
+.search-box{height:36px;width:220px;border:1px solid #b99a55;border-radius:7px;background:#14231c;margin-right:10px}
+.search-box span{color:#f2d58c}.search-box input{color:#fff8e7}.search-box input::placeholder{color:#d7c8a6}
+.lang{height:36px;padding:0 12px;border:1px solid #806d45;background:#17251e;color:#f7e7bd;cursor:pointer;font-weight:600}
+.lang.active{background:#a17b26;border-color:#d3b76f;color:#fff}
+.menu-toggle{display:none}
+.app-shell{grid-template-columns:310px minmax(0,1fr);min-height:calc(100vh - 164px);background:#eee8d9}
+.sidebar{background:#f7f0df;border-right:1px solid #cdbb91;top:164px;height:calc(100vh - 164px);padding:16px 12px}
+.side-heading{color:#3a2d1a}.side-count{color:#6e6048}
+.people-list{gap:7px}
+.people-list button,.person-item{background:#fffaf0;border:1px solid #dfd0ae;border-radius:9px;color:#251d13}
+.people-list button:hover,.people-list button.active{background:#f7e4b2;border-color:#bd902e}
+.main-content{padding:16px;background:#eee8d9}
+.profile-panel{padding:16px;background:#fbf6e9;border:1px solid #d9c9a7;border-radius:12px;box-shadow:var(--shadow)}
+.profile-layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.8fr);gap:18px;align-items:start}
+.profile-main-column,.profile-visual-column{min-width:0}
+.profile-heading{grid-template-columns:minmax(150px,210px) minmax(0,1fr);gap:18px;align-items:start;padding:0 0 14px}
+.portrait-wrap{width:100%}
+.main-portrait,.portrait-placeholder{width:100%;height:270px;object-fit:cover;object-position:center 15%;border-radius:9px;border:1px solid #cbb98f;background:#eee4cd}
+.identity h1{font-size:clamp(28px,2.5vw,42px);color:#281d10}
+.occupation{font-size:19px;color:#80621f;font-style:italic}
+.years{font-size:20px;color:#5d4a2d}
+.profile-tabs{margin-top:14px;gap:6px}
+.tab{background:#f3ead7;border:1px solid #d9c7a0;color:#45351b;padding:7px 11px;font-size:13px}
+.tab.selected,.tab:hover{background:#a17b26;color:#fff;border-color:#a17b26}
+.feature-grid{display:block}
+.profile-visual-column{display:flex;flex-direction:column;gap:12px}
+.feature-card,.qr-card{border-color:#d4c29c;border-radius:10px;background:#fffaf0}
+.feature-card h3,.qr-card h3{font-size:18px;color:#3b2c16;padding:9px 12px}
+.feature-image{height:clamp(180px,22vw,285px);object-fit:cover}
+.model-view{height:clamp(190px,22vw,270px);background:radial-gradient(ellipse at center,#4a4439,#161a16)}
+.panel-placeholder,.image-placeholder{min-height:150px;background:#f2ead9;color:#7e6b4b}
+.map-card .mini-map{height:190px;display:block;width:100%;border:0}
+.map-fallback{display:block;border:0}
+.coords{color:#5a4a30}.maps-link{background:#8c6a24;color:#fff5df}
+.biography-card{margin-top:0;background:#fffaf0;border-color:#d4c29c}
+.biography-card h2,.extra-card h2{background:#f2e7d0;color:#3a2b16;border-color:#d9c9a7}
+.bio-text{font:16px/1.56 "Source Serif 4",Georgia,serif;color:#2b2115;padding:14px 16px}
+.source-note{color:#786a52}
+.profile-actions{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}
+.action-button{display:inline-flex;align-items:center;justify-content:center;border:1px solid #9b7a31;background:#f5ead0;color:#3b2b13;border-radius:7px;padding:8px 12px;font:600 14px "Source Serif 4",Georgia,serif;cursor:pointer}
+.action-button:hover{background:#a17b26;color:#fff}
+.profile-bottom-meta{color:#6e5c3b}
+.all-map,.about-panel{background:#fffaf0;border-color:#d4c29c}
+.map{height:390px}
+footer{background:#17251d;color:#f1dfb5}
+@media(max-width:1120px){.header-navigation{flex-wrap:wrap;padding:8px 14px}.header-navigation nav{order:2;width:100%;overflow-x:auto}.header-tools{margin-left:auto}.app-shell{grid-template-columns:260px minmax(0,1fr)}.profile-layout{grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr)}.profile-heading{grid-template-columns:150px minmax(0,1fr)}.main-portrait,.portrait-placeholder{height:220px}}
+@media(max-width:820px){.header-masthead{grid-template-columns:74px 1fr 120px;padding:8px 12px;gap:8px}.city-emblem img{max-width:64px;height:72px}.jkp-brand{max-width:116px;padding:5px}.jkp-brand img{max-width:106px}.masthead-title h1{font-size:25px}.masthead-title p{font-size:15px}.masthead-title small{display:none}.header-navigation{gap:8px}.menu-toggle{display:block}.header-navigation nav{display:none;order:3;flex-direction:column;align-items:stretch;gap:0}.header-navigation nav.open{display:flex}.header-navigation nav a{padding:8px}.header-tools{width:100%;margin:0;order:2}.search-box{flex:1;width:auto}.app-shell{display:block}.sidebar{position:static;height:auto;border-right:0;border-bottom:1px solid #cdbb91}.category-list{display:flex;overflow:auto}.people-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-height:300px;overflow:auto}.main-content{padding:10px}.profile-layout{grid-template-columns:1fr}.profile-heading{grid-template-columns:130px minmax(0,1fr)}.main-portrait,.portrait-placeholder{height:180px}.profile-visual-column{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.map-card,.qr-card{grid-column:span 2}}
+@media(max-width:520px){.header-masthead{grid-template-columns:54px 1fr 80px}.city-emblem img{max-width:50px;height:60px}.jkp-brand{max-width:78px}.jkp-brand img{max-width:72px}.masthead-title h1{font-size:19px}.masthead-title p{font-size:12px}.people-list{grid-template-columns:1fr}.profile-heading{grid-template-columns:105px minmax(0,1fr);gap:10px}.main-portrait,.portrait-placeholder{height:150px}.identity h1{font-size:23px}.occupation{font-size:15px}.profile-tabs{gap:4px}.tab{padding:5px 7px;font-size:11px}.profile-visual-column{display:flex}.profile-actions{gap:6px}.action-button{font-size:12px;padding:7px 8px}}
