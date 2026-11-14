@@ -40,7 +40,7 @@ function openPortraitLightbox(src,alt){
  overlay.classList.add("is-open");document.body.classList.add("lightbox-open");
 }
 document.addEventListener("click",e=>{
- const img=e.target.closest("#peopleList img, #profileContent img");
+ const img=e.target.closest("#peopleList img.person-thumb, #profileContent img.main-portrait, #profileContent img.feature-image");
  if(!img||img.classList.contains("broken-image"))return;
  e.preventDefault();e.stopPropagation();openPortraitLightbox(img.currentSrc||img.src,img.alt);
 },true);
