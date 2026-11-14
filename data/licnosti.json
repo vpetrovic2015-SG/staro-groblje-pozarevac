@@ -120,12 +120,14 @@
     "lon": 21.177321,
     "izvori": "Текст доставио корисник; датум и место рођења, школовање и податке о сахрани проверити у поузданим изворима.",
     "fotografija": "assets/licnosti/vasa-pelagic.jpg",
-    "napomena": "У достављеном тексту појављују се различите године рођења (1833. и 1838); проверити меродаван биографски извор пре јавног објављивања.",
     "kategorije": [
       "umetnici",
       "prosvetni"
     ],
-    "fotografija_groba": ""
+    "fotografija_groba": "",
+    "ime_en": "Vasa Pelagić",
+    "zanimanje_en": "People's educator, publicist and revolutionary",
+    "biografija_en": "Vasa Pelagić (1833–1899), born Vasilije Stefanović Pelagić in the village of Žabar near Brčko, was a Serbian people's educator, publicist, revolutionary and one of the early advocates of socialist ideas in the Balkans. After studying in Belgrade, where he attended lower secondary school and the Orthodox seminary, he became a teacher at a Serbian primary school in Brčko in 1860. There he founded a Serbian reading room. He later travelled to Russia and attended lectures in medicine and the history of medicine at the University of Moscow. After returning, he travelled throughout Serbian lands, studying social conditions and the circumstances of the people. Throughout his life, he advocated education, social justice, freedom and public health. According to the text supplied for this guide, he was buried in Section 11 of the Old Cemetery in Požarevac, in the part of the cemetery where inmates of the Zabela Penitentiary were buried."
   },
   {
     "id": "josif-a-cecelski",
