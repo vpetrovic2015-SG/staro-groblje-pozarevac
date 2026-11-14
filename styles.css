@@ -86,3 +86,5 @@ footer{background:#17251d;color:#f1dfb5}
 .lightbox-close{position:absolute;top:18px;right:24px;width:48px;height:48px;border:1px solid #d0ad70;border-radius:50%;background:#17251f;color:#f5dfb2;font-size:34px;line-height:1;cursor:pointer}
 body.lightbox-open{overflow:hidden}
 @media(max-width:600px){.portrait-lightbox{padding:12px}.lightbox-image{max-width:96vw;max-height:78vh}.lightbox-close{top:10px;right:10px;width:42px;height:42px}}
+
+.portrait-note{display:block;margin-top:6px;color:#79674d;font:italic 11px "Inter",Arial,sans-serif;text-align:center;letter-spacing:.02em}
