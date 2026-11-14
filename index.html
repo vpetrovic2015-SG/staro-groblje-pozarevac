@@ -9,15 +9,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css?v=20261114-download2">
+<link rel="stylesheet" href="styles.css?v=20261114-final-layout1">
 
 </head>
 <body>
-<header class="topbar">
- <a class="brand" href="#pocetna"><span class="brand-cross">✝</span><span><b data-i18n="brand">СТАРО ГРОБЉЕ</b><strong data-i18n="city">ПОЖАРЕВАЦ</strong><small data-i18n="tagline">Дигитални водич кроз историју</small></span></a>
- <button class="menu-toggle" id="menuToggle" aria-label="Отвори мени">☰</button>
- <nav id="mainNav"><a href="#pocetna" class="nav-active" data-i18n="navHome">Почетна</a><a href="#licnosti" data-i18n="navPeople">Личности</a><a href="#mapa" data-i18n="navMap">Мапа</a><a href="#kategorije" data-i18n="navCategories">Категорије</a><a href="#o-projektu" data-i18n="navAbout">О пројекту</a><a href="#preuzimanje" data-i18n="navDownload">Преузимање</a></nav>
- <div class="header-tools"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Претрага..." autocomplete="off"></label><button class="lang active" data-lang="cir">СРБ</button><button class="lang" data-lang="lat">LAT</button><button class="lang" data-lang="en">EN</button></div>
+<header class="site-header">
+ <div class="header-masthead">
+  <div class="city-emblem"><img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Grb_pozarevca.svg" alt="Грб Града Пожаревца" loading="eager"></div>
+  <div class="masthead-title"><h1>Старо гробље Пожаревац</h1><p>Дигитални каталог знаменитих Пожаревљана</p><small>The Old Cemetery in Požarevac · History · Personalities · Heritage</small></div>
+  <a class="jkp-brand" href="https://www.komsluzbepo.rs/" target="_blank" rel="noopener"><img src="https://www.komsluzbepo.rs/wp-content/uploads/2020/09/logo.png" alt="ЈКП Комуналне службе Пожаревац"></a>
+ </div>
+ <div class="header-navigation">
+  <button class="menu-toggle" id="menuToggle" aria-label="Отвори мени">☰</button>
+  <nav id="mainNav"><a href="#pocetna" class="nav-active" data-i18n="navHome">Почетна</a><a href="#licnosti" data-i18n="navPeople">Личности</a><a href="#mapa" data-i18n="navMap">Интерактивна мапа</a><a href="#kategorije" data-i18n="navCategories">Категорије</a><a href="#o-projektu" data-i18n="navAbout">О пројекту</a><a href="#preuzimanje" data-i18n="navDownload">Документа</a></nav>
+  <div class="header-tools"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Претрага по имену..." autocomplete="off"></label><button class="lang active" data-lang="cir">Ћир</button><button class="lang" data-lang="lat">Lat</button><button class="lang" data-lang="en">EN</button></div>
+ </div>
 </header>
 <main id="pocetna" class="app-shell">
  <aside class="sidebar">
@@ -37,5 +43,5 @@
 <footer><span data-i18n="footerBrand">СТАРО ГРОБЉЕ • ПОЖАРЕВАЦ</span> <span data-i18n="tagline">Дигитални водич кроз историју</span></footer>
 
 
-<script src="app.js?v=20261114-lazyload1"></script>
+<script src="app.js?v=20261114-final-layout1"></script>
 </body></html>
