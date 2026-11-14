@@ -14,26 +14,26 @@
 </head>
 <body>
 <header class="topbar">
- <a class="brand" href="#pocetna"><span class="brand-cross">✝</span><span><b>СТАРО ГРОБЉЕ</b><strong>ПОЖАРЕВАЦ</strong><small>Дигитални водич кроз историју</small></span></a>
+ <a class="brand" href="#pocetna"><span class="brand-cross">✝</span><span><b data-i18n="brand">СТАРО ГРОБЉЕ</b><strong data-i18n="city">ПОЖАРЕВАЦ</strong><small data-i18n="tagline">Дигитални водич кроз историју</small></span></a>
  <button class="menu-toggle" id="menuToggle" aria-label="Отвори мени">☰</button>
- <nav id="mainNav"><a href="#pocetna" class="nav-active">Почетна</a><a href="#licnosti">Личности</a><a href="#mapa">Мапа</a><a href="#kategorije">Категорије</a><a href="#o-projektu">О пројекту</a></nav>
- <div class="header-tools"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Претрага..." autocomplete="off"></label><button class="lang active" data-lang="cir">СРБ</button><button class="lang" data-lang="lat">LAT</button></div>
+ <nav id="mainNav"><a href="#pocetna" class="nav-active" data-i18n="navHome">Почетна</a><a href="#licnosti" data-i18n="navPeople">Личности</a><a href="#mapa" data-i18n="navMap">Мапа</a><a href="#kategorije" data-i18n="navCategories">Категорије</a><a href="#o-projektu" data-i18n="navAbout">О пројекту</a></nav>
+ <div class="header-tools"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Претрага..." autocomplete="off"></label><button class="lang active" data-lang="cir">СРБ</button><button class="lang" data-lang="lat">LAT</button><button class="lang" data-lang="en">EN</button></div>
 </header>
 <main id="pocetna" class="app-shell">
  <aside class="sidebar">
-  <div class="side-heading" id="kategorije">Категорије</div>
+  <div class="side-heading" id="kategorije" data-i18n="categoriesTitle">Категорије</div>
   <div id="categoryList" class="category-list"></div>
-  <div class="side-heading people-heading" id="sidePeopleTitle">Личности</div>
+  <div class="side-heading people-heading" id="sidePeopleTitle" data-i18n="peopleTitle">Личности</div>
   <div id="peopleCount" class="side-count"></div>
   <div id="peopleList" class="people-list"><div class="loading">Учитавање каталога…</div></div>
  </aside>
  <section class="main-content" id="licnosti">
-  <article id="profileContent" class="profile-panel"><div class="empty-profile"><h2>Изаберите личност</h2><p>Биографија, фотографије и подаци о гробном месту приказаће се овде.</p></div></article>
-  <section class="all-map" id="mapa"><h2>Мапа Старог гробља</h2><div id="map" class="map"></div><p class="map-note">Приказане су само личности за које су координате гробног места унете у базу.</p></section>
-  <section class="about-panel" id="o-projektu"><h2>О дигиталном водичу</h2><p>Дигитални водич повезује биографије, фотографије, гробна места, интерактивну мапу, QR кодове и доступне 3D приказе знаменитих личности сахрањених на Старом гробљу у Пожаревцу.</p></section>
+  <article id="profileContent" class="profile-panel"><div class="empty-profile"><h2 data-i18n="choosePerson">Изаберите личност</h2><p data-i18n="choosePersonHelp">Биографија, фотографије и подаци о гробном месту приказаће се овде.</p></div></article>
+  <section class="all-map" id="mapa"><h2 data-i18n="mapTitle">Мапа Старог гробља</h2><div id="map" class="map"></div><p class="map-note" data-i18n="mapNote">Приказане су само личности за које су координате гробног места унете у базу.</p></section>
+  <section class="about-panel" id="o-projektu"><h2 data-i18n="aboutTitle">О дигиталном водичу</h2><p data-i18n="aboutText">Дигитални водич повезује биографије, фотографије, гробна места, интерактивну мапу, QR кодове и доступне 3D приказе знаменитих личности сахрањених на Старом гробљу у Пожаревцу.</p></section>
  </section>
 </main>
-<footer>СТАРО ГРОБЉЕ • ПОЖАРЕВАЦ <span>Дигитални водич кроз историју</span></footer>
+<footer><span data-i18n="footerBrand">СТАРО ГРОБЉЕ • ПОЖАРЕВАЦ</span> <span data-i18n="tagline">Дигитални водич кроз историју</span></footer>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="app.js?v=20261114"></script>
