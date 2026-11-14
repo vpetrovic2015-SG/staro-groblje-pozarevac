@@ -40,10 +40,10 @@ function openPortraitLightbox(src,alt){
  overlay.classList.add("is-open");document.body.classList.add("lightbox-open");
 }
 document.addEventListener("click",e=>{
- const img=e.target.closest(".people-list img, #profileContent img");
+ const img=e.target.closest("#peopleList img, #profileContent img");
  if(!img||img.classList.contains("broken-image"))return;
- e.preventDefault();openPortraitLightbox(img.currentSrc||img.src,img.alt);
-});
+ e.preventDefault();e.stopPropagation();openPortraitLightbox(img.currentSrc||img.src,img.alt);
+},true);
 function photo(path,alt,cls=""){return path?'<img class="'+cls+'" src="'+esc(path)+'" alt="'+esc(alt)+'" loading="lazy" decoding="async" onerror="this.classList.add(\'broken-image\');this.alt=\'Фотографија није пронађена: '+esc(path)+'\'">':'<div class="image-placeholder">'+L("noPhoto")+'</div>'}
 function hasCoord(p){if(!p||p.lat===null||p.lon===null||p.lat===undefined||p.lon===undefined||p.lat===""||p.lon==="")return false;const lat=Number(p.lat),lon=Number(p.lon);return Number.isFinite(lat)&&Number.isFinite(lon)&&lat>=-90&&lat<=90&&lon>=-180&&lon<=180&&(lat!==0||lon!==0)}
 function categoryKey(p){return (p.kategorije||[]).map(norm)}
