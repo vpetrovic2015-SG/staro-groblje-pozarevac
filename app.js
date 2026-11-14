@@ -78,17 +78,20 @@ function showProfile(id){
  const p=people.find(x=>x.id===id);if(!p)return;selectedId=id;renderList();
  const extras=(p.fotografije_dodatne||[]).filter(Boolean);
  $("profileContent").innerHTML=
- '<div class="profile-heading"><div class="portrait-wrap">'+(p.fotografija?photo(p.fotografija,name(p),"main-portrait"):'<div class="portrait-placeholder">✦</div>')+'</div><div class="identity"><h1>'+esc(name(p))+'</h1><div class="occupation">'+esc(job(p)||"")+'</div>'+(p.godine?'<div class="years">'+esc(p.godine)+'</div>':'')+'<div class="profile-tabs"><a class="tab selected" href="#bio">Почетна</a><a class="tab" href="#biografija">Биографија</a><a class="tab" href="#grobno">Гробно место</a><a class="tab" href="#model">3D приказ</a><a class="tab" href="#profileMap">Карта</a></div></div></div>'+
- '<div class="feature-grid"><section class="feature-card" id="grobno"><h3>'+L("grave")+'</h3>'+(p.fotografija_groba?photo(p.fotografija_groba,L("grave"),"feature-image"):'<div class="panel-placeholder">'+L("noPhoto")+'</div>')+'</section>'+
- '<section class="feature-card model-card" id="model"><h3>'+L("model")+'</h3>'+(p.model_3d?'<model-viewer class="model-view" src="'+esc(p.model_3d)+'" camera-controls auto-rotate loading="lazy" reveal="auto" shadow-intensity="1" exposure="1" alt="3D модел гробног места"></model-viewer>':'<div class="panel-placeholder">'+L("noModel")+'</div>')+'</section>'+
- '<div class="side-feature"><section class="feature-card map-card"><h3>'+L("map")+'</h3>'+mapCard(p)+'</section>'+qrCard(p)+'</div></div>'+
+ '<div class="profile-layout"><div class="profile-main-column">'+
+ '<div class="profile-heading"><div class="portrait-wrap">'+(p.fotografija?photo(p.fotografija,name(p),"main-portrait"):'<div class="portrait-placeholder">✦</div>')+'</div><div class="identity"><h1>'+esc(name(p))+'</h1><div class="occupation">'+esc(job(p)||"")+'</div>'+(p.godine?'<div class="years">'+esc(p.godine)+'</div>':'')+'<div class="profile-tabs"><a class="tab selected" href="#biografija">Биографија</a><a class="tab" href="#grobno">Гробно место</a><a class="tab" href="#model">3D модел</a><a class="tab" href="#profileMap">Локација</a></div></div></div>'+
  '<section class="biography-card" id="biografija"><h2>'+L("bio")+'</h2><div class="bio-text">'+esc(bio(p)||L("noBio"))+'</div>'+(p.izvori?'<small class="source-note">'+esc(p.izvori)+'</small>':'')+'</section>'+
- (extras.length?'<section class="extra-card"><h2>'+L("extra")+'</h2><div class="extra-gallery">'+extras.map((src,i)=>'<a href="'+esc(src)+'" target="_blank" rel="noopener">'+photo(src,L("extra")+" "+(i+1),"extra-image")+'</a>').join("")+'</div></section>':'')+
- '<div class="profile-bottom-meta">'+(p.parcela?'<span>Парцела: '+esc(p.parcela)+'</span>':'')+(p.grobno_mesto?'<span>Гробно место: '+esc(p.grobno_mesto)+'</span>':'')+'<button id="copyLink">Копирај линк профила</button></div>';
+ '<div class="profile-actions"><button class="action-button" type="button" onclick="document.getElementById(\'profileQr\')?.scrollIntoView({behavior:\'smooth\'})">▦ QR код</button>'+(hasCoord(p)?'<a class="action-button" href="https://www.google.com/maps/search/?api=1&query='+Number(p.lat)+','+Number(p.lon)+'" target="_blank" rel="noopener">⌖ Прикажи на мапи</a>':'')+'<button class="action-button" id="copyLink">↗ Подели</button><button class="action-button" type="button" data-lang="en">Biography (EN)</button></div>'+
+ '</div><aside class="profile-visual-column">'+
+ '<section class="feature-card grave-card" id="grobno"><h3>'+L("grave")+'</h3>'+(p.fotografija_groba?photo(p.fotografija_groba,L("grave"),"feature-image"):'<div class="panel-placeholder">'+L("noPhoto")+'</div>')+'</section>'+
+ '<section class="feature-card model-card" id="model"><h3>'+L("model")+'</h3>'+(p.model_3d?'<model-viewer class="model-view" src="'+esc(p.model_3d)+'" camera-controls auto-rotate loading="lazy" reveal="auto" shadow-intensity="1" exposure="1" alt="3D модел гробног места"></model-viewer>':'<div class="panel-placeholder">'+L("noModel")+'</div>')+'</section>'+
+ (hasCoord(p)?'<section class="feature-card map-card"><h3>'+L("map")+'</h3>'+mapCard(p)+'</section>':'')+qrCard(p)+
+ '</aside></div>'+
+ '<div class="profile-bottom-meta">'+(p.parcela?'<span>Парцела: '+esc(p.parcela)+'</span>':'')+(p.grobno_mesto?'<span>Гробно место: '+esc(p.grobno_mesto)+'</span>':'')+'</div>';
  activateLazyModelViewer(p);
  if(script==="en"&&!p.biografija_en){const source=document.querySelector(".biography-card .source-note");if(source)source.textContent="English translation is being prepared; the original Serbian text is retained for now.";}
  document.querySelectorAll(".profile-tabs .tab").forEach(a=>a.onclick=()=>{document.querySelectorAll(".profile-tabs .tab").forEach(x=>x.classList.remove("selected"));a.classList.add("selected")});
- if(hasCoord(p)){const mapEl=$("profileMap");if(mapEl){if(window.L){const m=L.map(mapEl,{scrollWheelZoom:false,zoomControl:true}).setView([Number(p.lat),Number(p.lon)],18);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:20,attribution:"© OpenStreetMap"}).addTo(m);L.marker([Number(p.lat),Number(p.lon)]).addTo(m);setTimeout(()=>m.invalidateSize(),150)}else{const a=Number(p.lat),o=Number(p.lon),d=.0012;mapEl.outerHTML='<iframe class="mini-map map-fallback" title="Lokacija grobnog mesta" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox='+(o-d)+','+(a-d)+','+(o+d)+','+(a+d)+'&layer=mapnik&marker='+a+','+o+'"></iframe>'}}}
+ if(hasCoord(p))initProfileMap(p);
 
  $("copyLink").onclick=async()=>{try{await navigator.clipboard.writeText(profileUrl(p));$("copyLink").textContent="Линк је копиран"}catch(e){prompt("Копирајте линк:",profileUrl(p))}};
  history.replaceState(null,"","#licnost="+encodeURIComponent(id));
@@ -105,6 +108,22 @@ function loadLeaflet(){
   s.onload=resolve;s.onerror=reject;document.head.appendChild(s);
  });
  return leafletPromise;
+}
+function initProfileMap(p){
+ const mapEl=$("profileMap");if(!mapEl)return;
+ const lat=Number(p.lat),lon=Number(p.lon);
+ const fallback=()=>{
+  if(!mapEl.isConnected)return;
+  const d=.0012;
+  mapEl.outerHTML='<iframe class="mini-map map-fallback" title="Локација гробног места" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox='+(lon-d)+','+(lat-d)+','+(lon+d)+','+(lat+d)+'&layer=mapnik&marker='+lat+','+lon+'"></iframe>';
+ };
+ loadLeaflet().then(()=>{
+  if(!mapEl.isConnected)return;
+  const map=L.map(mapEl,{scrollWheelZoom:false,zoomControl:true,preferCanvas:true}).setView([lat,lon],18);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:20,attribution:"© OpenStreetMap"}).addTo(map);
+  L.marker([lat,lon]).addTo(map).bindPopup(esc(name(p)));
+  setTimeout(()=>{if(mapEl.isConnected)map.invalidateSize();},250);
+ }).catch(fallback);
 }
 function initMapOnDemand(){
  const el=$("map");if(!el)return;
