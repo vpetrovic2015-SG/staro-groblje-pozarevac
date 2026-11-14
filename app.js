@@ -69,8 +69,42 @@ function showProfile(id){
  history.replaceState(null,"","#licnost="+encodeURIComponent(id));
 }
 function initMap(){
- if(!window.L){const pts=people.filter(hasCoord);if(pts.length){const lats=pts.map(p=>Number(p.lat)),lons=pts.map(p=>Number(p.lon));const minLat=Math.min(...lats)-.0008,maxLat=Math.max(...lats)+.0008,minLon=Math.min(...lons)-.0008,maxLon=Math.max(...lons)+.0008;$("map").innerHTML='<iframe class="map map-fallback" title="Mapa Starog groblja" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox='+minLon+','+minLat+','+maxLon+','+maxLat+'&layer=mapnik"></iframe>'}return;}mapInstance=L.map("map").setView([44.6301,21.1791],17);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:20,attribution:"© OpenStreetMap"}).addTo(mapInstance);
- people.filter(hasCoord).forEach(p=>{const marker=L.marker([Number(p.lat),Number(p.lon)]).addTo(mapInstance).bindPopup('<b>'+esc(name(p))+'</b><br><a href="#licnost='+encodeURIComponent(p.id)+'" data-id="'+esc(p.id)+'">Отвори профил</a>');marker.on("popupopen",()=>{document.querySelectorAll("#map [data-id]").forEach(a=>a.onclick=e=>{e.preventDefault();showProfile(a.dataset.id);window.scrollTo({top:0,behavior:"smooth"})})})});
+ const pts=people.filter(hasCoord);
+ const mapEl=$("map");
+ if(!mapEl)return;
+ const bounds=pts.length?[
+  [Math.min(...pts.map(p=>Number(p.lat)))-.0008,Math.min(...pts.map(p=>Number(p.lon)))-.0008],
+  [Math.max(...pts.map(p=>Number(p.lat)))+.0008,Math.max(...pts.map(p=>Number(p.lon)))+.0008]
+ ]:null;
+ const showFallback=()=>{
+  if(!bounds){mapEl.innerHTML='<div class="panel-placeholder">Координате гробних места још нису унете.</div>';return;}
+  const sw=bounds[0],ne=bounds[1],center=[(sw[0]+ne[0])/2,(sw[1]+ne[1])/2];
+  mapEl.innerHTML='<iframe class="map map-fallback" title="Мапа Старог гробља" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox='+sw[1]+','+sw[0]+','+ne[1]+','+ne[0]+'&layer=mapnik&marker='+center[0]+','+center[1]+'"></iframe>';
+ };
+ if(!pts.length){showFallback();return;}
+ if(!window.L){showFallback();return;}
+ try{
+  mapInstance=L.map(mapEl,{scrollWheelZoom:false,preferCanvas:true}).setView([44.6301,21.1791],17);
+  const tileLayer=L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
+   maxZoom:20,attribution:"© OpenStreetMap",crossOrigin:true
+  });
+  let tileLoaded=false;
+  tileLayer.on("tileload",()=>{tileLoaded=true;});
+  tileLayer.on("tileerror",()=>{if(!tileLoaded){setTimeout(()=>{if(!tileLoaded&&mapInstance){mapInstance.remove();mapInstance=null;showFallback();}},1800);}});
+  tileLayer.addTo(mapInstance);
+  pts.forEach(p=>{
+   const marker=L.marker([Number(p.lat),Number(p.lon)]).addTo(mapInstance)
+    .bindPopup('<b>'+esc(name(p))+'</b><br><a href="#licnost='+encodeURIComponent(p.id)+'" data-id="'+esc(p.id)+'">Отвори профил</a>');
+   marker.on("popupopen",()=>{
+    document.querySelectorAll("#map [data-id]").forEach(a=>a.onclick=e=>{
+     e.preventDefault();showProfile(a.dataset.id);window.scrollTo({top:0,behavior:"smooth"});
+    });
+   });
+  });
+  mapInstance.fitBounds(pts.map(p=>[Number(p.lat),Number(p.lon)]),{padding:[24,24],maxZoom:18});
+  setTimeout(()=>{if(mapInstance)mapInstance.invalidateSize();},250);
+  setTimeout(()=>{if(!tileLoaded&&mapInstance){mapInstance.remove();mapInstance=null;showFallback();}},7000);
+ }catch(e){console.error("Грешка при учитавању мапе:",e);if(mapInstance){mapInstance.remove();mapInstance=null;}showFallback();}
 }
 function setLanguage(lang){script=lang;document.documentElement.lang=lang==="lat"?"sr-Latn":"sr-Cyrl";document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));$("searchInput").placeholder=L("search");renderCategories();renderList();if(selectedId)showProfile(selectedId)}
 async function start(){
