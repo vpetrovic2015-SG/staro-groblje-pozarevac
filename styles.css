@@ -78,7 +78,7 @@ footer{background:#17251d;color:#f1dfb5}
 
 
 /* Click-to-enlarge historical portraits */
-.people-list img,#profileContent img{cursor:zoom-in}
+#peopleList img,#profileContent img{cursor:zoom-in}
 .portrait-lightbox{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;padding:24px;background:rgba(7,12,18,.94);opacity:0;visibility:hidden;transition:opacity .18s ease,visibility .18s ease}
 .portrait-lightbox.is-open{opacity:1;visibility:visible}
 .lightbox-image{display:block;max-width:min(92vw,1100px);max-height:82vh;width:auto;height:auto;object-fit:contain;border:2px solid #c7a66a;border-radius:8px;box-shadow:0 12px 48px #0009;cursor:default}
