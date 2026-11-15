@@ -100,3 +100,11 @@ body.lightbox-open{overflow:hidden}
 .intro-cta{display:block;width:max-content;margin:28px auto 0;padding:12px 28px;border:1px solid #9b762f;border-radius:7px;background:linear-gradient(#f9e6b4,#d4ae62);color:#2e2415;font:700 17px "Source Serif 4",Georgia,serif;text-decoration:none;box-shadow:0 3px 9px #80612c33}
 .intro-cta:hover{filter:brightness(1.04);transform:translateY(-1px)}
 @media(max-width:700px){.intro-home{min-height:calc(100vh - 130px);padding:20px 12px}.intro-card{padding:24px 18px}.intro-lead,.intro-care{text-align:left;font-size:17px;line-height:1.65}}
+
+/* Official heritage and tourism links on the introduction page */
+.intro-partners{margin:26px 0 8px;padding:20px 0 4px;border-top:1px solid #d9c69f}
+.intro-partners h3{margin:0 0 14px;text-align:center;color:#725321;font:700 19px/1.4 "Source Serif 4",Georgia,serif}
+.intro-partner-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.intro-partner-links a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border:1px solid #b99a61;border-radius:7px;background:#f7efdE;color:#493719;text-align:center;text-decoration:none;font:600 15px/1.4 "Source Serif 4",Georgia,serif;transition:background .15s ease,color .15s ease,transform .15s ease}
+.intro-partner-links a:hover{background:#8a6728;color:#fff;transform:translateY(-1px)}
+@media(max-width:600px){.intro-partner-links{flex-direction:column}.intro-partner-links a{width:100%}}
