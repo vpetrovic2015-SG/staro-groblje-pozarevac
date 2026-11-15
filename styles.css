@@ -88,3 +88,15 @@ body.lightbox-open{overflow:hidden}
 @media(max-width:600px){.portrait-lightbox{padding:12px}.lightbox-image{max-width:96vw;max-height:78vh}.lightbox-close{top:10px;right:10px;width:42px;height:42px}}
 
 .portrait-note{display:block;margin-top:6px;color:#79674d;font:italic 11px "Inter",Arial,sans-serif;text-align:center;letter-spacing:.02em}
+
+/* Introductory page is the default landing screen */
+.app-shell.is-hidden,.intro-home.is-hidden{display:none!important}
+.intro-home{min-height:calc(100vh - 164px);padding:clamp(28px,6vw,76px) 20px;background:radial-gradient(ellipse at top,#fffdf5 0%,#f2e7d0 62%,#e6d6b8 100%);display:flex;align-items:flex-start;justify-content:center}
+.intro-card{width:min(100%,1040px);margin:0 auto;padding:clamp(24px,4vw,54px);background:rgba(255,251,239,.94);border:1px solid #c8ae7c;border-radius:14px;box-shadow:0 12px 34px rgba(65,46,18,.14);color:#352817}
+.intro-eyebrow{text-align:center;color:#8a6728;font:700 13px/1.5 Georgia,serif;letter-spacing:.13em;margin:0 0 14px}
+.intro-card h2{text-align:center;font:700 clamp(32px,4vw,48px)/1.15 "Source Serif 4",Georgia,serif;color:#382817;margin:0 0 28px}
+.intro-lead,.intro-care{font:400 clamp(17px,1.5vw,21px)/1.75 "Source Serif 4",Georgia,serif;color:#382f24;text-align:justify;margin:0 0 22px}
+.intro-care{border-top:1px solid #d9c69f;padding-top:20px;font-style:italic}
+.intro-cta{display:block;width:max-content;margin:28px auto 0;padding:12px 28px;border:1px solid #9b762f;border-radius:7px;background:linear-gradient(#f9e6b4,#d4ae62);color:#2e2415;font:700 17px "Source Serif 4",Georgia,serif;text-decoration:none;box-shadow:0 3px 9px #80612c33}
+.intro-cta:hover{filter:brightness(1.04);transform:translateY(-1px)}
+@media(max-width:700px){.intro-home{min-height:calc(100vh - 130px);padding:20px 12px}.intro-card{padding:24px 18px}.intro-lead,.intro-care{text-align:left;font-size:17px;line-height:1.65}}
