@@ -21,11 +21,20 @@
  </div>
  <div class="header-navigation">
   <button class="menu-toggle" id="menuToggle" aria-label="Отвори мени">☰</button>
-  <nav id="mainNav"><a href="#pocetna" class="nav-active" data-i18n="navHome">Почетна</a><a href="#licnosti" data-i18n="navPeople">Личности</a><a href="#mapa" data-i18n="navMap">Интерактивна мапа</a><a href="#kategorije" data-i18n="navCategories">Категорије</a><a href="#o-projektu" data-i18n="navAbout">О пројекту</a><a href="#preuzimanje" data-i18n="navDownload">Документа</a></nav>
+  <nav id="mainNav"><a href="#uvod" class="nav-active" data-i18n="navHome">Почетна</a><a href="#licnosti" data-i18n="navPeople">Личности</a><a href="#mapa" data-i18n="navMap">Интерактивна мапа</a><a href="#kategorije" data-i18n="navCategories">Категорије</a><a href="#o-projektu" data-i18n="navAbout">О пројекту</a><a href="#preuzimanje" data-i18n="navDownload">Документа</a></nav>
   <div class="header-tools"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Претрага по имену..." autocomplete="off"></label><button class="lang active" data-lang="cir">Ћир</button><button class="lang" data-lang="lat">Lat</button><button class="lang" data-lang="en">EN</button></div>
  </div>
 </header>
-<main id="pocetna" class="app-shell">
+<section id="uvod" class="intro-home">
+ <div class="intro-card">
+  <p class="intro-eyebrow" data-i18n="introEyebrow">ДИГИТАЛНИ КАТАЛОГ ЗНАМЕНИТИХ ПОЖАРЕВЉАНА</p>
+  <h2 data-i18n="introTitle">Уводна реч</h2>
+  <p class="intro-lead" data-i18n="introText">Старо гробље у Пожаревцу представља драгоцено сведочанство историје града и људи који су својим животом, радом и делом оставили траг у његовом развоју. Овај дигитални каталог чува успомену на знамените Пожаревљане и повезује њихове биографије са фотографијама, местима починка, архивском грађом и доступним дигиталним моделима.</p>
+  <p class="intro-care" data-i18n="aboutCareText">Радници ЈКП „Комуналне службе“ Пожаревац се са посебним пијететом односе према гробним местима ових личности, нарочито оних који немају више живих потомака, али такође и према свим гробним местима на Старом гробљу. Професионализам, емпатија и култура у понашању током сахрана и других обичаја везаних за сахрањивање, наш је основни принцип деловања и идеја водиља. Дођите нам у посету...</p>
+  <a class="intro-cta" href="#licnosti" data-i18n="introCta">Погледајте личности</a>
+ </div>
+</section>
+<main id="pocetna" class="app-shell is-hidden">
  <aside class="sidebar">
   <div class="side-heading" id="kategorije" data-i18n="categoriesTitle">Категорије</div>
   <div id="categoryList" class="category-list"></div>
