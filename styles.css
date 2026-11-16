@@ -108,3 +108,17 @@ body.lightbox-open{overflow:hidden}
 .intro-partner-links a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border:1px solid #b99a61;border-radius:7px;background:#f7efdE;color:#493719;text-align:center;text-decoration:none;font:600 15px/1.4 "Source Serif 4",Georgia,serif;transition:background .15s ease,color .15s ease,transform .15s ease}
 .intro-partner-links a:hover{background:#8a6728;color:#fff;transform:translateY(-1px)}
 @media(max-width:600px){.intro-partner-links{flex-direction:column}.intro-partner-links a{width:100%}}
+
+/* Targeted historical research appeal */
+.missing-search{margin:30px 0 8px;padding:26px 0 4px;border-top:1px solid #d9c69f}
+.missing-search-heading{text-align:center;max-width:800px;margin:0 auto 20px}
+.missing-eyebrow{margin:0 0 6px;color:#8a6728;font:700 12px/1.5 Georgia,serif;letter-spacing:.14em}
+.missing-search h3{margin:0 0 12px;color:#382817;font:700 clamp(26px,3vw,36px)/1.2 "Source Serif 4",Georgia,serif}
+.missing-search-heading>p:last-child,.missing-call{color:#51432f;font:16px/1.65 "Source Serif 4",Georgia,serif;text-align:center}
+.missing-search-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:22px 0}
+.missing-person{position:relative;padding:22px 22px 18px 64px;border:1px solid #cdb98f;border-radius:9px;background:linear-gradient(135deg,#fbf5e7,#f2e6cc);min-height:142px}
+.missing-number{position:absolute;left:19px;top:20px;color:#a17b26;font:700 24px Georgia,serif}
+.missing-person h4{margin:0 0 8px;color:#3b2c16;font:700 20px/1.3 "Source Serif 4",Georgia,serif}
+.missing-person p{margin:0;color:#5c4c34;font:15px/1.55 "Source Serif 4",Georgia,serif}
+.missing-call{margin:18px auto 0;max-width:850px;padding:17px 20px;border-top:1px solid #d9c69f;border-bottom:1px solid #d9c69f}
+@media(max-width:600px){.missing-search-cards{grid-template-columns:1fr}.missing-person{padding:18px 16px 18px 54px}.missing-number{left:15px;top:17px}.missing-person h4{font-size:18px}.missing-search-heading>p:last-child,.missing-call{text-align:left;font-size:15px}}
