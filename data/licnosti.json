@@ -198,6 +198,7 @@
       "privrednici"
     ],
     "fotografija_groba": "assets/grobna-mesta/Jovanovic-Jovan-grob.jpg",
+    "model_3d": "assets/3d/Jovan Jovanovic Joska.glb",
     "biografija_en": "Jovan S. Jovanović, known in Požarevac as Joška, was a prominent political figure of the late nineteenth and early twentieth centuries. He was elected president of the Požarevac municipality under the new Municipalities Act of 1889. During his public service, he worked on paving the town’s streets and filling marshy areas that had occupied a considerable part of the settlement.\n\nHe belonged to the so-called Požarevac Radical circle, which included municipal engineer Nikola Pašić, journalist Steva Milićević and the priest Miloje Barjaktarević of Kragujevac. When political parties were established in 1881, Jovanović became one of the founders of the Radical Party in Požarevac and the district. He served as its local leader and represented the town as a Radical member of parliament.\n\nIn 1887, he founded, owned and edited the Radical newspaper *Građanin* in Požarevac. His house stood in the street that later became known as Joškina Street, named in his honour. According to the source booklet, he is buried in the Old Cemetery in Požarevac, Plot 6, grave 9 (N.B.)."
   },
   {
@@ -828,7 +829,7 @@
     "fotografija_groba": "assets/grobna-mesta/djordje-arandjelovic-grob.jpg",
     "kategorije": [],
     "izvori": "Српска енциклопедија, одредница „Аранђеловић, Ђорђе“, аутор Александар Животић (2010). Идентификацију са гробним местом треба додатно проверити.",
-    "model_3d": "djordje-arandjelovic.glb",
+    "model_3d": "assets/3d/djordje-arandjelovic.glb",
     "biografija_en": "Đorđe Aranđelović was born in Ivanjica on 30 March 1884, according to the entry in the Serbian Encyclopaedia. He completed both the Lower and Higher courses of the Military Academy. During the Balkan Wars, he commanded a company. In the First World War, he served as chief of staff of the Obrenovac Detachment and assistant chief of staff of the Combined Detachment.\n\nAfter the war, he held several command positions, including command of the infantry of the Kosovo and Adriatic Divisions and of the Vardar and Tisa divisional districts. He retired in 1940. During the April War of 1941, he was captured in Petrinja. After the war, he remained in exile and died abroad. The encyclopaedia entry does not confirm that his burial place was the Old Cemetery in Požarevac; the identification of the person buried here should therefore be checked against the grave inscription and archival records.",
     "oznaka_fotografije": "Илустративна реконструкција"
   },
@@ -865,6 +866,7 @@
     ],
     "izvori": "Биографија достављена од корисника.",
     "fotografija_groba": "assets/grobna-mesta/Simo-Brkic-grob.jpeg",
+    "model_3d": "assets/3d/Simo Brkic.glb",
     "biografija_en": "Sima Brkić, also recorded in some sources as Simo, was a Yugoslav and Serbian public and political figure who served as president of the Municipality of Požarevac in the early 1970s. In March 1970, he was first appointed acting president of the municipality, then formally the president of the Municipal Assembly, after his predecessor resigned. Before this appointment, he had chaired the Council of Associated Labour in the local assembly.\n\nThe supplied biography describes his appointment as a compromise following disagreements between two influential local Communist Party figures, Sveta Božić and Branko Ivošević. After local political consolidation, Brkić took on the full mandate and led Požarevac during the first half of the 1970s. His public activities are documented in the years 1970, 1971 and 1972. He took part in the expansion of local industry and the opening of new production facilities. In October 1970, on the occasion of Požarevac Liberation Day, he opened a newly built preschool institution with capacity for 120 children, described in the source as a major investment worth around 240 million dinars at the time.",
     "fotografija": "assets/licnosti/simo-brkic.webp",
     "oznaka_fotografije": "Илустративна реконструкција"
