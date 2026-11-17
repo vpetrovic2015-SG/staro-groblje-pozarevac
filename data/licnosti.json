@@ -887,5 +887,25 @@
     "izvori": "Биографија достављена од корисника.",
     "fotografija_groba": "",
     "biografija_en": "Milutin D. Miloјković, known by the local nickname “Dronja”, was a prominent merchant and pre-war politician who served as president of the Municipality of Požarevac from 1936 to 1941. He was elected in the local elections of 25 October 1936. The municipal administration under his leadership consisted of 35 councillors responsible for the urban, economic and communal affairs of Požarevac.\n\nHis term represented the final period of civilian local self-government in the town before the outbreak of the Second World War and the occupation of the Kingdom of Yugoslavia. His administration was brought to an end by the April War and the German occupation in 1941, after which the occupying authorities imposed military and collaborationist administration and took control of municipal finances and labour."
+  },
+  {
+    "id": "radomir-milenic-rus",
+    "ime": "Радомир Миленић – Рус",
+    "ime_lat": "Radomir Milenić – Rus",
+    "zanimanje": "Предратни студент, комунистички илегалац и учесник НОБ-а",
+    "zanimanje_lat": "Predratni student, komunistički ilegalac i učesnik NOB-a",
+    "biografija": "Радомир Миленић, познат под надимком Рус, био је предратни студент, комунистички илегалац и учесник Народноослободилачке борбе из пожаревачког краја. Пре почетка Другог светског рата у Југославији припадао је напредном студентском покрету и био члан Комунистичке партије Југославије у Пожаревцу. Деловао је у оквиру пожаревачке партијске организације заједно са предратним револуционарима Соломоном Анафом, Видом Станковић и Драгољубом Милојковићем.\n\nТоком припрема и подизања народног устанка у лето 1941. године учествовао је у организовању првих партизанских акција и формирању јединица у овом делу Србије. У историјским записима помиње се и под партизанским надимком „Пољак“.\n\nЗа разлику од многих својих партијских другова из пожаревачке организације који су погинули на почетку устанка или били стрељани, Радомир Миленић Рус преживео је Други светски рат. У знак сећања на његов допринос у борби против окупатора, једна улица у Пожаревцу носи његово име – Улица Радомира Миленића Руса.\n\nСахрањен је у породичној гробници на Старом гробљу у Пожаревцу, у парцели 2, гробно место 109 N.B.",
+    "biografija_lat": "Radomir Milenić, poznat pod nadimkom Rus, bio je predratni student, komunistički ilegalac i učesnik Narodnooslobodilačke borbe iz požarevačkog kraja. Pre početka Drugog svetskog rata u Jugoslaviji pripadao je naprednom studentskom pokretu i bio član Komunističke partije Jugoslavije u Požarevcu. Delovao je u okviru požarevačke partijske organizacije zajedno sa predratnim revolucionarima Solomonom Anafom, Vidom Stanković i Dragoljubom Milojkovićem.\n\nTokom priprema i podizanja narodnog ustanka u leto 1941. godine učestvovao je u organizovanju prvih partizanskih akcija i formiranju jedinica u ovom delu Srbije. U istorijskim zapisima pominje se i pod partizanskim nadimkom „Poljak“.\n\nZa razliku od mnogih svojih partijskih drugova iz požarevačke organizacije koji su poginuli na početku ustanka ili bili streljani, Radomir Milenić Rus preživeo je Drugi svetski rat. U znak sećanja na njegov doprinos u borbi protiv okupatora, jedna ulica u Požarevcu nosi njegovo ime – Ulica Radomira Milenića Rusa.\n\nSahranjen je u porodičnoj grobnici na Starom groblju u Požarevcu, u parceli 2, grobno mesto 109 N.B.",
+    "biografija_en": "Radomir Milenić, known by the nickname Rus, was a pre-war student, communist underground activist and participant in the National Liberation Struggle from the Požarevac region. Before the outbreak of the Second World War in Yugoslavia, he was part of the progressive student movement and a member of the Communist Party of Yugoslavia in Požarevac. He worked within the local Party organization alongside pre-war revolutionaries Solomon Anaf, Vida Stanković and Dragoljub Milojković.\n\nDuring the preparations for and the beginning of the uprising in the summer of 1941, he took part in organizing the first Partisan actions and forming units in this part of Serbia. Historical records also refer to him by the Partisan nickname “Poljak”.\n\nUnlike many of his comrades from the Požarevac organization, who were killed during the early uprising or executed, Radomir Milenić Rus survived the Second World War. In memory of his contribution to the struggle against the occupying forces, a street in Požarevac bears his name: Ulica Radomira Milenića Rusa.\n\nHe is buried in the family tomb at the Old Cemetery in Požarevac, plot 2, grave 109 N.B.",
+    "parcela": "2",
+    "grobno_mesto": "109 N.B.",
+    "lat": 44.630063,
+    "lon": 21.18075,
+    "kategorije": [
+      "vojna-lica",
+      "istorija"
+    ],
+    "izvori": "Биографски текст и подаци о гробном месту достављени за дигитални каталог; историјске наводе потребно је додатно поткрепити архивским и објављеним изворима.",
+    "fotografija_groba": "assets/grobna-mesta/radomir-milenic-rus-grob.jpg"
   }
 ]
