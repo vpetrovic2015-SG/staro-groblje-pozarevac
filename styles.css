@@ -122,3 +122,16 @@ body.lightbox-open{overflow:hidden}
 .missing-person p{margin:0;color:#5c4c34;font:15px/1.55 "Source Serif 4",Georgia,serif}
 .missing-call{margin:18px auto 0;max-width:850px;padding:17px 20px;border-top:1px solid #d9c69f;border-bottom:1px solid #d9c69f}
 @media(max-width:600px){.missing-search-cards{grid-template-columns:1fr}.missing-person{padding:18px 16px 18px 54px}.missing-number{left:15px;top:17px}.missing-person h4{font-size:18px}.missing-search-heading>p:last-child,.missing-call{text-align:left;font-size:15px}}
+
+/* Latest additions / news section */
+.latest-section{margin:28px 0 10px;padding:25px 0 4px;border-top:1px solid #d9c69f}
+.latest-heading{max-width:780px;margin:0 auto 20px;text-align:center}
+.latest-eyebrow{margin:0 0 6px;color:#8a6728;font:700 12px/1.5 Georgia,serif;letter-spacing:.14em}
+.latest-section h3{margin:0 0 10px;color:#382817;font:700 clamp(27px,3vw,36px)/1.2 "Source Serif 4",Georgia,serif}
+.latest-heading>p:last-child{margin:0;color:#62523b;font:16px/1.6 "Source Serif 4",Georgia,serif}
+.latest-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.latest-item{padding:20px 22px;border:1px solid #d2c09b;border-left:4px solid #a17b36;border-radius:8px;background:rgba(248,241,224,.78)}
+.latest-item time{display:block;margin:0 0 8px;color:#8a6728;font:600 12px/1.4 Inter,Arial,sans-serif;letter-spacing:.04em}
+.latest-item h4{margin:0 0 8px;color:#3b2c16;font:700 19px/1.35 "Source Serif 4",Georgia,serif}
+.latest-item p{margin:0;color:#554832;font:15px/1.6 "Source Serif 4",Georgia,serif}
+@media(max-width:650px){.latest-items{grid-template-columns:1fr}.latest-item{padding:18px}.latest-heading{text-align:left}.latest-heading>p:last-child{font-size:15px}}
