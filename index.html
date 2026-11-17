@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css?v=20261114-final-layout1">
+<link rel="stylesheet" href="styles.css?v=20261117-latest">
 
 </head>
 <body>
@@ -21,7 +21,7 @@
  </div>
  <div class="header-navigation">
   <button class="menu-toggle" id="menuToggle" aria-label="Отвори мени">☰</button>
-  <nav id="mainNav"><a href="#uvod" class="nav-active" data-i18n="navHome">Почетна</a><a href="#licnosti" data-i18n="navPeople">Личности</a><a href="#mapa" data-i18n="navMap">Интерактивна мапа</a><a href="#kategorije" data-i18n="navCategories">Категорије</a><a href="#o-projektu" data-i18n="navAbout">О пројекту</a><a href="#preuzimanje" data-i18n="navDownload">Документа</a></nav>
+  <nav id="mainNav"><a href="#uvod" class="nav-active" data-i18n="navHome">Почетна</a><a href="#najnovije" data-i18n="navLatest">Најновије</a><a href="#licnosti" data-i18n="navPeople">Личности</a><a href="#mapa" data-i18n="navMap">Интерактивна мапа</a><a href="#kategorije" data-i18n="navCategories">Категорије</a><a href="#o-projektu" data-i18n="navAbout">О пројекту</a><a href="#preuzimanje" data-i18n="navDownload">Документа</a></nav>
   <div class="header-tools"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Претрага по имену..." autocomplete="off"></label><button class="lang active" data-lang="cir">Ћир</button><button class="lang" data-lang="lat">Lat</button><button class="lang" data-lang="en">EN</button></div>
  </div>
 </header>
@@ -32,6 +32,13 @@
   <p class="intro-lead" data-i18n="introText">Старо гробље у Пожаревцу представља драгоцено сведочанство историје града и људи који су својим животом, радом и делом оставили траг у његовом развоју. Овај дигитални каталог чува успомену на знамените Пожаревљане и повезује њихове биографије са фотографијама, местима починка, архивском грађом и доступним дигиталним моделима.</p>
   <p class="intro-photo-note" data-i18n="introPhotoNote">Услед недостатка сачуваних и доступних оригиналних фотографија појединих личности, на овом сајту су коришћене и фотографије генерисане уз помоћ вештачке интелигенције. Оне имају искључиво илустративни карактер и не представљају аутентичне историјске портрете тих личности. Позивамо све грађане, установе и породице које поседују фотографије, писана сведочанства или било коју другу документацију о личностима представљеним на овом сајту, као и о другим људима за које сматрају да су својим радом и деловањем оставили значајан траг у развоју Пожаревца или Србије, да контактирају ЈКП „Комуналне службе“ Пожаревац. Сваки прилог и сведочанство драгоцени су за очување успомене и даље обогаћивање ове базе података. Њено допуњавање и очување заједничко је добро и интерес свих нас.</p>
   <p class="intro-care" data-i18n="aboutCareText">Радници ЈКП „Комуналне службе“ Пожаревац се са посебним пијететом односе према гробним местима ових личности, нарочито оних који немају више живих потомака, али такође и према свим гробним местима на Старом гробљу. Професионализам, емпатија и култура у понашању током сахрана и других обичаја везаних за сахрањивање, наш је основни принцип деловања и идеја водиља. Дођите нам у посету...</p>
+  <section class="latest-section" id="najnovije">
+   <div class="latest-heading"><p class="latest-eyebrow" data-i18n="latestEyebrow">НОВОСТИ И ДОПУНЕ</p><h3 data-i18n="latestTitle">Најновије</h3><p data-i18n="latestIntro">Овде можете пратити нове биографије, фотографије, документа и друге садржаје који се додају у дигитални каталог.</p></div>
+   <div class="latest-items">
+    <article class="latest-item"><time datetime="2026-11-17" data-i18n="latestDate">17. новембар 2026.</time><h4 data-i18n="latestRadomirTitle">Додата биографија Радомира Миленића – Руса</h4><p data-i18n="latestRadomirText">Каталог је допуњен биографијом предратног студента и учесника Народноослободилачке борбе. Унети су подаци о породичној гробници у парцели 2, гробно место 109 N.B, као и координате за приказ на мапи.</p></article>
+    <article class="latest-item"><time datetime="2026-11-17" data-i18n="latestSearchDate">17. новембар 2026.</time><h4 data-i18n="latestSearchTitle">Покренута рубрика „У потрази за…“</h4><p data-i18n="latestSearchText">Отворена је посебна истраживачка рубрика у којој се траже подаци о пуковнику Стојану Марјановићу и др Живану Марковићу. Позивамо грађане и установе да помогну у прикупљању фотографија, докумената и сведочанстава.</p></article>
+   </div>
+  </section>
   <div class="intro-partners" aria-label="Корисни линкови">
    <h3 data-i18n="introPartnersTitle">Корисне установе и туристичке организације</h3>
    <div class="intro-partner-links">
@@ -73,5 +80,5 @@
 <footer><span data-i18n="footerBrand">СТАРО ГРОБЉЕ • ПОЖАРЕВАЦ</span> <span data-i18n="tagline">Дигитални водич кроз историју</span></footer>
 
 
-<script src="app.js?v=20261114-final-layout1"></script>
+<script src="app.js?v=20261117-latest"></script>
 </body></html>
