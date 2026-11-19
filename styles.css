@@ -135,3 +135,19 @@ body.lightbox-open{overflow:hidden}
 .latest-item h4{margin:0 0 8px;color:#3b2c16;font:700 19px/1.35 "Source Serif 4",Georgia,serif}
 .latest-item p{margin:0;color:#554832;font:15px/1.6 "Source Serif 4",Georgia,serif}
 @media(max-width:650px){.latest-items{grid-template-columns:1fr}.latest-item{padding:18px}.latest-heading{text-align:left}.latest-heading>p:last-child{font-size:15px}}
+
+/* One monument – many stories */
+.monument-stories{margin:34px 0 20px;padding:28px 0 8px;border-top:1px solid #d9c69f}
+.monument-stories-heading{max-width:820px;margin:0 auto 22px;text-align:center}
+.monument-eyebrow{margin:0 0 7px;color:#8a6728;font:700 12px/1.5 Georgia,serif;letter-spacing:.14em}
+.monument-stories h3{margin:0 0 10px;color:#382817;font:700 clamp(27px,3vw,37px)/1.2 "Source Serif 4",Georgia,serif}
+.monument-stories-heading>p:last-child{margin:0;color:#62523b;font:16px/1.65 "Source Serif 4",Georgia,serif}
+.monument-feature{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(280px,.92fr);gap:24px;align-items:start;padding:24px;border:1px solid #d2c09b;border-radius:10px;background:linear-gradient(135deg,rgba(250,245,232,.96),rgba(242,231,207,.88))}
+.monument-kicker{margin:0 0 7px;color:#94702f;font:700 11px/1.5 Arial,sans-serif;letter-spacing:.12em}
+.monument-feature h4{margin:0 0 14px;color:#3b2c16;font:700 clamp(22px,2.5vw,29px)/1.25 "Source Serif 4",Georgia,serif}
+.monument-feature-copy>p:not(.monument-kicker):not(.monument-source-note){color:#51432f;font:15px/1.7 "Source Serif 4",Georgia,serif}
+.monument-facts{display:grid;grid-template-columns:1fr 1fr;gap:9px 16px;margin:18px 0;padding:14px 0;border-top:1px solid #d9c69f;border-bottom:1px solid #d9c69f}
+.monument-facts div{min-width:0}.monument-facts dt{color:#8a6728;font:700 11px/1.4 Arial,sans-serif;text-transform:uppercase;letter-spacing:.06em}.monument-facts dd{margin:3px 0 0;color:#3e321f;font:600 14px/1.45 "Source Serif 4",Georgia,serif}
+.monument-source-note{padding:11px 13px;border-left:3px solid #b18a43;background:rgba(255,255,255,.45);color:#66583f;font:italic 13px/1.55 "Source Serif 4",Georgia,serif}
+.monument-feature-images{display:grid;gap:15px}.monument-feature-images figure{margin:0}.monument-feature-images a{display:block}.monument-feature-images img{display:block;width:100%;height:auto;max-height:430px;object-fit:contain;border:1px solid #cdb98f;border-radius:6px;background:#fff}.monument-feature-images figcaption{margin-top:6px;color:#65563e;font:13px/1.5 "Source Serif 4",Georgia,serif}
+@media(max-width:760px){.monument-feature{grid-template-columns:1fr;padding:17px}.monument-stories-heading{text-align:left}.monument-stories-heading>p:last-child{font-size:15px}.monument-facts{grid-template-columns:1fr 1fr}.monument-feature-images img{max-height:360px}}
