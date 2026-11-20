@@ -151,3 +151,35 @@ body.lightbox-open{overflow:hidden}
 .monument-source-note{padding:11px 13px;border-left:3px solid #b18a43;background:rgba(255,255,255,.45);color:#66583f;font:italic 13px/1.55 "Source Serif 4",Georgia,serif}
 .monument-feature-images{display:grid;gap:15px}.monument-feature-images figure{margin:0}.monument-feature-images a{display:block}.monument-feature-images img{display:block;width:100%;height:auto;max-height:430px;object-fit:contain;border:1px solid #cdb98f;border-radius:6px;background:#fff}.monument-feature-images figcaption{margin-top:6px;color:#65563e;font:13px/1.5 "Source Serif 4",Georgia,serif}
 @media(max-width:760px){.monument-feature{grid-template-columns:1fr;padding:17px}.monument-stories-heading{text-align:left}.monument-stories-heading>p:last-child{font-size:15px}.monument-facts{grid-template-columns:1fr 1fr}.monument-feature-images img{max-height:360px}}
+
+
+/* Homepage feature links to dedicated editorial sections */
+.home-feature-links{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:30px 0 12px}
+.home-feature-card{display:grid;grid-template-columns:48px 1fr;gap:4px 14px;align-items:center;padding:22px 20px;border:1px solid #cdb98f;border-radius:10px;background:linear-gradient(135deg,#fbf5e7,#f1e4c8);color:#3b2c16;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.home-feature-card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(55,42,20,.12)}
+.home-feature-icon{grid-row:span 2;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#e7d7b5;color:#805d22;font-size:23px}
+.home-feature-card strong{display:block;font:700 19px/1.3 "Source Serif 4",Georgia,serif}
+.home-feature-card small{display:block;margin-top:4px;color:#65563e;font:14px/1.5 "Source Serif 4",Georgia,serif}
+.home-feature-card>b{grid-column:2;color:#8a6728;font:700 12px/1.4 Inter,Arial,sans-serif;letter-spacing:.02em}
+.video-feature-card{background:linear-gradient(135deg,#253342,#111c29);border-color:#253342;color:#fff}
+.video-feature-card .home-feature-icon{background:#d9c18e;color:#1b2834}
+.video-feature-card small{color:#d7dce2}.video-feature-card>b{color:#e5c98e}
+.section-page{max-width:1180px;margin:0 auto;padding:32px 24px 64px}
+.section-page-heading{text-align:center;max-width:850px;margin:10px auto 30px}
+.section-page-eyebrow{color:#98732f;font:700 12px/1.5 Inter,Arial,sans-serif;letter-spacing:.14em}
+.section-page-heading h2{margin:8px 0 12px;color:#382817;font:700 clamp(30px,4vw,46px)/1.15 "Source Serif 4",Georgia,serif}
+.section-page-heading p{color:#62523b;font:17px/1.65 "Source Serif 4",Georgia,serif}
+.section-page .monument-feature{margin:22px 0}
+.video-hero{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:center;padding:24px;border-radius:14px;background:linear-gradient(120deg,#172635,#263b4b);color:#fff}
+.video-hero-art{position:relative;min-height:300px;border-radius:10px;overflow:hidden;background:#101923}
+.video-hero-art img{width:100%;height:100%;min-height:300px;object-fit:cover;opacity:.78}
+.video-hero-play{position:absolute;inset:0;display:grid;place-items:center;color:white;font-size:64px;text-shadow:0 3px 20px #000}
+.video-hero-copy h2{font:700 clamp(28px,3vw,40px)/1.15 "Source Serif 4",Georgia,serif;margin:0 0 12px}
+.video-hero-copy p{color:#e1e6ea;font:16px/1.65 "Source Serif 4",Georgia,serif}
+.video-coming-soon{display:inline-block;margin-top:10px;padding:8px 12px;border:1px solid #d6bd88;border-radius:20px;color:#f0d8a8;font:600 12px Inter,Arial,sans-serif}
+.video-category-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:28px 0}
+.video-category{padding:22px;border:1px solid #d2c09b;border-radius:10px;background:#faf5e9}
+.video-category h3{margin:0 0 8px;color:#3b2c16;font:700 21px "Source Serif 4",Georgia,serif}
+.video-category p{margin:0;color:#62523b;font:15px/1.6 "Source Serif 4",Georgia,serif}
+.video-empty{margin:22px 0;padding:28px;text-align:center;border:1px dashed #bda77c;border-radius:10px;color:#65563e;background:rgba(250,245,233,.6)}
+@media(max-width:700px){.home-feature-links,.video-hero,.video-category-grid{grid-template-columns:1fr}.home-feature-card{padding:18px}.section-page{padding:22px 15px 44px}.section-page-heading{text-align:left}.video-hero{padding:16px}.video-hero-art,.video-hero-art img{min-height:210px}}
