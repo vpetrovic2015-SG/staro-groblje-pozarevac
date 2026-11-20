@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css?v=20261120-pages">
+<link rel="stylesheet" href="styles.css?v=20261120-separate">
 
 </head>
 <body>
@@ -21,7 +21,7 @@
  </div>
  <div class="header-navigation">
   <button class="menu-toggle" id="menuToggle" aria-label="Отвори мени">☰</button>
-  <nav id="mainNav"><a href="#uvod" class="nav-active" data-i18n="navHome">Почетна</a><a href="#najnovije" data-i18n="navLatest">Најновије</a><a href="jedan-spomenik.html" data-i18n="navMonuments">Један споменик – више прича…</a><a href="video-galerija.html" data-i18n="navVideos">Видео галерија</a><a href="#licnosti" data-i18n="navPeople">Личности</a><a href="#mapa" data-i18n="navMap">Интерактивна мапа</a><a href="#kategorije" data-i18n="navCategories">Категорије</a><a href="#o-projektu" data-i18n="navAbout">О пројекту</a><a href="#preuzimanje" data-i18n="navDownload">Документа</a></nav>
+  <nav id="mainNav"><a href="#uvod" class="nav-active" data-i18n="navHome">Почетна</a><a href="najnovije.html" data-i18n="navLatest">Најновије</a><a href="jedan-spomenik.html" data-i18n="navMonuments">Један споменик – више прича…</a><a href="video-galerija.html" data-i18n="navVideos">Видео галерија</a><a href="#licnosti" data-i18n="navPeople">Личности</a><a href="#mapa" data-i18n="navMap">Интерактивна мапа</a><a href="index.html#kategorije" data-i18n="navCategories">Категорије</a><a href="o-projektu.html" data-i18n="navAbout">О пројекту</a><a href="dokumenti.html" data-i18n="navDownload">Документа</a></nav>
   <div class="header-tools"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Претрага по имену..." autocomplete="off"></label><button class="lang active" data-lang="cir">Ћир</button><button class="lang" data-lang="lat">Lat</button><button class="lang" data-lang="en">EN</button></div>
  </div>
 </header>
@@ -32,16 +32,6 @@
   <p class="intro-lead" data-i18n="introText">Старо гробље у Пожаревцу представља драгоцено сведочанство историје града и људи који су својим животом, радом и делом оставили траг у његовом развоју. Овај дигитални каталог чува успомену на знамените Пожаревљане и повезује њихове биографије са фотографијама, местима починка, архивском грађом и доступним дигиталним моделима.</p>
   <p class="intro-photo-note" data-i18n="introPhotoNote">Услед недостатка сачуваних и доступних оригиналних фотографија појединих личности, на овом сајту су коришћене и фотографије генерисане уз помоћ вештачке интелигенције. Оне имају искључиво илустративни карактер и не представљају аутентичне историјске портрете тих личности. Позивамо све грађане, установе и породице које поседују фотографије, писана сведочанства или било коју другу документацију о личностима представљеним на овом сајту, као и о другим људима за које сматрају да су својим радом и деловањем оставили значајан траг у развоју Пожаревца или Србије, да контактирају ЈКП „Комуналне службе“ Пожаревац. Сваки прилог и сведочанство драгоцени су за очување успомене и даље обогаћивање ове базе података. Њено допуњавање и очување заједничко је добро и интерес свих нас.</p>
   <p class="intro-care" data-i18n="aboutCareText">Радници ЈКП „Комуналне службе“ Пожаревац се са посебним пијететом односе према гробним местима ових личности, нарочито оних који немају више живих потомака, али такође и према свим гробним местима на Старом гробљу. Професионализам, емпатија и култура у понашању током сахрана и других обичаја везаних за сахрањивање, наш је основни принцип деловања и идеја водиља. Дођите нам у посету...</p>
-  <section class="latest-section" id="najnovije">
-   <div class="latest-heading"><p class="latest-eyebrow" data-i18n="latestEyebrow">НОВОСТИ И ДОПУНЕ</p><h3 data-i18n="latestTitle">Најновије</h3><p data-i18n="latestIntro">Овде можете пратити нове биографије, фотографије, документа и друге садржаје који се додају у дигитални каталог.</p></div>
-   <div class="latest-items">
-    <article class="latest-item"><time datetime="2026-11-19" data-i18n="latestHamkeDate">19. новембар 2026.</time><h4 data-i18n="latestHamkeTitle">Додата прича о Јозефу Хамкеу</h4><p data-i18n="latestHamkeText">Друга прича у рубрици „Један споменик – више прича…“ посвећена је натпису на немачком језику и споменику у парцели 2.</p></article><article class="latest-item"><time datetime="2026-11-19" data-i18n="latestVelikaDate">19. новембар 2026.</time><h4 data-i18n="latestVelikaTitle">Покренута рубрика „Један споменик – више прича…“</h4><p data-i18n="latestVelikaText">Прва прича посвећена је Великој Стојановић, о којој је лист „Реч народа“ писао 1977. године, наводећи да је имала 118 година. Додати су подаци о гробном месту у парцели 5, број 148 N.B.</p></article>
-
-    <article class="latest-item"><time datetime="2026-11-17" data-i18n="latestDate">17. новембар 2026.</time><h4 data-i18n="latestRadomirTitle">Додата биографија Радомира Миленића – Руса</h4><p data-i18n="latestRadomirText">Каталог је допуњен биографијом предратног студента и учесника Народноослободилачке борбе. Унети су подаци о породичној гробници у парцели 2, гробно место 109 N.B, као и координате за приказ на мапи.</p></article>
-    <article class="latest-item"><time datetime="2026-11-17" data-i18n="latestSearchDate">17. новембар 2026.</time><h4 data-i18n="latestSearchTitle">Покренута рубрика „У потрази за…“</h4><p data-i18n="latestSearchText">Отворена је посебна истраживачка рубрика у којој се траже подаци о пуковнику Стојану Марјановићу и др Живану Марковићу. Позивамо грађане и установе да помогну у прикупљању фотографија, докумената и сведочанстава.</p></article>
-    <article class="latest-item"><time datetime="2026-11-19" data-i18n="latestSretenDate">19. новембар 2026.</time><h4 data-i18n="latestSretenTitle">У каталог уврштен боксер Сретен Мирковић – Среле</h4><p data-i18n="latestSretenText">Додата је биографија пожаревачког боксера, европског вицешампиона из 1979. године и тренера. У профилу је јасно наведено да је сахрањен на Новом гробљу у Пожаревцу, парцела 9.</p></article>
-   </div>
-  </section>
   <section class="home-feature-links">
    <a class="home-feature-card" href="jedan-spomenik.html"><span class="home-feature-icon">✦</span><span><strong>Један споменик – више прича…</strong><small>Историјске приче које се крију иза надгробних споменика.</small></span><b>Отвори рубрику ↗</b></a>
    <a class="home-feature-card video-feature-card" href="video-galerija.html"><span class="home-feature-icon">▶</span><span><strong>Видео галерија</strong><small>Видео-туре, приче о личностима и документарни прилози.</small></span><b>Погледај видео галерију ↗</b></a>
@@ -56,15 +46,6 @@
     <a href="https://www.significantcemeteries.org/" target="_blank" rel="noopener noreferrer" data-i18n="introAsceLink">Асоцијација значајних гробаља Европе (ASCE) ↗</a>
    </div>
   </div>
-  <section class="missing-search" id="potraga">
-   <div class="missing-search-heading"><p class="missing-eyebrow" data-i18n="searchEyebrow">ИСТРАЖИВАЧКА ПОТРАГА</p><h3 data-i18n="searchTitle">У потрази за…</h3>
-   <p data-i18n="searchIntro">Ова рубрика издваја две личности за којима трагамо из посебних истраживачких разлога, поводом интересовања и потреба других установа у Србији. Потрага је циљана и одвојена од каталога знаменитих Пожаревљана представљених у уводној речи.</p></div>
-   <div class="missing-search-cards">
-    <article class="missing-person"><span class="missing-number">01</span><h4 data-i18n="searchColonel">Пуковник Стојан Марјановић</h4><p data-i18n="searchColonelText">Трагамо за поузданим биографским подацима, фотографијама, документима и другим историјским сведочанствима.</p></article>
-    <article class="missing-person"><span class="missing-number">02</span><h4 data-i18n="searchDoctor">Др Живан Марковић</h4><p data-i18n="searchDoctorText">Трагамо за подацима о животу и професионалном раду, фотографијама, документима и породичним сведочанствима.</p></article>
-   </div>
-   <p class="missing-call" data-i18n="searchCall">Позивамо грађане, потомке, истраживаче, колекционаре и установе да нам помогну. Ако поседујете било какав податак, фотографију, писмо или документ који би могао да допринесе истраживању, молимо вас да контактирате ЈКП „Комуналне службе“ Пожаревац. И најмањи траг може бити важан.</p>
-  </section>
   <a class="intro-cta" href="#licnosti" data-i18n="introCta">Погледајте личности</a>
  </div>
 </section>
@@ -79,13 +60,10 @@
  <section class="main-content" id="licnosti">
   <article id="profileContent" class="profile-panel"><div class="empty-profile"><h2 data-i18n="choosePerson">Изаберите личност</h2><p data-i18n="choosePersonHelp">Биографија, фотографије и подаци о гробном месту приказаће се овде.</p></div></article>
   <section class="all-map" id="mapa"><h2 data-i18n="mapTitle">Мапа Старог гробља</h2><div id="map" class="map"></div><p class="map-note" data-i18n="mapNote">Приказане су само личности за које су координате гробног места унете у базу.</p></section>
-  <section class="about-panel" id="o-projektu"><h2 data-i18n="aboutTitle">О дигиталном водичу</h2><p data-i18n="aboutText">Дигитални водич повезује биографије, фотографије, гробна места, интерактивну мапу, QR кодове и доступне 3D приказе знаменитих личности сахрањених на Старом гробљу у Пожаревцу.</p>
-  <p class="about-care-text" data-i18n="aboutCareText">Радници ЈКП „Комуналне службе“ Пожаревац се са посебним пијететом односе према гробним местима ових личности, нарочито оних који немају више живих потомака, али такође и према свим гробним местима на Старом гробљу. Професионализам, емпатија и култура у понашању током сахрана и других обичаја везаних за сахрањивање, наш је основни принцип деловања и идеја водиља. Дођите нам у посету...</p></section>
-  <section class="about-panel downloads-panel" id="preuzimanje"><h2 data-i18n="downloadTitle">Преузимање докумената</h2><p data-i18n="downloadIntro">Документи и публикације о Старом гробљу у Пожаревцу.</p><div class="download-list"><article class="download-item"><div><strong data-i18n="docCultureTitle">Старо гробље – непокретни споменик културе (2025)</strong><p data-i18n="docCultureMeta">др Мирољуб Манојловић • PDF</p><a class="download-link" href="miroljub-manojlovic-staro-groblje-2025.pdf.pdf" target="_blank" rel="noopener" data-i18n="docOpen">Отвори / преузми PDF</a></div></article><article class="download-item"><div><strong data-i18n="docPamphletTitle">Познати Пожаревљани – кроз споменике познатих личности</strong><p data-i18n="docPamphletMeta">Памфлет • DOCX</p><a class="download-link" href="flipbook_staro_groblje/index.html" target="_blank" rel="noopener">Отвори дигиталну књигу</a></div></article></div></section>
  </section>
 </main>
 <footer><span data-i18n="footerBrand">СТАРО ГРОБЉЕ • ПОЖАРЕВАЦ</span> <span data-i18n="tagline">Дигитални водич кроз историју</span></footer>
 
 
-<script src="app.js?v=20261120-pages"></script>
+<script src="app.js?v=20261120-separate"></script>
 </body></html>
