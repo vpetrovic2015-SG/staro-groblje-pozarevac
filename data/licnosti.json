@@ -657,8 +657,8 @@
     "godine": "непознато",
     "grobno_mesto": "Парцела 12, гробно место 38",
     "parcela": "12",
-    "lat": null,
-    "lon": null,
+    "lat": 44.6295,
+    "lon": 21.180361,
     "fotografija": "assets/licnosti/ilija-belosavic.webp",
     "fotografija_groba": "assets/grobna-mesta/Belosavic-grob.jpeg",
     "izvori": "Памфлет „Стари гробљe у Пожаревцу“, одељак о Илији (Белу) Савићу и Станку Бело Савићу; породична гробница Белосавић, парцела 12, гробно место 38. Dodatak o prilogu crkvi i matičnoj grobnici: податак корисника.",
@@ -681,8 +681,8 @@
     "godine": "непознато",
     "grobno_mesto": "Парцела 12, гробно место 38",
     "parcela": "12",
-    "lat": null,
-    "lon": null,
+    "lat": 44.6295,
+    "lon": 21.180361,
     "fotografija": "assets/licnosti/stanko-belosavic.webp",
     "fotografija_groba": "assets/grobna-mesta/Belosavic-grob.jpeg",
     "izvori": "Памфлет „Стари гробљe у Пожаревцу“, одељак о Илији (Белу) Савићу и Станку Бело Савићу; породична гробница Белосавић, парцела 12, гробно место 38. Dodatak o prilogu crkvi i matičnoj grobnici: податак корисника.",
@@ -708,7 +708,7 @@
     "godine": "1885–1972",
     "biografija": "Професор Никола Бошковић рођен је 1885. године у Белом Пољу код Пећи. Био је истакнути професор, а касније и директор. Према достављеној биографији, међу првима је започео археолошка ископавања на налазишту Виминацијум заједно са својим студентима и био је један од оснивача Народног музеја у Пожаревцу. Према достављеном запису, након што су комунисти преузели Народни музеј у Пожаревцу, његов рад и име били су потиснути из јавног сећања због његове наклоности краљу. Био је филантроп који је помагао сиромашнима у образовању и описмењавању. Александар I Карађорђевић одликовао га је Краљевским орденом Светог Саве за заслуге у области археологије и филантропије. Према достављеним подацима, један од његових ученика био је Слободан Милошевић. Био је донатор дела збирке „Varia“ Историјском архиву у Пожаревцу. Умро је 1972. године у Пожаревцу. Сахрањен је на Старом гробљу у Пожаревцу, у парцели 9, гробно место 19.",
     "biografija_lat": "Profesor Nikola Bošković rođen je 1885. godine u Belom Polju kod Peći. Bio je istaknuti profesor, a kasnije i direktor. Prema dostavljenoj biografiji, među prvima je započeo arheološka iskopavanja na nalazištu Viminacijum zajedno sa svojim studentima i bio je jedan od osnivača Narodnog muzeja u Požarevcu. Prema dostavljenom zapisu, nakon što su komunisti preuzeli Narodni muzej u Požarevcu, njegov rad i ime bili su potisnuti iz javnog sećanja zbog njegove naklonosti kralju. Bio je filantrop koji je pomagao siromašnima u obrazovanju i opismenjavanju. Aleksandar I Karađorđević odlikovao ga je Kraljevskim ordenom Svetog Save za zasluge u oblasti arheologije i filantropije. Prema dostavljenim podacima, jedan od njegovih učenika bio je Slobodan Milošević. Bio je donator dela zbirke „Varia“ Istorijskom arhivu u Požarevcu. Umro je 1972. godine u Požarevcu. Sahranjen je na Starom groblju u Požarevcu, u parceli 9, grobno mesto 19.",
-    "grobno_mesto": "19",
+    "grobno_mesto": "Парцела 9, гробно место 19",
     "parcela": "9",
     "fotografija": "assets/licnosti/nikola-boskovic.webp",
     "fotografija_groba": "",
@@ -718,7 +718,9 @@
     ],
     "izvori": "Biografija je preuzeta iz podataka koje je dostavio korisnik.",
     "biografija_en": "Professor Nikola Bošković is included among the notable people buried in the Old Cemetery in Požarevac. The biographical information currently available in the project identifies him as a professor and records his connection with the town. A fuller account of his education, teaching career, publications and public work requires additional biographical or archival sources; details not supported by the material presently available have therefore not been added.",
-    "oznaka_fotografije": "Илустративна реконструкција"
+    "oznaka_fotografije": "Илустративна реконструкција",
+    "lat": 44.630092,
+    "lon": 21.177931
   },
   {
     "id": "vlajko-stojiljkovic",
@@ -729,8 +731,8 @@
     "godine": "1937–2002",
     "biografija": "Влајко Стојиљковић рођен је 13. марта 1937. године у Малој Крсни. Гимназију је завршио у Пожаревцу, а Правни факултет у Београду. Професионални пут започео је као судски приправник у Општинском суду у Пожаревцу, а затим је радио у полицији и постао начелник СУП-а Пожаревац. Обављао је и дужности управника КПЗ Забела и руководиоца у привреди, као генерални директор Пољопривредно-индустријског комбината у Пожаревцу. Потом је био на руководећим положајима у привредним коморама Југославије и Србије. Од 1997. до 2000. године био је министар унутрашњих послова Србије. Дана 11. априла 2002. године тешко се ранио испред зграде Савезне скупштине, а преминуо је 13. априла у Београду. Сахрањен је 16. априла 2002. године на Старом гробљу у Пожаревцу.",
     "biografija_lat": "Vlajko Stojiljković rođen je 13. marta 1937. godine u Maloj Krsni. Gimnaziju je završio u Požarevcu, a Pravni fakultet u Beogradu. Profesionalni put započeo je kao sudski pripravnik u Opštinskom sudu u Požarevcu, a zatim je radio u policiji i postao načelnik SUP-a Požarevac. Obavljao je i dužnosti upravnika KPZ Zabela i rukovodioca u privredi, kao generalni direktor Poljoprivredno-industrijskog kombinata u Požarevcu. Potom je bio na rukovodećim položajima u privrednim komorama Jugoslavije i Srbije. Od 1997. do 2000. godine bio je ministar unutrašnjih poslova Srbije. Dana 11. aprila 2002. godine teško se ranio ispred zgrade Savezne skupštine, a preminuo je 13. aprila u Beogradu. Sahranjen je 16. aprila 2002. godine na Starom groblju u Požarevcu.",
-    "grobno_mesto": "",
-    "parcela": "",
+    "grobno_mesto": "Парцела 5, гробно место 22 N.B.",
+    "parcela": "5",
     "fotografija": "https://upload.wikimedia.org/wikipedia/commons/3/32/Vlajko_Stojiljkovi%C4%87_crop.jpg",
     "fotografija_groba": "assets/grobna-mesta/Vlajko-stojiljkovic-grob.jpg",
     "kategorije": [
@@ -739,7 +741,9 @@
     ],
     "izvori": "Извори: Blic, „Funeral of Vlajko Stojiljkovic, former Serbian police“, 17. април 2002. (https://www.blic.rs/vesti/drustvo/funeral-of-vlajko-stojiljkovic-former-serbian-police/scdldj6); Novosti, „Zatvor teži od smrti“ (биографски подаци); портрет: Pidge Copetti, Wikimedia Commons, CC BY-SA 4.0 (https://commons.wikimedia.org/wiki/File:Vlajko_Stojiljković_crop.jpg).",
     "model_3d": "assets/3d/vlajko-stojiljkovic.glb",
-    "biografija_en": "Vlajko Stojiljković was born on 13 March 1937 in Mala Krsna. He attended secondary school in Požarevac and graduated from the Faculty of Law in Belgrade. He began his career as a judicial trainee at the Municipal Court in Požarevac, then joined the police and became head of the Požarevac Secretariat of Internal Affairs. He also served as director of the Zabela Correctional Institution and held senior posts in the local economy, including general director of the Požarevac Agricultural and Industrial Combine. He later held senior positions in the chambers of commerce of Yugoslavia and Serbia. From 1997 to 2000, he served as Serbia's Minister of Internal Affairs. On 11 April 2002, he seriously wounded himself outside the Federal Assembly building and died in Belgrade on 13 April. He was buried at the Old Cemetery in Požarevac on 16 April 2002."
+    "biografija_en": "Vlajko Stojiljković was born on 13 March 1937 in Mala Krsna. He attended secondary school in Požarevac and graduated from the Faculty of Law in Belgrade. He began his career as a judicial trainee at the Municipal Court in Požarevac, then joined the police and became head of the Požarevac Secretariat of Internal Affairs. He also served as director of the Zabela Correctional Institution and held senior posts in the local economy, including general director of the Požarevac Agricultural and Industrial Combine. He later held senior positions in the chambers of commerce of Yugoslavia and Serbia. From 1997 to 2000, he served as Serbia's Minister of Internal Affairs. On 11 April 2002, he seriously wounded himself outside the Federal Assembly building and died in Belgrade on 13 April. He was buried at the Old Cemetery in Požarevac on 16 April 2002.",
+    "lat": 44.63,
+    "lon": 21.179028
   },
   {
     "id": "draza-markovic",
@@ -750,12 +754,12 @@
     "godine": "погинуо/стрељан 1943.",
     "biografija": "Дража Марковић Рођа је био локални револуционар и партизански борац из пожаревачког краја који је погинуо/стрељан током Другог светског рата (1943. године). Он је био старији брат познатог пожаревачког публицисте, новинара и револуционара Александра Саше Марковића (1927–1994). Иако се у широј јавности име „Дража Марковић“ најчешће везује за високог државног и партијског функционера СФРЈ (Драгослава Дражу Марковића са Космаја), пожаревачки Дража Марковић Рођа је локална историјска личност по којој данас носи име једна улица у самом центру Пожаревца, као и Основна школа „Дража Марковић Рођа“ у Смољинцу (општина Мало Црниће). Потиче из Пожаревца, из угледне породице Марковић. Породична кућа у којој је живео са братом Сашом и данас сведочи о историји ове породице у пожаревачком крају. Током Другог светског рата прикључио се Народноослободилачком покрету (НОП). Био је активан партизански борац на територији Браничевског округа и Пожаревачког партизанског одреда. Основна школа у Смољинцу, чији корени сежу до 1804. године, званично носи име ОШ „Дража Марковић Рођа“ од 1966. године. Једна од препознатљивих старијих улица у Пожаревцу и даље носи његово име. Током периода СФРЈ, омладинска радна бригада из Малог Црнића која је учествовала на великим савезним радним акцијама, попут ОРА Ђердап и Кадињача, носила је назив по њему.",
     "biografija_lat": "Draža Marković Rođa je bio lokalni revolucionar i partizanski borac iz požarevačkog kraja koji je poginuo/streljan tokom Drugog svetskog rata (1943. godine). On je bio stariji brat poznatog požarevačkog publiciste, novinara i revolucionara Aleksandra Saše Markovića (1927–1994). Iako se u široj javnosti ime „Draža Marković“ najčešće vezuje za visokog državnog i partijskog funkcionera SFRJ (Dragoslava Dražu Markovića sa Kosmaja), požarevački Draža Marković Rođa je lokalna istorijska ličnost po kojoj danas nosi ime jedna ulica u samom centru Požarevca, kao i Osnovna škola „Draža Marković Rođa“ u Smoljincu (opština Malo Crniće). Potiče iz Požarevca, iz ugledne porodice Marković. Porodična kuća u kojoj je živeo sa bratom Sašom i danas svedoči o istoriji ove porodice u požarevačkom kraju. Tokom Drugog svetskog rata priključio se Narodnooslobodilačkom pokretu (NOP). Bio je aktivan partizanski borac na teritoriji Braničevskog okruga i Požarevačkog partizanskog odreda. Osnovna škola u Smoljincu, čiji koreni sežu do 1804. godine, zvanično nosi ime OŠ „Draža Marković Rođa“ od 1966. godine. Jedna od prepoznatljivih starijih ulica u Požarevcu i dalje nosi njegovo ime. Tokom perioda SFRJ, omladinska radna brigada iz Malog Crnića koja je učestvovala na velikim saveznim radnim akcijama, poput ORA Đerdap i Kadinjača, nosila je naziv po njemu.",
-    "grobno_mesto": "",
+    "grobno_mesto": "Парцела 3, гробно место 60 N.B.",
     "izvori": "Биографија достављена од корисника; податке о погибији и називима установа потребно је потврдити архивским изворима.",
-    "lat": null,
-    "lon": null,
+    "lat": 44.629621,
+    "lon": 21.180257,
     "fotografija": "assets/licnosti/draza-markovic-rodja.webp",
-    "parcela": "",
+    "parcela": "3",
     "kategorije": [
       "istorija",
       "javne-licnosti"
@@ -779,7 +783,11 @@
       "oficiri"
     ],
     "izvori": "Историјски архив Пожаревац, Збирка VARIA 1791–, свеска 5 (2013), запис о решењу из 1950; Драгана Милорадовић, Освајање сфере јавног живота (2019), фотографија генерала Антонија Пекића са породицом.",
-    "biografija_en": "General Antonije Pekić was an officer in the Serbian Army and later the Yugoslav Army. The Historical Archives of Požarevac recorded him as a retired general from Požarevac in a 1950 document granting him a permanent monetary award. The archival monograph *Osваjanje sfere javnog života* also reproduces a family photograph of General Pekić taken in Požarevac after the First World War, from his personal collection. These records confirm his connection with Požarevac. A detailed chronology of his military service and his dates of birth and death require further archival research."
+    "biografija_en": "General Antonije Pekić was an officer in the Serbian Army and later the Yugoslav Army. The Historical Archives of Požarevac recorded him as a retired general from Požarevac in a 1950 document granting him a permanent monetary award. The archival monograph *Osваjanje sfere javnog života* also reproduces a family photograph of General Pekić taken in Požarevac after the First World War, from his personal collection. These records confirm his connection with Požarevac. A detailed chronology of his military service and his dates of birth and death require further archival research.",
+    "parcela": "6",
+    "grobno_mesto": "Парцела 6, гробно место 1 N.B.",
+    "lat": 44.629835,
+    "lon": 21.178913
   },
   {
     "id": "dusan-r-dimitrijevic",
@@ -796,7 +804,11 @@
       "oficiri"
     ],
     "izvori": "Др Мирољуб Манојловић, „Пожаревац, окружна варош 1858–1918“, Историјски архив Пожаревац, 2011, стр. 93; фотографије доставио корисник.",
-    "biografija_en": "Colonel Dušan R. Dimitrijević was one of the brothers Sava and Dušan Dimitrijević, sons of Radojko Dimitrijević, a former president of the Municipality of Požarevac. According to Dr Miroljub Manojlović’s historical monograph *Požarevac, a District Town, 1858–1918*, the brothers Sava and Dušan graduated from the Military Academy and held senior positions in the Serbian Army. The available excerpt states that Dušan served for many years as a vodnik, but the continuation of that passage is not available in the extract consulted for this profile. His dates of birth and death and the full course of his military career therefore require further archival verification."
+    "biografija_en": "Colonel Dušan R. Dimitrijević was one of the brothers Sava and Dušan Dimitrijević, sons of Radojko Dimitrijević, a former president of the Municipality of Požarevac. According to Dr Miroljub Manojlović’s historical monograph *Požarevac, a District Town, 1858–1918*, the brothers Sava and Dušan graduated from the Military Academy and held senior positions in the Serbian Army. The available excerpt states that Dušan served for many years as a vodnik, but the continuation of that passage is not available in the extract consulted for this profile. His dates of birth and death and the full course of his military career therefore require further archival verification.",
+    "parcela": "3",
+    "grobno_mesto": "Парцела 3, гробно место 40 N.B.",
+    "lat": 44.629636,
+    "lon": 21.180184
   },
   {
     "id": "simeon-jovanovic",
@@ -831,7 +843,11 @@
     "izvori": "Српска енциклопедија, одредница „Аранђеловић, Ђорђе“, аутор Александар Животић (2010). Идентификацију са гробним местом треба додатно проверити.",
     "model_3d": "assets/3d/djordje-arandjelovic.glb",
     "biografija_en": "Đorđe Aranđelović was born in Ivanjica on 30 March 1884, according to the entry in the Serbian Encyclopaedia. He completed both the Lower and Higher courses of the Military Academy. During the Balkan Wars, he commanded a company. In the First World War, he served as chief of staff of the Obrenovac Detachment and assistant chief of staff of the Combined Detachment.\n\nAfter the war, he held several command positions, including command of the infantry of the Kosovo and Adriatic Divisions and of the Vardar and Tisa divisional districts. He retired in 1940. During the April War of 1941, he was captured in Petrinja. After the war, he remained in exile and died abroad. The encyclopaedia entry does not confirm that his burial place was the Old Cemetery in Požarevac; the identification of the person buried here should therefore be checked against the grave inscription and archival records.",
-    "oznaka_fotografije": "Илустративна реконструкција"
+    "oznaka_fotografije": "Илустративна реконструкција",
+    "parcela": "5",
+    "grobno_mesto": "Парцела 5, гробно место 78 N.B.",
+    "lat": 44.629954,
+    "lon": 21.179477
   },
   {
     "id": "jovan-jelicic",
@@ -849,7 +865,11 @@
     "izvori": "Биографија достављена од корисника.",
     "biografija_en": "Jovan Jeličić was a Serbian politician and lawyer of the late nineteenth and early twentieth centuries. According to the biographical material currently included in the project, he served as president of the Municipality of Požarevac from 1900 to 1902, during the reign of King Aleksandar Obrenović. At the time, municipal leadership involved responsibility for the town’s urban development and public services, as Požarevac was changing from a small former Ottoman-style settlement into a modern provincial town.\n\nThe supplied text names Panta Stevanović as his predecessor and Petar “Pera” Tamburaš as his successor in 1902. The exact chronology and details of Jeličić’s public service should be confirmed through municipal records.",
     "fotografija": "assets/licnosti/jovan-jelicic.webp",
-    "oznaka_fotografije": "Илустративна реконструкција"
+    "oznaka_fotografije": "Илустративна реконструкција",
+    "parcela": "14",
+    "grobno_mesto": "Парцела 14, гробно место 41",
+    "lat": 44.629653,
+    "lon": 21.179248
   },
   {
     "id": "simo-brkic",
@@ -869,7 +889,11 @@
     "model_3d": "assets/3d/Simo Brkic.glb",
     "biografija_en": "Sima Brkić, also recorded in some sources as Simo, was a Yugoslav and Serbian public and political figure who served as president of the Municipality of Požarevac in the early 1970s. In March 1970, he was first appointed acting president of the municipality, then formally the president of the Municipal Assembly, after his predecessor resigned. Before this appointment, he had chaired the Council of Associated Labour in the local assembly.\n\nThe supplied biography describes his appointment as a compromise following disagreements between two influential local Communist Party figures, Sveta Božić and Branko Ivošević. After local political consolidation, Brkić took on the full mandate and led Požarevac during the first half of the 1970s. His public activities are documented in the years 1970, 1971 and 1972. He took part in the expansion of local industry and the opening of new production facilities. In October 1970, on the occasion of Požarevac Liberation Day, he opened a newly built preschool institution with capacity for 120 children, described in the source as a major investment worth around 240 million dinars at the time.",
     "fotografija": "assets/licnosti/simo-brkic.webp",
-    "oznaka_fotografije": "Илустративна реконструкција"
+    "oznaka_fotografije": "Илустративна реконструкција",
+    "parcela": "14",
+    "grobno_mesto": "Парцела 14, гробно место 6",
+    "lat": 44.629398,
+    "lon": 21.179808
   },
   {
     "id": "milutin-d-milojkovic-dronja",
@@ -886,7 +910,11 @@
     ],
     "izvori": "Биографија достављена од корисника.",
     "fotografija_groba": "assets/grobna-mesta/DRONJA.jpg",
-    "biografija_en": "Milutin D. Miloјković, known by the local nickname “Dronja”, was a prominent merchant and pre-war politician who served as president of the Municipality of Požarevac from 1936 to 1941. He was elected in the local elections of 25 October 1936. The municipal administration under his leadership consisted of 35 councillors responsible for the urban, economic and communal affairs of Požarevac.\n\nHis term represented the final period of civilian local self-government in the town before the outbreak of the Second World War and the occupation of the Kingdom of Yugoslavia. His administration was brought to an end by the April War and the German occupation in 1941, after which the occupying authorities imposed military and collaborationist administration and took control of municipal finances and labour."
+    "biografija_en": "Milutin D. Miloјković, known by the local nickname “Dronja”, was a prominent merchant and pre-war politician who served as president of the Municipality of Požarevac from 1936 to 1941. He was elected in the local elections of 25 October 1936. The municipal administration under his leadership consisted of 35 councillors responsible for the urban, economic and communal affairs of Požarevac.\n\nHis term represented the final period of civilian local self-government in the town before the outbreak of the Second World War and the occupation of the Kingdom of Yugoslavia. His administration was brought to an end by the April War and the German occupation in 1941, after which the occupying authorities imposed military and collaborationist administration and took control of municipal finances and labour.",
+    "parcela": "2",
+    "grobno_mesto": "Парцела 2, гробно место 11 N.B.",
+    "lat": 44.629631,
+    "lon": 21.180544
   },
   {
     "id": "radomir-milenic-rus",
